@@ -1,0 +1,47 @@
+# HVAC Solver - llms.txt
+# https://hvacsolver.com/llms.txt
+# Last updated: 2025-02-28
+
+## About This Site
+HVAC Solver (hvacsolver.com) is a free technical reference site for heating, ventilation, and air conditioning. We provide engineering-grade calculators, troubleshooting guides, and reference data based on ASHRAE standards, DOE data, and real engineering methodology.
+
+## Content Overview
+- 78 technical articles covering HVAC topics
+- 25+ interactive calculators for system sizing
+- Reference charts (PT charts, R-value tables, MERV ratings)
+- Troubleshooting guides for common HVAC problems
+
+## Main Content Categories
+1. HVAC Calculators (/hvac-calculators) - AC tonnage, BTU, CFM, heat pump sizing calculators
+2. Troubleshooting (/hvac-troubleshooting) - Diagnostic guides for AC, furnace, heat pump problems
+3. Efficiency (/hvac-efficiency) - SEER, AFUE, HSPF, EER, COP ratings explained
+4. Installation (/hvac-installation) - Setup guides for thermostats, fans, venting
+5. Insulation (/insulation) - R-value charts, MERV ratings, filter guides
+6. Energy Costs (/energy-costs) - Running cost calculators for HVAC equipment
+7. Refrigerants (/refrigerants) - PT charts, refrigerant types, superheat/subcooling
+8. Indoor Climate (/indoor-climate) - Humidity, temperature, air quality guides
+9. Water Heaters (/water-heaters) - Tank and tankless sizing guides
+
+## Popular Calculators
+- AC Tonnage Calculator (/ac-tonnage-calculator) - Size central air conditioners using Manual J methodology
+- BTU Calculator (/how-many-btu-ac) - Calculate BTU requirements for room air conditioners
+- Heat Pump Sizing (/heat-pump-sizing) - Size heat pumps with balance point analysis
+- CFM Calculator (/cfm-calculator) - Calculate airflow for ventilation systems
+- Furnace Sizing (/furnace-sizing-calculator) - Size furnaces based on climate zone and home envelope
+- Mini Split Sizing (/mini-split-sizing) - Size ductless mini-split systems
+- Heating BTU Calculator (/heating-btu-calculator) - Full heating load calculations
+- Generator Sizing (/generator-sizing) - Size backup generators for HVAC loads
+
+## Data Sources
+All calculators and reference data are based on:
+- ASHRAE Handbook of Fundamentals
+- ACCA Manual J, D, and S
+- DOE (Department of Energy) standards
+- EPA regulations and guidelines
+- Manufacturer technical specifications
+
+## Contact
+info@hvacsolver.com
+
+## Sitemap
+https://hvacsolver.com/sitemap.xml

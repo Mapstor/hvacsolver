@@ -1,0 +1,413 @@
+---
+title: "Air Changes Per Hour Calculator (ACH Formula)"
+slug: "air-changes-per-hour"
+description: "Great question. Air changes per hour (ACH) tells you how many times the entire volume of air in a room is replaced in one hour. For a dental office, you..."
+pillar: "calculators"
+pillarHub: "/hvac-calculators"
+hasCalculator: true
+calculatorComponent: "ACHCalculator"
+seoTitle: "Air Changes Per Hour Calculator (ACH Formula)"
+---
+
+# Air Changes Per Hour Calculator (ACH Formula)
+
+> "I'm designing a ventilation system for a dental office and need to know the air changes per hour requirement. How do I calculate the CFM needed for that?"
+
+Great question. Air changes per hour (ACH) tells you how many times the entire volume of air in a room is replaced in one hour. For a dental office, you typically need **6–12 ACH** per ASHRAE Standard 170.
+
+To calculate the required CFM for any target ACH, you only need two things:
+
+1. Your **target ACH** for the room type (we have a full table below).
+2. The **room dimensions** — length, width, and ceiling height.
+
+Plug those into the formula, and you get the exact CFM your ventilation system needs to deliver. Here's the core formula:
+
+**ACH = (CFM × 60) ÷ Room Volume (cu ft)**
+
+{/* CALCULATOR */}
+
+## What Are Air Changes Per Hour (ACH)?
+
+Air changes per hour — abbreviated **ACH** or **ACPH** — measures how many times the total air volume in a room gets completely replaced with fresh or filtered air in one hour. It's the gold standard for quantifying ventilation effectiveness.
+
+Think of it this way: if a room has **6 ACH**, the entire air volume is cycled out and replaced **6 times every hour**, or once every **10 minutes**. The higher the ACH, the faster stale, contaminated, or humid air gets removed.
+
+ACH matters because it directly affects indoor air quality (IAQ), occupant health, moisture control, and energy efficiency. ASHRAE, the CDC, and ISO all publish ACH requirements for different building types — and failing to meet them can mean everything from stuffy offices to dangerous pathogen buildup in hospitals.
+
+## The ACH Formula: How to Calculate Air Changes Per Hour
+
+The ACH formula is straightforward. Here it is:
+
+**ACH = (CFM × 60) ÷ Room Volume**
+
+Where:
+
+- **ACH** = air changes per hour (unitless)
+- **CFM** = airflow rate in cubic feet per minute
+- **60** = conversion factor (minutes to hours)
+- **Room Volume** = length × width × height, in cubic feet (cu ft)
+
+The "× 60" converts CFM (per minute) into cubic feet per hour, then dividing by the room's total air volume gives you the number of complete air replacements per hour.
+
+### Worked Example: Calculating ACH for a Bedroom
+
+Let's say you have a **12 ft × 14 ft bedroom with 8 ft ceilings** and a supply vent delivering **80 CFM**.
+
+1. Room volume: **12 × 14 × 8 = 1,344 cu ft**
+2. ACH = **(80 × 60) ÷ 1,344**
+3. ACH = **4,800 ÷ 1,344**
+4. **ACH = 3.57**
+
+That's a bit low for a bedroom (recommended **4–6 ACH**). You'd want to bump the airflow up to at least **90 CFM** to hit **4.0 ACH**.
+
+## ACH to CFM Conversion: The Reverse Formula
+
+Often, you know the *target* ACH and need to figure out how much airflow (CFM) to deliver. Just rearrange the formula:
+
+**CFM = (ACH × Room Volume) ÷ 60**
+
+This is the formula HVAC engineers use every day when sizing ductwork, selecting [exhaust fans](/bathroom-fan-cfm), and designing ventilation systems.
+
+### Worked Example: CFM Required for a Dental Office
+
+A dental operatory is **10 ft × 12 ft with 9 ft ceilings**. Per ASHRAE 170, dental treatment rooms need **6–12 ACH**. We'll target **8 ACH** for good air quality.
+
+1. Room volume: **10 × 12 × 9 = 1,080 cu ft**
+2. CFM = **(8 × 1,080) ÷ 60**
+3. CFM = **8,640 ÷ 60**
+4. **CFM = 144**
+
+You need **144 CFM** of supply air to achieve **8 ACH** in this dental operatory. That translates to roughly a **6-inch round duct** using standard [CFM duct sizing](/cfm-duct-sizing) charts.
+
+## Recommended Air Changes Per Hour by Room Type (Master Table)
+
+This is the big reference table. It covers residential, commercial, healthcare, and clean room ACH requirements from ASHRAE 62.1, ASHRAE 62.2, ASHRAE 170, and ISO 14644.
+
+### Table 1: Recommended ACH by Room/Building Type
+
+| Room / Building Type | Recommended Total ACH | Min Outdoor ACH | Source |
+|---|---|---|---|
+| **RESIDENTIAL** | | | |
+| Living rooms | 4–6 ACH | 0.35 ACH | ASHRAE 62.2 |
+| Bedrooms | 4–6 ACH | 0.35 ACH | ASHRAE 62.2 |
+| Kitchens | 7–8 ACH | 5 ACH continuous | ASHRAE 62.2 |
+| Bathrooms | 6–8 ACH | 50 CFM intermittent | ASHRAE 62.2 |
+| Garages (attached) | 4–6 ACH | — | Industry practice |
+| Laundry rooms | 5–7 ACH | — | Industry practice |
+| **COMMERCIAL** | | | |
+| Offices | 6–8 ACH | 5 CFM/person + 0.06 CFM/ft² | ASHRAE 62.1 |
+| Classrooms | 6–8 ACH | 10 CFM/person + 0.12 CFM/ft² | ASHRAE 62.1 |
+| Conference rooms | 6–8 ACH | 5 CFM/person + 0.06 CFM/ft² | ASHRAE 62.1 |
+| Restaurants / dining areas | 8–12 ACH | 7.5 CFM/person + 0.18 CFM/ft² | ASHRAE 62.1 |
+| Retail stores | 6–8 ACH | 7.5 CFM/person + 0.12 CFM/ft² | ASHRAE 62.1 |
+| Gyms / fitness centers | 6–8 ACH | 20 CFM/person | ASHRAE 62.1 |
+| Server rooms | 10–15 ACH | — | ASHRAE TC 9.9 |
+| **HEALTHCARE** | | | |
+| Patient rooms (general) | 6 ACH | 2 ACH | ASHRAE 170 |
+| Exam / treatment rooms | 6 ACH | 2 ACH | ASHRAE 170 |
+| Operating rooms | 20 ACH (min) | 4 ACH | ASHRAE 170 |
+| Dental offices / procedure rooms | 6–12 ACH | 2 ACH | ASHRAE 170 |
+| Airborne infection isolation (AII) | 12 ACH | 2 ACH | ASHRAE 170 / CDC |
+| Protective environments | 12 ACH | 2 ACH | ASHRAE 170 |
+| Emergency waiting rooms | 12 ACH | 2 ACH | ASHRAE 170 |
+| Laboratories (general) | 6–12 ACH | — | ASHRAE 170 / OSHA |
+| Pharmacy (compounding) | 12+ ACH | Per USP 797 | USP 797/800 |
+| **CLEAN ROOMS (ISO 14644)** | | | |
+| ISO Class 8 (Class 100,000) | 15–25 ACH | — | ISO 14644-4 |
+| ISO Class 7 (Class 10,000) | 40–60 ACH | — | ISO 14644-4 |
+| ISO Class 6 (Class 1,000) | 150–240 ACH | — | ISO 14644-4 |
+| ISO Class 5 (Class 100) | 240–480 ACH | — | ISO 14644-4 |
+| ISO Class 4 and below | 400–600+ ACH | — | ISO 14644-4 |
+
+*Sources: ASHRAE 62.1-2022, ASHRAE 62.2-2019, ASHRAE/ASHE 170-2021 (Table 7.1), ISO 14644-1:2015 / 14644-4, CDC Guidelines for Environmental Infection Control (2003).*
+
+## Residential ACH: Bedrooms, Kitchens, Bathrooms, and More
+
+For homes, ACH requirements come primarily from **ASHRAE Standard 62.2** — the residential ventilation standard. Here's what you need to know for each room type.
+
+### ACH for Bedrooms and Living Rooms
+
+ASHRAE 62.2 recommends a minimum of **0.35 ACH of outdoor air** for the entire home. In practice, bedrooms and living rooms are well-ventilated at **4–6 ACH** total (including recirculated air from your [HVAC system](/cold-air-return-vents)).
+
+For a typical **12 × 15 ft bedroom with 8 ft ceilings** (1,440 cu ft), hitting **5 ACH** requires:
+
+**CFM = (5 × 1,440) ÷ 60 = 120 CFM**
+
+That's about what a single well-sized supply register delivers.
+
+### ACH for Kitchens
+
+Kitchens generate more contaminants — cooking fumes, moisture, combustion byproducts — so they need **7–8 ACH**. ASHRAE 62.2 requires either **100 CFM intermittent exhaust** (a range hood) or **5 ACH continuous** ventilation for the kitchen volume.
+
+A **10 × 12 ft kitchen with 9 ft ceilings** needs:
+
+**CFM = (8 × 1,080) ÷ 60 = 144 CFM**
+
+Most range hoods deliver **150–400 CFM**, which more than covers this. You can learn more about [proper bathroom fan venting](/bathroom-fan-venting) for similar exhaust principles.
+
+### ACH for Bathrooms
+
+Bathrooms need **6–8 ACH** due to high moisture and odor generation. ASHRAE 62.2 specifies **50 CFM intermittent** or **20 CFM continuous** exhaust. Check our [bathroom exhaust fan CFM guide](/bathroom-fan-cfm) for detailed sizing.
+
+### ACH for Garages
+
+Attached garages should have **4–6 ACH** to dilute carbon monoxide, volatile organic compounds (VOCs), and fuel vapors. This is especially important for garages connected to living spaces.
+
+### Natural Infiltration ACH in Homes
+
+Even without mechanical ventilation, homes exchange air through cracks, gaps, and other envelope leaks. This is called **natural infiltration**.
+
+For modern, code-built homes, natural infiltration is approximately **0.15–0.25 ACH**. Older, leaky homes can see **0.5–1.0+ ACH** from infiltration alone. ASHRAE 62.2 sets **0.35 ACH** as the minimum outdoor air requirement — meaning most new homes need mechanical ventilation to supplement natural leakage.
+
+### Table 2: Residential ACH Summary
+
+| Room Type | Recommended ACH | Min Exhaust (ASHRAE 62.2) | Typical CFM Needed |
+|---|---|---|---|
+| Bedrooms | 4–6 ACH | — | 90–120 CFM |
+| Living rooms | 4–6 ACH | — | 120–180 CFM |
+| Kitchens | 7–8 ACH | 100 CFM intermittent | 140–200 CFM |
+| Bathrooms | 6–8 ACH | 50 CFM intermittent | 50–80 CFM |
+| Garages | 4–6 ACH | — | 100–200 CFM |
+| Whole house (outdoor air) | 0.35 ACH min | Per 62.2 formula | 30–100 CFM |
+
+*CFM estimates based on typical room sizes. Source: ASHRAE 62.2-2019.*
+
+## Commercial and Institutional ACH Requirements
+
+Commercial ventilation rates come from **ASHRAE Standard 62.1**, which uses a dual-rate formula: CFM per person plus CFM per square foot of floor area.
+
+### ACH for Offices, Classrooms, and Restaurants
+
+**Offices** typically achieve **6–8 ACH** with ASHRAE 62.1's requirement of **5 CFM/person + 0.06 CFM/ft²** at default occupancy. Classrooms need more outdoor air — **10 CFM/person** — because of higher occupant density.
+
+Restaurants and dining areas are the most demanding commercial spaces at **8–12 ACH**, driven by cooking odors, heat, and dense occupancy.
+
+### Table 3: ASHRAE 62.1 Ventilation Rates for Common Commercial Spaces
+
+| Space Type | CFM/Person (Rp) | CFM/ft² (Ra) | Default Occupancy (per 1,000 ft²) | Typical ACH |
+|---|---|---|---|---|
+| Office space | 5 | 0.06 | 5 people | 6–8 |
+| Classroom (age 9+) | 10 | 0.12 | 35 people | 6–8 |
+| Lecture hall | 7.5 | 0.06 | 65 people | 6–10 |
+| Restaurant dining | 7.5 | 0.18 | 70 people | 8–12 |
+| Retail (sales) | 7.5 | 0.12 | 15 people | 6–8 |
+| Gym / exercise | 20 | 0.06 | 7 people | 6–8 |
+
+*Source: ASHRAE 62.1-2022, Table 6.2.2.1.*
+
+### ACH for Hospitals and Healthcare Facilities (ASHRAE 170 / CDC)
+
+Healthcare ventilation is governed by **ASHRAE/ASHE Standard 170**, which the CDC, Joint Commission, and CMS all enforce. These are minimum requirements — many facilities exceed them.
+
+**Operating rooms** require a minimum of **20 total ACH** with at least **4 outdoor ACH** and must maintain positive pressure relative to adjacent spaces. The 2021 edition increased filter requirements to **MERV 16** minimum.
+
+**Airborne infection isolation (AII) rooms** — used for TB, measles, and other airborne pathogens — need **12 ACH** with **negative pressure** to prevent contaminated air from escaping to corridors.
+
+**Patient rooms** require a minimum of **6 total ACH** with **2 outdoor ACH**.
+
+The CDC's general guidance for non-healthcare buildings recommends targeting **5 or more ACH** of clean air to reduce viral transmission — a benchmark from their post-COVID ventilation guidance.
+
+### Table 4: ASHRAE 170 Healthcare Ventilation Requirements
+
+| Healthcare Space | Pressure | Min Outdoor ACH | Min Total ACH |
+|---|---|---|---|
+| Operating rooms | Positive | 4 | 20 |
+| Patient rooms (general) | Neutral | 2 | 6 |
+| AII rooms (TB, measles) | Negative | 2 | 12 |
+| Protective environments | Positive | 2 | 12 |
+| Emergency waiting rooms | Negative | 2 | 12 |
+| Exam / treatment rooms | Neutral | 2 | 6 |
+| Bronchoscopy | Negative | 2 | 12 |
+| Recovery rooms | Neutral | 2 | 6 |
+| Autopsy | Negative | 2 | 12 |
+| Pharmacy (compounding) | Positive | — | 12+ |
+
+*Source: ASHRAE/ASHE Standard 170-2021, Table 7.1; CDC Guidelines for Environmental Infection Control (2003).*
+
+### ACH for Clean Rooms (ISO 14644)
+
+Clean rooms are on an entirely different scale. While a hospital operating room needs **20 ACH**, an **ISO Class 5 clean room** needs **240–480 ACH** — and an **ISO Class 3** can exceed **500+ ACH**, often expressed as airflow velocity rather than air changes.
+
+The ACH requirements scale with the ISO classification because each step down the scale permits dramatically fewer airborne particles per cubic meter.
+
+### Table 5: Clean Room ACH by ISO Class
+
+| ISO Class | Fed Std 209E Equivalent | Typical ACH Range | Airflow Type |
+|---|---|---|---|
+| ISO Class 8 | Class 100,000 | 15–25 ACH | Non-unidirectional (mixed) |
+| ISO Class 7 | Class 10,000 | 40–60 ACH | Non-unidirectional |
+| ISO Class 6 | Class 1,000 | 150–240 ACH | Non-unidirectional |
+| ISO Class 5 | Class 100 | 240–480 ACH | Unidirectional or mixed |
+| ISO Class 4 | Class 10 | 400–600+ ACH | Unidirectional (laminar) |
+
+*Source: ISO 14644-1:2015, ISO 14644-4; Angstrom Technology; American Cleanroom Systems.*
+
+### ACH for Server Rooms
+
+Server rooms need **10–15 ACH** to manage heat loads from equipment. This is separate from cooling capacity — the ACH ensures adequate air circulation to prevent hot spots. ASHRAE Technical Committee 9.9 covers thermal guidelines for data processing environments.
+
+## How to Measure ACH: Blower Door Tests and ACH50
+
+For existing homes, the most common way to measure air exchange is a **blower door test**. Here's how it works and how to interpret the results.
+
+### What Is ACH50?
+
+A blower door test depressurizes your home to **50 Pascals** and measures how much air leaks through the building envelope. The result is **ACH50** — air changes per hour at 50 Pa of pressure.
+
+**ACH50 = (CFM50 × 60) ÷ Building Volume (cu ft)**
+
+### Converting ACH50 to Natural ACH
+
+The 50 Pa test pressure is much higher than natural conditions (typically **1–4 Pa**). To estimate what your home actually experiences day-to-day, you divide by an **N-factor** developed by Lawrence Berkeley National Laboratory (LBL):
+
+**ACHnatural ≈ ACH50 ÷ N**
+
+The N-factor varies by climate, building height, and site exposure:
+
+- **N = 20** is the conservative rule of thumb for most situations.
+- Cold, windy climates with tall buildings: **N = 14.8–17**
+- Mild, sheltered climates: **N = 22–30**
+
+### Table 6: ACH50 Benchmarks and Natural ACH Conversion
+
+| Building Type | Typical ACH50 | N-Factor | Estimated ACHnat |
+|---|---|---|---|
+| Passive House certified | ≤ 0.6 ACH50 | 20 | ≤ 0.03 ACH |
+| High-performance new home | 1.0–2.0 ACH50 | 20 | 0.05–0.10 ACH |
+| Energy Star new home | 3.0–5.0 ACH50 | 20 | 0.15–0.25 ACH |
+| Code minimum new home | 3.0 ACH50 | 20 | ~0.15 ACH |
+| Average existing home | 5–10 ACH50 | 20 | 0.25–0.50 ACH |
+| Older/leaky home | 10–20+ ACH50 | 20 | 0.50–1.0+ ACH |
+
+*Source: LBL infiltration method; ASHRAE Standard 119; Building Performance Association; Passive House Institute.*
+
+### Worked Example: Converting a Blower Door Test to Natural ACH
+
+Your home tests at **5.0 ACH50** during a blower door test. It's a two-story home in a moderately exposed location in Climate Zone 4.
+
+1. ACH50 = **5.0**
+2. N-factor (general) = **20**
+3. ACHnat = **5.0 ÷ 20 = 0.25 ACH**
+
+Your home naturally exchanges its entire air volume roughly **once every 4 hours**. Since ASHRAE 62.2 requires **0.35 ACH** minimum outdoor air, you'd need mechanical ventilation to make up the **0.10 ACH gap** — which is exactly what a whole-house [exhaust fan or ERV system](/cold-air-return-vents) provides.
+
+## ACH and Air Purifiers: How to Size a Purifier by Target ACH
+
+Air purifiers don't bring in outdoor air — they filter and recirculate indoor air. Their effectiveness is measured in **equivalent air changes per hour (eACH)**, using the **CADR (Clean Air Delivery Rate)** metric.
+
+The formula to calculate ACH from a purifier's CADR:
+
+**ACH = (CADR in CFM × 60) ÷ Room Volume (cu ft)**
+
+And to find the CADR you need for a target ACH:
+
+**Required CADR (CFM) = (Room Volume × Target ACH) ÷ 60**
+
+### Key ACH Targets for Air Purifiers
+
+- **AHAM standard**: **4.8 ACH** (basis for manufacturer room size ratings)
+- **CDC recommendation**: **5+ ACH** clean air for reducing viral transmission
+- **ASHRAE for schools**: **6 ACH**
+- **Lancet Commission tiers**: **4 ACH** (Good), **6 ACH** (Better), **>6 ACH** (Best)
+
+You can check our [air purifier sizing guide](/air-purifier-sizing) and [CADR rating explained](/cadr-rating) for detailed purifier selection. [Placement matters too](/where-to-place-air-purifier) — a well-placed purifier at **4 ACH** can outperform a poorly placed one at **6 ACH**.
+
+### Worked Example: Sizing an Air Purifier for 5 ACH
+
+Your bedroom is **14 ft × 16 ft with 8 ft ceilings**. You want **5 ACH** of filtration.
+
+1. Room volume: **14 × 16 × 8 = 1,792 cu ft**
+2. Required CADR = **(1,792 × 5) ÷ 60**
+3. Required CADR = **8,960 ÷ 60**
+4. **Required CADR = 149.3 CFM**
+
+Look for a purifier with a **smoke CADR of at least 150 CFM** (or **255 m³/h**). The [MERV rating](/merv-rating-chart) of your [furnace filter](/furnace-filter-guide) also contributes to equivalent ACH — a MERV 13 filter on a recirculating HVAC system adds significant eACH to every room it serves.
+
+## Additional Worked Examples
+
+### Example 4: Clean Room ISO 7 CFM Requirement
+
+An ISO 7 clean room measures **20 ft × 30 ft with 10 ft ceilings**. The target is **60 ACH** (top of the ISO 7 range).
+
+1. Room volume: **20 × 30 × 10 = 6,000 cu ft**
+2. CFM = **(60 × 6,000) ÷ 60**
+3. **CFM = 6,000 CFM**
+
+That's **6,000 CFM** — requiring a substantial HVAC system with HEPA filtration. For reference, a typical residential furnace moves about **400–800 CFM**.
+
+### Example 5: Bathroom Exhaust Sizing by ACH
+
+A **6 ft × 8 ft bathroom with 8 ft ceilings** needs **8 ACH**.
+
+1. Room volume: **6 × 8 × 8 = 384 cu ft**
+2. CFM = **(8 × 384) ÷ 60**
+3. **CFM = 51.2 CFM**
+
+A **50 CFM exhaust fan** nearly hits the mark — and that aligns perfectly with ASHRAE 62.2's minimum requirement of **50 CFM intermittent** for bathrooms. Check our [bathroom fan CFM calculator](/bathroom-fan-cfm) for exact sizing.
+
+## CDC Table: Airborne Contaminant Clearance Times by ACH
+
+One critical application of ACH in healthcare is determining how long to wait before re-entering a room after a patient with an airborne infection has left. The CDC publishes this reference table.
+
+### Table 7: CDC Airborne Contaminant Removal Times
+
+| ACH | Time for 99% Removal (min) | Time for 99.9% Removal (min) |
+|---|---|---|
+| 2 | 138 min | 207 min |
+| 4 | 69 min | 104 min |
+| 6 | 46 min | 69 min |
+| 8 | 35 min | 52 min |
+| 10 | 28 min | 41 min |
+| 12 | 23 min | 35 min |
+| 15 | 18 min | 28 min |
+| 20 | 14 min | 21 min |
+| 50 | 6 min | 8 min |
+
+*Assumes perfect mixing (k=1) and no active aerosol source. Real-world mixing factor k = 3–10 increases times significantly. Source: CDC Guidelines for Environmental Infection Control in Health-Care Facilities (2003), Table B.1.*
+
+This table shows exactly why operating rooms need **20 ACH** — at that rate, **99% of airborne contaminants are cleared in just 14 minutes**. At **6 ACH** (standard patient rooms), the same clearance takes **46 minutes**. Understanding this relationship is critical for [heating load calculations](/heating-btu-calculator) too, since infiltration ACH directly affects the BTU requirement.
+
+## Frequently Asked Questions
+
+### What Is a Good ACH Rate for a House?
+
+For residential spaces, **4–6 ACH** is considered good for most rooms. ASHRAE 62.2 requires a minimum of **0.35 ACH of outdoor air** for the whole house. Kitchens and bathrooms need higher rates — **7–8 ACH** and **6–8 ACH** respectively — because they produce more contaminants and moisture.
+
+### How Do You Convert ACH to CFM?
+
+Use the formula: **CFM = (ACH × Room Volume in cu ft) ÷ 60**. For example, to achieve **6 ACH** in a **1,200 cu ft** room, you need **(6 × 1,200) ÷ 60 = 120 CFM**. Check our [CFM calculator](/cfm-calculator) for instant results.
+
+### What ACH Is Required for a Hospital Operating Room?
+
+ASHRAE Standard 170-2021 requires a minimum of **20 total ACH** with at least **4 outdoor ACH** for operating rooms. ORs must also maintain **positive pressure** relative to adjacent spaces and use **MERV 16 minimum filtration** (HEPA for orthopedic and transplant ORs).
+
+### What Is the Difference Between ACH and CFM?
+
+**CFM** (cubic feet per minute) measures the volume of air moving through a space. **ACH** puts that airflow in context by relating it to the room's total volume. Two rooms with the same **100 CFM** supply will have very different ACH values if one is a small bathroom and the other is a large living room.
+
+### How Does ACH Affect Indoor Humidity?
+
+Higher ACH rates mean more air exchange with the outdoors, which can increase or decrease [indoor humidity](/indoor-humidity-guide) depending on your climate. In humid climates, excessive ACH can raise indoor moisture levels. In dry climates, high ACH drops humidity. Balancing ACH with humidity control is essential for both comfort and preventing mold growth.
+
+### What ACH Do Air Purifiers Provide?
+
+That depends on the purifier's CADR and your room size. Use the formula: **ACH = (CADR in CFM × 60) ÷ Room Volume**. AHAM rates purifiers at **4.8 ACH** for their recommended room sizes, but the CDC suggests targeting **5+ ACH** for viral protection. A purifier with a **CADR of 200 CFM** in a **1,500 cu ft** room delivers **8 ACH** — that's excellent.
+
+## Sources and References
+
+1. **ASHRAE Standard 62.1-2022** — Ventilation and Acceptable Indoor Air Quality. [ashrae.org](https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2)
+2. **ASHRAE Standard 62.2-2019** — Ventilation and Acceptable Indoor Air Quality in Residential Buildings. [ashrae.org](https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2)
+3. **ASHRAE/ASHE Standard 170-2021** — Ventilation of Health Care Facilities, Table 7.1. [ashrae.org](https://www.ashrae.org/technical-resources/standards-and-guidelines/standards-addenda/ansi-ashrae-ashe-standard-170-2017)
+4. **CDC** — Guidelines for Environmental Infection Control in Health-Care Facilities (2003), Table B.1. [cdc.gov](https://www.cdc.gov/infection-control/hcp/environmental-control/appendix-b-air.html)
+5. **CDC/NIOSH** — Ventilation in Buildings: Aim for 5+ ACH. [cdc.gov](https://www.cdc.gov/niosh/ventilation/prevention/Aim-for-5.html)
+6. **ISO 14644-1:2015** — Cleanrooms and Associated Controlled Environments. [iso.org](https://www.iso.org/standard/53394.html)
+7. **ISO 14644-4** — Cleanroom Design, Construction, and Start-up.
+8. **Lawrence Berkeley National Laboratory** — ACH50 to ACHnat Conversion (N-Factor Method). [mdpi.com](https://www.mdpi.com/1996-1073/14/4/912)
+9. **AHAM AC-1 Standard** — CADR Testing for Portable Air Cleaners.
+10. **Lancet COVID-19 Commission** — ACH Tiers for Indoor Air Quality (4/6/>6 ACH).
+11. **ASHRAE Standard 119** — Normalized Leakage Definition.
+12. **Building Performance Association** — ACH50 to ACHnat Field Guide. [building-performance.org](https://building-performance.org/bpa-journal/ach50-achnat/)
+
+---
+
+If you have a specific room or building type that isn't covered in our tables, just drop your room dimensions and use case in the comments below and we'll help you calculate the right ACH and CFM.

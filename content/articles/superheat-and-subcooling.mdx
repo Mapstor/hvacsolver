@@ -1,0 +1,421 @@
+---
+title: "Superheat and Subcooling — Complete HVAC Technician Guide"
+slug: "superheat-and-subcooling"
+description: "If you can answer that in your head, you're ahead of most techs on the truck. If you can't, this guide will get you there."
+pillar: "refrigerants"
+pillarHub: "/refrigerants"
+hasCalculator: false
+seoTitle: "Superheat and Subcooling — Complete HVAC Technician Guide"
+---
+
+# Superheat and Subcooling — Complete HVAC Technician Guide
+
+*Formulas, Target Charts, Diagnostic Troubleshooting Matrix, and Worked Examples for R-410A, R-22, R-407C, and R-134a*
+
+> *You're on a callback. Homeowner says the AC isn't cooling. You hook up your manifold gauges: suction pressure reads 150 psig on an R-410A system, and your pipe clamp thermometer shows 58°F on the suction line. Quick — what's the superheat? Is this system undercharged, overcharged, or is the metering device failing?*
+
+If you can answer that in your head, you're ahead of most techs on the truck. **If you can't, this guide will get you there.**
+
+Superheat and subcooling are the two most important diagnostic measurements in HVAC. They tell you what's happening inside the refrigeration circuit — specifically, whether the evaporator and condenser are doing their jobs. Get these two numbers right, and you can diagnose undercharge, overcharge, restrictions, metering device failures, and airflow problems **without replacing a single part.**
+
+We've consolidated everything you need into one page: definitions, formulas, step-by-step measurement procedures, target charts by refrigerant and metering device type, a complete diagnostic troubleshooting matrix, and six worked examples with real pressures and temperatures. Let's get into it.
+
+## What Is Superheat in HVAC?
+
+Superheat is the temperature of refrigerant vapor *above* its boiling point (saturation temperature) at a given pressure. In practical terms, it tells you how much extra heat the refrigerant absorbed after fully changing from liquid to vapor inside the evaporator.
+
+Here's the deal: the entire purpose of superheat is to protect the compressor. Compressors are designed to pump vapor, not liquid. If liquid refrigerant makes it back to the compressor, you get **flooding** (liquid in the crankcase during operation) or **slugging** (liquid entering the compression chamber). Slugging can snap connecting rods, break valves, and destroy head gaskets — often in seconds.
+
+Adequate superheat confirms that all the liquid refrigerant has boiled off before leaving the evaporator. Every degree of superheat is one degree of safety margin between your compressor and catastrophic damage.
+
+## Superheat Formula
+
+**Superheat (°F) = Suction Line Temperature — Saturation Temperature at Suction Pressure**
+
+The suction line temperature is the actual measured temperature on the large copper pipe (vapor line) near the condensing unit. The saturation temperature comes from a **pressure-temperature (PT) chart** for the specific refrigerant — you convert the suction pressure gauge reading to its corresponding saturation temperature.
+
+### How to Measure Superheat (Step-by-Step)
+
+You'll need a manifold gauge set and a digital thermometer with a pipe clamp probe. Here's the process:
+
+1.  Let the system run for at least 10-15 minutes to stabilize pressures and temperatures.
+
+2.  Connect the low-side (blue) gauge hose to the suction service valve on the outdoor unit.
+
+3.  Read and record the suction pressure in psig from the low-side gauge.
+
+4.  Using a PT chart for the system's refrigerant, convert the suction pressure to saturation temperature. Example: 118 psig on R-410A = 40°F saturation temperature.
+
+5.  Attach a pipe clamp thermometer to the suction line (large copper pipe) at the outdoor unit. Keep it in the shade and insulate from ambient air.
+
+6.  Record the actual suction line temperature. Example: 52°F.
+
+7.  Subtract: Suction Line Temp (52°F) — Saturation Temp (40°F) = 12°F superheat.
+
+8.  Compare to the target superheat for the system's metering device type (see target table below).
+
+***Pro tip:*** Measure the suction line temperature as close to the outdoor unit as possible — not at the evaporator outlet. The suction line picks up heat along its length, so measuring at the compressor gives you **total superheat**, which is what matters for compressor protection and for charging fixed-orifice systems.
+
+## What Is Subcooling in HVAC?
+
+Subcooling is the temperature of liquid refrigerant *below* its condensing point (saturation temperature) at the measured liquid line pressure. It tells you how much the liquid has been cooled after it fully changed from vapor to liquid in the condenser.
+
+Subcooling serves a critical purpose: it ensures that only **100% liquid refrigerant** reaches the metering device (TXV or fixed orifice). If the refrigerant arriving at the metering device contains any vapor bubbles — called **flash gas** — the metering device can't regulate flow properly, and system capacity drops significantly.
+
+Think of subcooling as a liquid buffer. The more subcooled the liquid is, the more margin you have before it starts flashing back to vapor in the liquid line — especially on long line sets or systems with vertical risers.
+
+## Subcooling Formula
+
+**Subcooling (°F) = Saturation Temp at Liquid Line Pressure — Liquid Line Temperature**
+
+Notice the formula is reversed from superheat. The saturation temperature will always be *higher* than the actual liquid line temperature (because the liquid has been cooled below its condensing point). You get the saturation temperature by converting the high-side pressure reading using a PT chart.
+
+### How to Measure Subcooling (Step-by-Step)
+
+You'll need the same tools — manifold gauges and a digital pipe clamp thermometer:
+
+1.  Let the system run for at least 10-15 minutes to stabilize.
+
+2.  Connect the high-side (red) gauge hose to the liquid line service valve at the outdoor unit.
+
+3.  Read and record the liquid line (high-side) pressure in psig.
+
+4.  Using a PT chart, convert the high-side pressure to saturation temperature. Example: 350 psig on R-410A = 107.1°F saturation temperature.
+
+5.  Attach a pipe clamp thermometer to the liquid line (small copper pipe) at the outdoor unit near the condenser outlet.
+
+6.  Record the actual liquid line temperature. Example: 97°F.
+
+7.  Subtract: Saturation Temp (107.1°F) — Liquid Line Temp (97°F) = 10.1°F subcooling.
+
+8.  Compare to the manufacturer's target subcooling (typically 8-14°F for TXV systems).
+
+***Important:*** Always check the manufacturer's data plate for the target subcooling value. If it's not listed, **10-12°F** is a safe general target for most residential TXV systems. Add approximately **5°F of subcooling for every 30 feet of liquid line lift**.
+
+## Target Superheat and Subcooling Chart (By Metering Device and Refrigerant)
+
+Target values depend on the metering device type and the refrigerant. The table below gives you the reference ranges. Always defer to manufacturer specifications when available.
+
+  ------------------------------------------------------------------------------------------------------------------------------------------
+  **Metering Device**          **Superheat Target**   **Subcooling Target**   **Charging Method**    **Notes**
+| TXV / TEV | 8-12°F | -14°F                 C | arge by subcooling   T | V controls SH; SC determines charge |
+| --- | --- | --- | --- | --- |
+| Fixed Orifice / Piston | 5-30°F (use chart) | onitor only | harge by superheat | se indoor WB + outdoor DB chart |
+| Capillary Tube | 5-30°F (use chart) | onitor only | harge by superheat | ame method as fixed orifice |
+
+
+## R-410A, R-22, R-407C, and R-134a Target Values
+
+  ----------------------------------------------------------------------------------------------------------------------------------
+  **Refrigerant**   **Evap Sat Temp**   **Suction (psig)**   **Cond Sat Temp**   **High Side (psig)**   **Target SH / SC**
+| R-410A | 40-45°F | 18-130 psig        1 | 5-120°F          34 | -420 psig          SH: | 10-15°F / SC: 8-14°F |
+| --- | --- | --- | --- | --- | --- |
+| R-22 | 40-45°F | 8-76 psig          1 | 5-120°F          21 | -260 psig          SH: | 10-15°F / SC: 8-16°F |
+| R-407C | 40-45°F | 2-70 psig          1 | 5-120°F          21 | -270 psig          SH: | 10-15°F / SC: 8-16°F |
+| R-134a | 35-40°F | 6-35 psig          1 | 5-120°F          13 | -175 psig          SH: | 8-12°F / SC: 8-14°F |
+
+
+These are typical ranges for standard residential AC under normal conditions (**75-95°F outdoor ambient**). Actual targets vary by manufacturer and system design. Always check the data plate.
+
+For complete PT references, see our **Refrigerant PT Charts** (/refrigerant-pt-charts). For how different refrigerant properties affect target values, see **Refrigerant Types** (/refrigerant-types).
+
+## TXV vs Fixed Orifice: Which Measurement to Use for Charging
+
+**TXV systems: charge by subcooling.** A thermostatic expansion valve actively regulates superheat by adjusting refrigerant flow into the evaporator. Because the TXV controls superheat (typically 8-12°F), superheat is no longer an independent indicator of charge. Subcooling becomes the variable that changes with charge level.
+
+**Fixed orifice / piston systems: charge by superheat.** A fixed orifice has no mechanism to adjust flow. Superheat varies directly with charge level and conditions. Use the target superheat charging chart (indoor wet bulb + outdoor dry bulb) to determine the correct target.
+
+***Critical point:*** Even on TXV systems, always check superheat in addition to subcooling. If the TXV is sticking, hunting, or has a loose sensing bulb, superheat will be abnormal even when subcooling looks fine. Checking both gives you the complete picture.
+
+For more on verifying correct charge levels, see our **AC Refrigerant Charge** guide (/ac-refrigerant-charge).
+
+## Superheat Charging Chart for Fixed Orifice Systems
+
+For fixed orifice systems, target superheat changes with conditions. You need two measurements: **indoor wet bulb (WB)** at the return air duct, and **outdoor dry bulb (DB)** at the condenser coil.
+
+  ----------------------------------------------------------------------------------------------------
+  **OD DB ↓ / ID WB →**   **57°F**   **60°F**   **63°F**   **66°F**   **69°F**   **72°F**   **76°F**
+| 75°F | 21°F | 17°F | 14°F | 10°F | 7°F | \* | \* |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 80°F | 25°F | 22°F | 18°F | 14°F | 10°F | 7°F | \* |
+| 85°F | 30°F | 26°F | 22°F | 18°F | 14°F | 10°F | 5°F |
+| 90°F | 34°F | 30°F | 26°F | 22°F | 18°F | 14°F | 9°F |
+| 95°F | —        3 | °F       3 | °F       2 | °F       2 | °F       1 | °F       1 | °F |
+| 100°F | —        — | 34° | 30° | 26° | 22° | 16° |  |
+| 105°F | —        — | — | 34°F | 30°F | 26°F | 20°F |  |
+| 110°F | —        — | — | — | 34°F | 30°F | 24°F |  |
+| 115°F | —        — | — | — | — | 34°F | 28°F |  |
+
+
+**\* = Target superheat below 5°F.** Compressor flooding risk. Do not charge to this value. Replace the fixed orifice with a TXV or add a suction line accumulator.
+
+**Quick formula:** Target Superheat = (3 × Indoor WB — 80 — Outdoor DB) ÷ 2. This approximation gets within ±1-2°F of most manufacturer charts.
+
+***Important:*** Target superheat changes as the building cools and indoor WB drops. Re-check after adding or removing refrigerant. Allow **10-15 minutes** for the system to stabilize.
+
+## Superheat and Subcooling Diagnostic Troubleshooting Table
+
+This is the chart you keep in your service bag. Superheat tells you what's happening in the evaporator. Subcooling tells you what's happening in the condenser. Read them together for the full picture.
+
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **SH**     **SC**     **Probable Cause**                               **What's Happening**                                **Fix**                                     **Related Article**
+| HIGH | LOW | Undercharge | Not enough refrigerant in evaporator or condenser | Find leak, then add refrigerant | /ac-refrigerant-charge |
+| --- | --- | --- | --- | --- | --- |
+| LOW | HIGH | Overcharge | Excess liquid in condenser; evaporator flooding | Recover refrigerant to 8-14°F SC | ac-not-blowing-cold |
+| HIGH | HIGH | Restriction / metering device underfeeding | Refrigerant backs up but can't reach evaporator | Check liquid line, TXV bulb, filter drier | /ac-short-cycling |
+| LOW | LOW | Low evaporator airflow / oversized orifice | Evaporator floods, condenser empties | Check blower, clean coil, verify orifice | /window-ac-freezing-up |
+| HIGH | NORM | Restricted metering device | Condenser fine, evaporator starving | Inspect TXV, clean condenser | /ac-making-noise |
+| NORM | HIGH | Mild overcharge (TXV compensating) | TXV maintains SH but excess charge stacks | Recover refrigerant; clean condenser | /seer-rating |
+| NORM | NORM | System OK | Properly charged, good airflow | No action needed | --- |
+
+
+**Never adjust charge based on one measurement alone.** Measure both superheat and subcooling, check airflow, verify outdoor ambient, and compare amp draw to the compressor's rated load amps before making changes.
+
+## What Causes High Superheat?
+
+High superheat means the evaporator is starving — not enough liquid refrigerant is reaching the coil. Common causes: **low refrigerant charge** (most common), **restricted metering device** (clogged TXV screen, stuck piston), **restricted liquid line** (kinked tubing, clogged filter drier), and **excessive heat load** on the evaporator during pulldown.
+
+On fixed orifice systems, high superheat during high-load conditions is normal. Always compare to the target superheat chart before adding refrigerant.
+
+## What Causes Low Superheat?
+
+Low superheat means the evaporator is flooding — liquid isn't fully boiling off. Causes: **overcharged system**, **oversized metering device**, **low evaporator airflow** (dirty filter, failed blower), and **low outdoor ambient**. If you see low superheat with a cold, sweating suction line, take action immediately.
+
+Low superheat is a common cause of AC units freezing up (/window-ac-freezing-up) and compressor noise from liquid slugging (/ac-making-noise).
+
+## What Causes Low Subcooling?
+
+Low subcooling means the condenser is nearly empty of liquid. Causes: **low refrigerant charge** (system has a leak), **undersized condenser**, and **long liquid lines** without additional charge. Low subcooling + high superheat = classic undercharge.
+
+## What Causes High Subcooling?
+
+High subcooling means too much liquid is backing up in the condenser. Causes: **overcharge** (most common), **restricted metering device**, and **dirty condenser coil**. For every 1°F of subcooling above normal, capacity increases \~0.5%, but achieving it through overcharging raises head pressure, which *decreases* overall efficiency.
+
+## Superheat and Subcooling Calculator
+
+\
+
+### Worked Examples: Superheat and Subcooling Calculations
+
+### Example 1: R-410A TXV System — Verifying Correct Charge
+
+Let's say you're servicing a 3-ton Carrier R-410A split system with a TXV in Dallas, Texas. It's 95°F outside. The homeowner wants a maintenance check.
+
+  -----------------------------------------------------------------------
+  **Measurement**                **Value**
+| Suction pressure | 130 psig |
+| --- | --- |
+| Suction line temp | 55°F |
+| Liquid line pressure | 370 psig |
+| Liquid line temp | 99°F |
+
+
+From the R-410A PT chart: 130 psig = **43.8°F** sat temp. Superheat = 55 — 43.8 = **11.2°F**. Within the TXV range of 8-12°F.
+
+High side: 370 psig = **109.3°F** sat temp. Subcooling = 109.3 — 99 = **10.3°F**. Within the 10-12°F target on the data plate.
+
+**Verdict: System is properly charged.** Both readings within target. No adjustment needed.
+
+### Example 2: R-410A Fixed Orifice — Charging by Target Superheat
+
+You're charging a Goodman R-410A system with a piston in Atlanta, Georgia. Outdoor DB: 90°F. Indoor WB at the return duct: 66°F.
+
+From the charging chart: 90°F outdoor × 66°F indoor WB = **target superheat of 22°F**.
+
+Readings: suction = 122 psig (sat temp = **41.8°F**), suction line = 70°F. Actual superheat = 70 — 41.8 = **28.2°F**. That's 6°F above target — system needs refrigerant.
+
+After adding R-410A slowly and waiting 10 minutes: suction = 126 psig (sat temp = **42.8°F**), suction line = 64°F. New superheat = 64 — 42.8 = **21.2°F**. Within ±3°F of target. **Charge is correct.**
+
+### Example 3: R-22 Legacy System — Maintenance Check
+
+Maintenance call on a 15-year-old Trane R-22 system with TXV in Phoenix, Arizona. It's 105°F outside.
+
+Readings: suction = 75 psig (R-22 sat temp = **44.5°F**), suction line = 56°F. Superheat = 56 — 44.5 = **11.5°F**. TXV controlling normally.
+
+Liquid line = 250 psig (sat temp = **117.2°F**), liquid line temp = 105°F. Subcooling = 117.2 — 105 = **12.2°F**. Within range.
+
+**Verdict: System operating correctly.** R-22 is no longer manufactured, so maintaining existing charge is critical. If this system develops a leak, discuss a refrigerant retrofit or replacement with the homeowner.
+
+### Example 4: Diagnosing an Undercharge (High SH + Low SC)
+
+Service call: AC isn't keeping up. 92°F outside. R-410A with TXV.
+
+Readings: suction = 105 psig (sat temp = **36.7°F**), suction line = 65°F. Superheat = 65 — 36.7 = **28.3°F** (very high).
+
+Liquid line = 300 psig (sat temp = **96.9°F**), liquid line = 93°F. Subcooling = 96.9 — 93 = **3.9°F** (very low).
+
+**Diagnosis: Classic undercharge.** High superheat = evaporator starving. Low subcooling = condenser nearly empty. Find and repair the leak before adding refrigerant. The homeowner is likely experiencing poor cooling (/ac-not-blowing-cold) and possibly short cycling (/ac-short-cycling).
+
+### Example 5: Diagnosing an Overcharge (Low SH + High SC)
+
+Service call: compressor louder than normal, high amp draw. R-410A with TXV, 88°F outside.
+
+Readings: suction = 140 psig (sat temp = **47.9°F**), suction line = 50°F. Superheat = 50 — 47.9 = **2.1°F** (dangerously low).
+
+Liquid line = 420 psig (sat temp = **120.7°F**), liquid line = 98°F. Subcooling = 120.7 — 98 = **22.7°F** (very high).
+
+**Diagnosis: Overcharged system.** Condenser packed with liquid. Evaporator flooding. Compressor at immediate risk. Slowly recover refrigerant to target **10-12°F subcooling**. Verify superheat returns to 8-12°F and amp draw drops to rated.
+
+### Example 6: Heat Pump in Heating Mode
+
+Checking a Lennox R-410A heat pump running in heating mode in Nashville, Tennessee. 38°F outside.
+
+In heating mode, the outdoor coil is the evaporator and the indoor coil is the condenser. **Superheat** is measured at the outdoor unit. **Subcooling** is measured at the indoor unit.
+
+Outdoor suction = 95 psig (sat temp = **32.8°F**), suction line = 42°F. Superheat = 42 — 32.8 = **9.2°F**. Normal.
+
+Indoor liquid line = 340 psig (sat temp = **105.1°F**), liquid line = 94°F. Subcooling = 105.1 — 94 = **11.1°F**. Within target.
+
+**Verdict: Heat pump operating correctly in heating mode.** Remember — measurement points reverse between cooling and heating. For more on temperature effects, see **Heat Pump Efficiency by Temperature** (/heat-pump-efficiency-temperature).
+
+## Consequences of Incorrect Superheat and Subcooling
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Condition**             **What Happens**                                                                                                   **Potential Damage**
+| Superheat too low | Liquid returns to compressor (flooding). Oil foams and dilutes. Severe cases: liquid enters cylinder (slugging). | Broken valves, connecting rods, gaskets. Bearing wear. Compressor failure. |
+| --- | --- | --- |
+| Superheat too high | Compressor overheats. Discharge temp rises. Evaporator not fully utilized. | Accelerated wear. Winding insulation breakdown. Reduced system life. |
+| Subcooling too low | Flash gas at metering device. TXV operation erratic. Capacity drops 5-15%. | nconsistent cooling. Higher energy bills. TXV hunting. |
+| Subcooling too high | Excess liquid backs up in condenser. Head pressure and amp draw rise. | Efficiency drops \~0.5%/°F above target. Higher costs. High-pressure cutout risk. |
+
+
+## Tools Required for Measuring Superheat and Subcooling
+
+  -------------------------------------------------------------------------------------------------------------------------------------
+  **Tool**                               **Purpose**                                 **Accuracy**   **Examples**
+| Manifold gauge set | Measure suction and liquid line pressures | ±1 psig | Fieldpiece SMAN460, Testo 550s |
+| --- | --- | --- | --- |
+| Digital thermometer + pipe clamp | Measure line surface temperatures | ±1°F | Fieldpiece SDP2, UEi DT302 |
+| Digital psychrometer | Indoor WB for charging chart | ±1°F WB | Extech RH300, Fieldpiece SRH3 |
+| PT chart | Convert pressure to saturation temp | —            P | inted chart or digital manifold |
+
+
+Digital manifolds like the Fieldpiece SMAN series calculate superheat and subcooling automatically when clamps are connected — eliminating manual PT chart lookups. For system sizing context, see our **AC Tonnage Calculator** (/ac-tonnage-calculator).
+
+## Frequently Asked Questions
+
+## What should superheat and subcooling be?
+
+For TXV systems: **8-12°F superheat** and **8-14°F subcooling**. For fixed orifice: superheat varies from **5-30°F** depending on conditions — use the charging chart.
+
+## Do you charge by superheat or subcooling?
+
+**Subcooling for TXV systems** (the valve controls superheat). **Superheat for fixed orifice systems** (no flow regulation).
+
+## What does high superheat and low subcooling mean?
+
+**Low refrigerant charge (undercharge).** Evaporator is starving, condenser is nearly empty. Find and fix the leak before adding refrigerant.
+
+## Can low superheat damage a compressor?
+
+Yes. **Flooding** (liquid in crankcase) dilutes oil and causes bearing wear. **Slugging** (liquid in compression chamber) can break valves, rods, and gaskets instantly. Compressors pump vapor, not liquid.
+
+## What is the difference between evaporator superheat and total superheat?
+
+**Evaporator superheat** is measured at the evaporator outlet (TXV sensing bulb location). **Total (compressor) superheat** is measured at the compressor suction line and includes heat gained in the suction line. For fixed orifice charging, use total superheat.
+
+## Do targets change for heat pumps?
+
+The target values are similar, but **measurement locations reverse** in heating mode. Outdoor coil = evaporator (superheat). Indoor coil = condenser (subcooling). Always use the manufacturer's heating mode specs.
+
+One final note: on TXV systems, do not chase suction pressure. Adding refrigerant to a TXV system will stack liquid in the condenser (raising subcooling and head pressure), but suction pressure may barely change because the TXV regulates evaporator pressure independently. If subcooling is at target and suction pressure is low, the problem is likely low airflow, not low charge.
+
+**Add refrigerant to increase subcooling; remove refrigerant to decrease subcooling.** On TXV systems, subcooling is your charge indicator. Again, small adjustments and patience. Rushing the charge leads to overcharging, which leads to the callback you are trying to avoid.
+
+**Add refrigerant to decrease superheat; remove refrigerant to increase superheat.** On fixed orifice systems, this is your primary charge adjustment. Make small adjustments (2-4 oz at a time) and wait 10-15 minutes between additions for the system to stabilize.
+
+**Weigh your charge whenever possible.** The most accurate charging method is weighing in the exact factory charge from the data plate, then fine-tuning with superheat or subcooling. This is especially important on new installations. If the nameplate says 6 lbs 4 oz of R-410A with a 15-foot line set, weigh that amount in, then adjust for any additional line set length per the manufacturer instructions.
+
+**Always add R-410A as a liquid.** R-410A is a near-azeotropic blend of R-32 and R-125. If you add it as a vapor, the components can fractionate (separate), changing the blend ratio. This alters the PT relationship and makes all your readings unreliable. Throttle liquid into the suction side slowly with the system running to prevent slugging the compressor.
+
+## Practical Charging Tips from the Field
+
+Adequate subcooling (**8-14°F**) provides a thermal buffer. The liquid must gain that many degrees of heat before any vapor forms. On systems with long liquid lines, vertical risers, or outdoor-to-indoor runs through hot attics, subcooling becomes even more critical. The general rule of adding **5°F of subcooling per 30 feet of vertical lift** accounts for the pressure drop in the liquid line that reduces the bubble point of the refrigerant.
+
+Flash gas reduces the effective flow rate through the metering device, which starves the evaporator. The system loses **5-15% of its cooling capacity** depending on severity. The homeowner notices warmer supply air, longer run times, and higher electric bills. For the technician, it looks like an undercharge — because functionally, it is.
+
+When liquid refrigerant in the liquid line absorbs enough heat to partially vaporize, the result is **flash gas** — bubbles of vapor mixed in with the liquid stream. Flash gas is a problem because metering devices (both TXV and fixed orifice) are designed to meter **liquid**, not a two-phase mixture.
+
+## Why Subcooling Matters: Preventing Flash Gas
+
+Both conditions occur when superheat drops to **0°F** — meaning the temperature at the compressor inlet equals the saturation temperature, confirming that liquid is present. Maintaining **8-15°F of superheat at the compressor** provides a safety buffer against flooding and slugging even during transient load changes, defrost cycles, or TXV hunting.
+
+**Slugging** is the acute version. Liquid refrigerant enters the compression chamber itself. Since liquids cannot be compressed, the resulting hydraulic pressure spike can instantly break reed valves, shatter connecting rods, crack head gaskets, and destroy piston assemblies. A single severe slugging event can total a compressor.
+
+**Flooding** occurs during the run cycle when liquid refrigerant enters the crankcase. The liquid settles under the oil because it is heavier. As the low crankcase pressure causes the liquid to boil off, it carries oil droplets with it — a process called **oil foaming**. Over time, this dilutes the oil, reduces lubrication, and causes progressive bearing wear. Flooding is a slow killer.
+
+Compressors are the most expensive single component in an HVAC system — a residential replacement typically costs **\$1,500--\$3,000** for the part alone, plus labor. The number one preventable cause of compressor failure is liquid refrigerant returning to the compressor, which superheat measurement directly prevents.
+
+## Why Superheat Is Critical for Compressor Protection
+
+**Mistake 6: Ignoring the ambient temperature minimum for charging.** Most manufacturers specify a minimum outdoor temperature of 55-65°F for accurate charging. Below this threshold, condensing pressures drop too low for reliable superheat and subcooling measurements. If you must evaluate charge in cool weather, weigh in the factory charge amount and verify when conditions permit.
+
+**Mistake 5: Not checking airflow before adjusting charge.** Airflow problems mimic refrigerant charge problems. A dirty evaporator coil or failed blower motor will give you low superheat and low suction pressure — which looks exactly like an overcharge. Always verify that the evaporator and condenser have proper airflow before touching the refrigerant charge. Check the temperature split across the evaporator (typically 15-20°F) and visually inspect filters, coils, and fan operation.
+
+**Mistake 4: Using the wrong PT chart for the refrigerant.** This sounds obvious, but it happens more than you would think — especially on systems that have been retrofitted from R-22 to R-407C. The data plate may say R-22, but if someone did a drop-in replacement, the pressures will not match. Verify the actual refrigerant in the system before looking up saturation temperatures.
+
+**Mistake 3: Not waiting for system stabilization.** Pressures and temperatures fluctuate for the first 10-15 minutes after startup or after adjusting charge. Taking readings too early gives you a moving target. Let the system run until pressures hold steady for at least 5 minutes before recording final values.
+
+**Mistake 2: Reading pressure at the wrong location.** For superheat, read suction pressure at the outdoor unit service valve — not at the evaporator. For subcooling, read liquid line pressure at the condenser outlet. If you read pressure at the wrong point, pressure drop in the lines will throw off your saturation temperature conversion.
+
+**Mistake 1: Measuring suction line temperature in direct sunlight.** Solar radiation on a bare copper pipe can add 5-10°F to your reading. Always shade the thermocouple location or insulate the probe with a piece of pipe insulation after attaching it. Wait 2-3 minutes for the reading to stabilize.
+
+Accurate superheat and subcooling readings depend on technique. A 2-3°F measurement error can lead to a misdiagnosis. Here are the most common mistakes technicians make in the field and how to avoid them.
+
+## Measurement Best Practices and Common Mistakes
+
+R-410A operates at significantly higher pressures than R-22. An R-22 system at 68 psig suction gives roughly the same 40°F evaporator temperature that R-410A achieves at 118 psig. This is why R-410A requires rated hoses, gauges, and recovery equipment — R-22 equipment cannot safely handle R-410A pressures.
+
+The low-side pressures (left columns) correspond to evaporator operation. The high-side pressures (right columns) correspond to condenser operation. On a typical 95°F day, expect roughly **118-140 psig on the low side** and **350-420 psig on the high side** for R-410A.
+
+| Pressure (psig) | Sat Temp (°F) | Pressure (psig) | Sat Temp (°F) |
+| --- | --- | --- | --- |
+| 105 | 36.7°F | 300 | 96.9°F |
+| 110 | 38.2°F | 320 | 100.6°F |
+| 118 | 40.0°F | 340 | 105.1°F |
+| 122 | 41.8°F | 350 | 107.1°F |
+| 126 | 42.8°F | 360 | 108.3°F |
+| 130 | 43.8°F | 370 | 109.3°F |
+| 135 | 45.5°F | 380 | 111.2°F |
+| 140 | 48.7°F | 400 | 114.8°F |
+| 145 | 50.3°F | 420 | 120.7°F |
+| 150 | 52.5°F | 440 | 124.2°F |
+
+
+Since R-410A is by far the most common residential refrigerant, here is a quick-reference PT excerpt for the pressures you will see most often. The bolded rows cover the most typical operating conditions.
+
+## R-410A Pressure-Temperature Quick Reference (Common Operating Range)
+
+## Sources and References
+
+1.  AC Service Tech — Target Superheat and Charging Procedures (acservicetech.com)
+
+2.  ACHR News — "Charging Methods for Metering Devices" (achrnews.com)
+
+3.  ACHR News — "Superheat Charging Curves for Technicians" (achrnews.com)
+
+4.  ACHR News — "Proper Superheat Can Protect Compressor From Damage" (achrnews.com)
+
+5.  ACHR News — "The Professor: Flooding and Slugging" by John Tomczyk (achrnews.com)
+
+6.  ACHR News — "Understanding Superheat" by John Tomczyk (achrnews.com)
+
+7.  Contracting Business — "Superheat and Subcooling Diagnostics" by David Richardson/NCI (contractingbusiness.com)
+
+8.  Contracting Business — "Subcooling and Superheat Superheroes of System Charging" (contractingbusiness.com)
+
+9.  Coburns Supply — Tech Tip: Measuring Superheat and Subcool (library.coburns.com)
+
+10. HVAC Brain — Troubleshooting HVAC Systems Using Superheat (hvacbrain.com)
+
+11. HVAC School — Solving Superheat; Preventing Slugging & Flooding w/ Copeland (hvacrschool.com)
+
+12. TruTech Tools — Recharging AC Units: Procedures (trutechtools.com)
+
+13. York Central Tech Talk — "Subcooling Can Aid in Troubleshooting" (yorkcentraltechtalk.wordpress.com)
+
+14. Advantage Engineering — PT Chart for R-22, R-410A, R-407C, R-134a (advantageengineering.com)
+
+15. Efficient Comfort — Charging and TD Chart (efficientcomfort.net)
+
+If you have questions about a specific reading you're seeing in the field, drop your pressures, temperatures, refrigerant type, and metering device in the comments below. We'll do our best to help you diagnose it.

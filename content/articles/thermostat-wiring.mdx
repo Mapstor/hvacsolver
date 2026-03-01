@@ -1,0 +1,587 @@
+---
+title: "Thermostat Wiring Guide — Complete Diagrams for Every Type"
+slug: "thermostat-wiring"
+description: "You pulled off the old thermostat and now you're staring at a tangle of colored wires poking out of the wall. Red, White, Yellow, Green, maybe a Blue on..."
+pillar: "installation"
+pillarHub: "/hvac-installation"
+hasCalculator: false
+seoTitle: "Thermostat Wiring Guide — Complete Diagrams for Every Type"
+---
+
+# Thermostat Wiring Guide — Complete Diagrams for Every Type
+
+> *"I'm replacing my old thermostat with a smart one and there are 5 colored wires behind the wall plate. Which wire goes where? I don't want to fry my HVAC system."*
+
+You pulled off the old thermostat and now you're staring at a tangle of colored wires poking out of the wall. **Red**, **White**, **Yellow**, **Green**, maybe a **Blue** one. No labels. No manual. And you know that one wrong connection could blow a fuse — or worse, damage your furnace control board.
+
+Don't panic. This is the complete thermostat wiring guide that covers every system type, every wire color, and every major smart thermostat brand. We've compiled wiring diagrams for **2-wire through 8-wire systems**, heat pumps, dual fuel setups, and brand-specific terminal maps for Nest, Ecobee, Honeywell, and Sensi.
+
+Before you touch a single wire, you need three things:
+
+1. **Turn off the power.** Flip the breaker that controls your HVAC system.
+2. **Take a picture.** Before disconnecting anything from your old thermostat, photograph the wiring. Capture which color wire is connected to which terminal letter. This is your insurance policy.
+3. **Count your wires.** Pull the thermostat off the wall plate and count every wire in the cable — including any unused wires tucked behind the plate. That count tells you what system you have and what smart thermostats are compatible.
+
+*Note: Thermostat wiring is low voltage (**24VAC**), but you can still blow a fuse or short out your control board if wires touch while the system is live.*
+
+Got all three? Good. Let's start with the most important reference you'll need: the wire color code chart.
+
+---
+
+## Thermostat Wire Color Codes: What Every Color Means
+
+Here's the deal: there is **no official industry standard** for thermostat wire colors. Honeywell Home states it plainly — *"there is no standard for which color wire controls each function."* That said, the vast majority of HVAC installations follow the same convention. The colors below match what you'll find in **90%+ of homes** with standard 18-gauge thermostat cable.
+
+**Always identify wires by the terminal label they're connected to, not by color alone.** If your wires don't match the colors below, trace them to the furnace control board and check the terminal letter there.
+
+| Wire Color | Terminal | Function | System Type |
+|---|---|---|---|
+| **Red** | R / Rh / Rc | 24VAC power from transformer | All systems |
+| **White** | W / W1 | Stage 1 heating (furnace, boiler) | All heating systems |
+| **Yellow** | Y / Y1 | Stage 1 cooling (compressor) | All cooling systems |
+| **Green** | G | Indoor blower fan | All forced-air systems |
+| **Blue** | C | Common wire (24V return path) | Smart/WiFi thermostats |
+| **Orange** | O / O/B | Reversing valve (heat pump) | Heat pump systems |
+| **Brown** | W2 / AUX | Stage 2 heat / auxiliary heat | 2-stage or heat pump w/ aux |
+| **Dark Blue** | B | Reversing valve (energized in heat) | Rheem, Ruud heat pumps |
+| **Black** | C (alternate) | Common wire (alternate color) | Varies by installer |
+| **Pink / Violet** | Y2 | Stage 2 cooling | 2-stage cooling systems |
+
+*Note: Some Trane systems use **Brown** for the common (C) wire. Some installers use **Black** for the C wire instead of **Blue**. When in doubt, check the control board.*
+
+### What Is the Difference Between Rh and Rc on a Thermostat?
+
+A single **R** terminal powers the entire HVAC system from one transformer. That's the setup in most homes.
+
+If your system has *separate transformers* for heating and cooling (common with heat pump + furnace combos), you'll see two power terminals: **Rh** (power for heating) and **Rc** (power for cooling). In single-transformer systems, these two terminals are jumpered together — connected by a small metal tab or wire on the thermostat sub-base.
+
+Here's the simple rule: if you have **one Red wire**, it goes to **R** (or **Rc** with the jumper in place). If you have **two Red wires**, one goes to **Rh** and the other to **Rc**, and you remove the jumper.
+
+### What Is a C Wire on a Thermostat?
+
+The **C wire** — short for "common wire" — provides the return path for **24VAC** power to the thermostat. Together with the **R wire**, it creates a complete circuit that delivers continuous power.
+
+Older mechanical and battery-powered thermostats didn't need a C wire. They either used mercury switches or ran on AA batteries. But every modern WiFi/smart thermostat needs a steady **24VAC** power supply to run its display, WiFi radio, and processor. That's what the C wire delivers.
+
+If you have a **Blue** or **Black** wire connected to the **C** terminal on your old thermostat, you're set. If not, check the section below on [how to add a C wire](#how-to-install-a-c-wire-or-work-without-one) — there are several options that don't require running new cable.
+
+---
+
+## Thermostat Terminal Designations: Complete Reference Table
+
+Every thermostat has letter-coded terminals on its sub-base or backplate. Here's the complete reference for what each terminal does, what wire color typically connects to it, and which system types use it.
+
+| Terminal | Full Name | Function | Typical Wire Color | Used In |
+|---|---|---|---|---|
+| **R** | Red / Power | 24VAC from transformer | **Red** | All systems |
+| **Rh** | Red Heat | 24VAC from heating transformer | **Red** | Dual-transformer systems |
+| **Rc** | Red Cool | 24VAC from cooling transformer | **Red** | Dual-transformer systems |
+| **C** | Common | 24V return path; powers thermostat | **Blue** or **Black** | Smart/WiFi thermostats |
+| **W** / **W1** | Heat Stage 1 | Activates furnace or boiler | **White** | All heating systems |
+| **W2** | Heat Stage 2 | Activates 2nd-stage heat or aux heat | **Brown** | 2-stage heating, heat pump aux |
+| **Y** / **Y1** | Cool Stage 1 | Activates compressor (cooling) | **Yellow** | All cooling systems |
+| **Y2** | Cool Stage 2 | Activates 2nd-stage compressor | **Pink** / **Violet** | 2-stage cooling |
+| **G** | Fan | Activates indoor blower fan | **Green** | All forced-air systems |
+| **O** | Reversing Valve (Cool) | Energizes valve for cooling mode | **Orange** | Heat pumps (most brands) |
+| **B** | Reversing Valve (Heat) | Energizes valve for heating mode | **Dark Blue** | Heat pumps (Rheem/Ruud) |
+| **O/B** | Combined Reversing | Single terminal; set in thermostat menu | **Orange** | Heat pumps (smart stats) |
+| **E** | Emergency Heat | Bypasses heat pump; activates backup heat | **Brown** or **Black** | Heat pump systems |
+| **AUX** | Auxiliary Heat | Supplemental heat strips | **Brown** or **White** | Heat pump w/ electric backup |
+| **L/A** | Fault Indicator | Heat pump fault alert input | Varies | Heat pump systems |
+| **S/S1/S2** | Sensor | Outdoor temperature sensor | Varies | Advanced heat pump setups |
+| **U** | Universal | Humidifier, dehumidifier, or ventilator | Varies | Accessory control |
+
+If you're wiring a new thermostat for a furnace you've just sized using our [furnace sizing calculator](/furnace-sizing-calculator), make sure the thermostat supports the correct number of heating and cooling stages for your equipment.
+
+---
+
+## Thermostat Wiring Diagrams by System Type
+
+Let's walk through each wiring configuration, from simplest to most complex. Find the section that matches your wire count and system type.
+
+### 2-Wire Thermostat Wiring Diagram (Heat Only)
+
+A **2-wire thermostat** is the simplest setup. It's used for **heat-only systems** — gas furnaces, oil furnaces, hot water boilers, and wall heaters that don't have air conditioning.
+
+The two wires are:
+
+- **Red (R)** — 24VAC power from the furnace transformer
+- **White (W)** — Heat call signal
+
+That's it. When the thermostat calls for heat, it connects **R to W**, completing the circuit and activating the furnace. The furnace controls the blower fan on its own using an internal fan limit switch.
+
+*[SVG Diagram: 2-Wire System — Transformer → R wire to thermostat → W wire back to furnace heat relay]*
+
+If you're upgrading from a 2-wire system to a smart thermostat, you'll almost certainly need to add a **C wire**. Most WiFi thermostats require at least **3-4 wires** to operate. Check the section on [C-wire solutions](#how-to-install-a-c-wire-or-work-without-one) for options.
+
+If you're sizing a heating system and want to calculate the right [BTU output for your home](/heating-btu-calculator), we have a dedicated calculator for that.
+
+### 3-Wire Thermostat Wiring Diagram
+
+A **3-wire thermostat** adds independent fan control to a heat-only system. It's common in electric forced-air furnaces where the thermostat controls both the heat *and* the blower.
+
+The three wires are:
+
+- **Red (R)** — 24VAC power
+- **White (W)** — Heat call
+- **Green (G)** — Fan call
+
+In gas and oil furnaces, the furnace usually controls the fan internally. But in electric heating systems, the thermostat needs to activate the fan separately. The **Green** wire handles that.
+
+*[SVG Diagram: 3-Wire System — R, W, G from control board to thermostat]*
+
+### 4-Wire Thermostat Wiring Diagram
+
+The **4-wire configuration** is the classic setup for homes with **heating and cooling** (furnace + central AC) but no common wire. This was the standard for decades before smart thermostats.
+
+The four wires are:
+
+- **Red (R)** — 24VAC power
+- **White (W)** — Heat call
+- **Yellow (Y)** — Cool call (compressor)
+- **Green (G)** — Fan call
+
+When the thermostat calls for cooling, it connects **R to Y** (activating the compressor) and **R to G** (turning on the blower) simultaneously. When it calls for heating, it connects **R to W**. The furnace handles the fan timing internally for heat cycles.
+
+*[SVG Diagram: 4-Wire System — R, W, Y, G from furnace control board to thermostat, with Y also routing to outdoor condenser]*
+
+This 4-wire setup works fine with basic programmable thermostats. But if you're installing a WiFi thermostat, you need that 5th wire for the **C** terminal. Check if there's an unused wire in your cable bundle — many homes have 18/5 cable with the **Blue** wire tucked behind the wall plate.
+
+If your AC isn't keeping up after installation, our guide on [why your AC is not blowing cold air](/ac-not-blowing-cold) covers the most common causes.
+
+### 5-Wire Thermostat Wiring Diagram (Most Common)
+
+The **5-wire configuration** is the most common setup in modern homes. Honeywell Home confirms that *"the most common configuration is five wires."* It covers single-stage heating, single-stage cooling, and provides continuous power for smart thermostats.
+
+The five wires are:
+
+- **Red (R)** — 24VAC power
+- **White (W)** — Heat call
+- **Yellow (Y)** — Cool call (compressor)
+- **Green (G)** — Fan call
+- **Blue (C)** — Common wire (24V return)
+
+This is the configuration that makes smart thermostat installation plug-and-play. Every major brand — Nest, Ecobee, Honeywell, Sensi — works perfectly with these five wires.
+
+*[SVG Diagram: 5-Wire System — R, W, Y, G, C from furnace control board to thermostat]*
+
+The standard cable for this setup is **18/5 thermostat wire** (18 AWG, 5 conductors). The wire colors inside the cable are typically **Red**, **White**, **Green**, **Yellow**, and **Blue** — matching the terminal labels almost perfectly.
+
+If you want to understand how your AC system is sized relative to your home, our [AC tonnage calculator](/ac-tonnage-calculator) breaks down the math.
+
+### 6-Wire Thermostat Wiring Diagram
+
+A **6-wire thermostat** is used for systems that need one additional function beyond the basic 5-wire setup. Common scenarios include:
+
+- **Two-stage heating** (furnace with W1 and W2)
+- **Heat pump** with auxiliary heat (adding O/B to the 5-wire base)
+- **Humidifier or dehumidifier control** (adding a U wire)
+
+For a two-stage furnace, the six wires are:
+
+- **Red (R)**, **White (W1)**, **Brown (W2)**, **Yellow (Y)**, **Green (G)**, **Blue (C)**
+
+For a basic heat pump, the six wires are:
+
+- **Red (R)**, **Yellow (Y)**, **Green (G)**, **Orange (O/B)**, **Blue (C)**, **White (AUX/W2)**
+
+*[SVG Diagram: 6-Wire System showing two variants — 2-stage furnace and basic heat pump]*
+
+### 7-Wire and 8-Wire Thermostat Wiring Diagrams
+
+**7-wire and 8-wire configurations** are for complex systems: two-stage heat pumps, dual fuel systems (heat pump + gas furnace), and setups with accessory controls like humidifiers.
+
+A typical 8-wire setup for a **dual fuel system** uses:
+
+- **Red (R)** — 24VAC power
+- **Yellow (Y)** — Compressor
+- **Green (G)** — Fan
+- **Orange (O/B)** — Reversing valve
+- **Blue (C)** — Common
+- **White (W)** — Gas furnace heat call
+- **Brown (W2/AUX)** — Auxiliary/emergency heat
+- **Black (E)** — Emergency heat override
+
+The standard cable for these systems is **18/8 thermostat wire** — 18 AWG with 8 color-coded conductors. If you're running new wire for a complex system, always install 18/8 even if you only need 5-6 wires right now. The extra conductors give you room for future upgrades.
+
+*[SVG Diagram: 8-Wire System — full dual fuel with heat pump, gas furnace, and all terminals]*
+
+For proper ductwork sizing to match your system, check our [CFM and duct sizing calculator](/cfm-duct-sizing).
+
+---
+
+## Heat Pump Thermostat Wiring Diagram
+
+Heat pump wiring is different from conventional furnace wiring because the system uses a **reversing valve** to switch between heating and cooling. This valve is controlled by the **O/B** terminal on the thermostat — and getting it wrong means your system will heat when it should cool (and vice versa).
+
+### Single-Stage Heat Pump Wiring (O/B Terminal Explained)
+
+A standard single-stage heat pump with auxiliary electric heat uses **6-7 wires**:
+
+| Terminal | Wire Color | Function |
+|---|---|---|
+| **R** | **Red** | 24VAC power |
+| **Y** | **Yellow** | Compressor (runs in both heat and cool modes) |
+| **G** | **Green** | Indoor blower fan |
+| **O/B** | **Orange** | Reversing valve |
+| **C** | **Blue** | Common wire |
+| **AUX/W2** | **White** or **Brown** | Auxiliary heat strips |
+| **E** | **Black** (if separate) | Emergency heat |
+
+The critical detail is the **O/B terminal**. Most U.S. heat pump manufacturers — Trane, Carrier, Goodman, Lennox, York — use the **O** configuration: the reversing valve is **energized for cooling**. The system defaults to heating mode when de-energized.
+
+**Rheem, Ruud, Weatherking, and Bosch** are the exceptions. They use the **B** configuration: the reversing valve is **energized for heating**. The system defaults to cooling mode.
+
+| Manufacturer | Valve Energized In | Use Terminal |
+|---|---|---|
+| Trane / American Standard | Cooling | O |
+| Carrier | Cooling | O |
+| Goodman / Amana | Cooling | O |
+| Lennox | Cooling | O |
+| York / Coleman | Cooling | O |
+| **Rheem** | **Heating** | **B** |
+| **Ruud** | **Heating** | **B** |
+| **Weatherking** | **Heating** | **B** |
+| **Bosch** | **Heating** | **B** |
+
+Most smart thermostats have a combined **O/B** terminal where you select the mode in the thermostat's setup menu. If your heat pump is running in the wrong mode after installation, the O/B setting is almost always the cause.
+
+For help sizing a heat pump for your home, our [heat pump sizing calculator](/heat-pump-sizing) covers the full range of climates and home sizes. You can also compare efficiency using our [HSPF rating guide](/hspf-rating) for heating and [SEER rating guide](/seer-rating) for cooling.
+
+### What Is the W2 Wire on a Thermostat?
+
+The **W2 wire** (sometimes labeled **AUX**) controls **second-stage heating** or **auxiliary heat**. In a heat pump system, this wire activates the electric heat strips that supplement the heat pump when outdoor temperatures drop too low for the heat pump to keep up on its own.
+
+In a two-stage furnace (no heat pump), the **W2** wire activates the second stage of the gas valve for higher heating output during extreme cold.
+
+**Honeywell's critical warning:** *"Do NOT connect any wire to W for heat pump applications! This can cause heat to run continuously."* In heat pump systems, the **W1** terminal is reserved for auxiliary/alternate heat — not the heat pump compressor. The compressor runs from the **Y** terminal.
+
+### Dual Fuel Heat Pump Wiring Diagram
+
+A **dual fuel system** combines a heat pump with a gas furnace. The heat pump handles mild-weather heating and all cooling. When outdoor temperatures drop below a set threshold (the balance point), the system switches to the gas furnace for heat.
+
+This is the most complex residential thermostat wiring. You need **7-8 wires** and a thermostat that supports dual fuel operation. The key wires are:
+
+- **Y** connects to the heat pump compressor
+- **O/B** connects to the reversing valve
+- **W** connects to the *gas furnace* (not heat strips)
+- **AUX/W2** may connect to emergency electric heat strips (if equipped)
+
+**Important:** The Honeywell T6 Pro, Nest Learning Thermostat, and Ecobee all support dual fuel. But the Nest Thermostat (budget model with 6 connectors: R, G, C, Y, W, */O/B) does **not** support dual fuel — it lacks the separate W and AUX terminals needed.
+
+*[SVG Diagram: Dual Fuel System — heat pump outdoor unit + gas furnace indoor unit, both connected through thermostat]*
+
+---
+
+## Smart Thermostat Wiring: Nest, Ecobee, Honeywell, and Sensi
+
+Each smart thermostat brand has slightly different terminal layouts and labels. Here's a side-by-side comparison and brand-specific wiring guidance.
+
+| Terminal | Nest Learning (4th Gen) | Ecobee Premium | Honeywell T6 Pro | Sensi Touch 2 |
+|---|---|---|---|---|
+| Power (heat) | Rh | RH | R (w/ jumper to Rc) | RH (w/ internal jumper) |
+| Power (cool) | Rc | Rc | Rc | Rc |
+| Common | C | C | C | C (**required**) |
+| Heat Stage 1 | W1 | W1 | W | W/E |
+| Heat Stage 2 | W2/AUX | W2 | W2/AUX | W2/* |
+| Cool Stage 1 | Y1 | Y1 | Y | Y1 |
+| Cool Stage 2 | Y2 | Y2 | Y2 | Y2/* |
+| Fan | G | G | G | G |
+| Reversing Valve | O/B | O/B | O/B | O/B |
+| Accessory / Star | * (star) | ACC+, ACC- | U | Y2/*, W2/* |
+| C-wire required? | Recommended | **Yes** (PEK included) | **Yes** | **Yes** |
+
+### Nest Thermostat Wiring Diagram
+
+The **Nest Learning Thermostat (4th Gen)** has **10 terminal connectors**: Y1, Y2, G, O/B, Rc, W1, W2/AUX, C, Rh, and the * (star) terminal.
+
+Key Nest wiring notes:
+
+- **No jumper wires needed.** The Nest automatically jumps Rh and Rc internally when only one R wire is connected. Remove any jumper wires from your old thermostat before connecting to the Nest.
+- **The star (*) terminal** is a flexible connector that can be assigned to one function: W3, E (emergency heat), HUM (humidifier), or DEHUM (dehumidifier). You configure it during setup.
+- **Y wire goes to Y1.** If your old thermostat had a single Y terminal, connect that wire to the Nest's **Y1** connector.
+- **Power sharing.** The Nest can operate without a C wire by "borrowing" power from other wires. But this causes problems in many systems — intermittent WiFi drops, phantom furnace cycling, and low battery warnings. We strongly recommend connecting a C wire or installing the [Nest Power Connector](https://store.google.com/product/nest_power_connector).
+
+Use the [Nest Compatibility Checker](https://store.google.com/us/widget/compatibility/thermostat) to verify your system before purchasing.
+
+*[SVG Diagram: Nest Learning Thermostat base with terminal layout labeled]*
+
+### Ecobee Wiring Diagram and PEK Installation
+
+The **Ecobee Smart Thermostat Premium** has terminal connectors for: **Rc, RH, C, W1, W2, Y1, Y2, G, O/B, and ACC+/ACC-**.
+
+Key Ecobee wiring notes:
+
+- **C wire is required.** The Ecobee will not operate without continuous 24VAC power.
+- **If you don't have a C wire**, use the included **Power Extender Kit (PEK)**. The PEK installs at the furnace control board and works by combining the **Y** and **G** wire functions into a single conductor, freeing up a wire to serve as the C connection.
+- **PEK minimum requirement:** You need at least **4 wires** between the thermostat and furnace for the PEK to work (Rc, G, Y, and W minimum). The PEK is **not compatible** with millivolt systems, high-voltage systems, dual-transformer systems, or communicating HVAC equipment.
+- **RH and Rc:** If your system has two separate transformers (two R wires), connect them to the separate RH and Rc terminals. For single-transformer systems, connect the R wire to Rc.
+
+The Ecobee requires a minimum of **3 wires** (Rc, C, W1) to control a basic furnace/boiler.
+
+*[SVG Diagram: Ecobee backplate with PEK wiring at furnace control board]*
+
+### Honeywell Thermostat Wiring Diagram
+
+The **Honeywell Home T6 Pro Smart** has terminals for: **R, Rc, C, W, W2/AUX, Y, Y2, G, O/B, L/A, S1, S2, E, and U**.
+
+Key Honeywell wiring notes:
+
+- **R/Rc jumper switch.** The T6 Pro has a physical R slider tab. Set it UP for single-transformer systems (one R wire). Set it DOWN for dual-transformer systems (separate R and Rc wires).
+- **C wire is required** for the T6 Pro Smart and all WiFi Honeywell models.
+- **W terminal warning for heat pumps:** Honeywell's documentation emphasizes this in bold: *"Do NOT connect any wire to W for heat pump applications! This can cause heat to run continuously."* For heat pumps, the compressor wire goes to **Y** and auxiliary heat goes to **W2/AUX**.
+- **U terminal** controls humidifiers, dehumidifiers, or ventilators.
+
+### Sensi Thermostat Wiring Diagram
+
+The **Sensi Touch 2** by Copeland (formerly Emerson) has terminals for: **RH, Rc, C, W/E, W2/*, Y1, Y2/*, G, O/B, and B**.
+
+Key Sensi wiring notes:
+
+- **C wire is required.** The Sensi Touch 2 will not power on without a C wire connection.
+- **Internal jumper** between Rh and Rc. For single-transformer systems, connect the R wire to **Rc** only — the internal jumper handles the rest. For dual-transformer systems, clip the jumper and connect both wires separately.
+- **W/E terminal** serves double duty: **W** (first-stage heat) for conventional systems, or **E** (emergency heat) for heat pump systems. Both wires connect to the same terminal.
+- **Sensi requires 20-30 VAC.** It's not compatible with line-voltage systems (120V/240V baseboard heaters) or millivolt systems.
+
+---
+
+## How to Install a C Wire (Or Work Without One)
+
+If your home was wired before the smart thermostat era, you probably have a **4-wire setup** (R, W, Y, G) with no common wire. That's the single most common barrier to installing a WiFi thermostat.
+
+Here are your options, ranked from easiest to hardest.
+
+### Smart Thermostat Without C Wire: Your Options
+
+**Option 1: Check for an unused wire.** Pull the thermostat off the wall and look for a wire that's not connected to any terminal — often a **Blue** wire tucked behind the plate. If you find one, connect it to **C** on the thermostat and the **C** terminal on your furnace control board. Done.
+
+# Option 2: Use a manufacturer-specific adapter.
+
+- **Ecobee Power Extender Kit (PEK):** Included with most Ecobee models. Installs at the furnace. Requires 4+ wires. Cost: **$0** (included) or **~$25** purchased separately.
+- **Nest Power Connector:** Installs at the HVAC system control board. Cost: **~$25**.
+
+**Option 3: Use a universal C-wire adapter.**
+
+- **Venstar Add-A-Wire (ACC0410):** Uses a diode to combine Y and G signals into one wire at the furnace, freeing up a wire for C. Works with any 24VAC system. Cost: **~$25-$35**.
+- **Fast-Stat Common Maker:** Piggybacks the C signal onto an existing 2-wire cable. Works with all brands. Cost: **~$40-$50**.
+
+**Option 4: Re-purpose the G wire (free but has a trade-off).** Move the **Green** (G) wire to the **C** terminal on both the thermostat and furnace. Then add a jumper wire between **Y** and **G** on the furnace control board. The downside: the fan will only run when the AC compressor runs. You lose independent fan control.
+
+**Option 5: Run new thermostat cable.** Pull new **18/5** or **18/8** cable from the furnace to the thermostat. This is the gold-standard fix but requires fishing wire through walls. Cost: **$30-$200+** depending on accessibility. Consider 18/8 cable for future-proofing.
+
+**Option 6: Install an external 24VAC transformer.** Mount a **24VA transformer** near the thermostat, plug it into a wall outlet, and run two wires to the thermostat's **R** and **C** terminals. Cost: **~$15-$25**. This provides power without touching the furnace wiring at all.
+
+### Ecobee Power Extender Kit (PEK) Wiring
+
+The PEK is the most popular C-wire solution because it ships free with most Ecobee thermostats. Here's how it works:
+
+The PEK installs at your furnace control board. It takes the **Y** (cooling) and **G** (fan) signals and combines them into a single wire. This frees up one of the existing wires in your cable to serve as a dedicated **C** wire to the thermostat.
+
+At the thermostat end, you connect **Rc**, **C**, and **PEK** to specific terminals. At the furnace end, the PEK module connects between the control board and the thermostat cable.
+
+## PEK Requirements:
+
+- Minimum **4 wires** between thermostat and furnace
+- **24VAC system only** (not millivolt or line voltage)
+- **Not compatible** with dual-transformer systems, fan coil units, or communicating HVAC equipment
+
+*[SVG Diagram: PEK installation at furnace — showing old wiring vs. new PEK wiring]*
+
+---
+
+## Worked Examples: Step-by-Step Wiring Walkthroughs
+
+### Example 1: Wiring a Nest Learning Thermostat to a Single-Stage Gas Furnace + Central AC (5-Wire)
+
+*Scenario: You have a home in Dallas, Texas with a single-stage gas furnace and a 3-ton central AC. The existing thermostat has 5 wires: **Red**, **White**, **Yellow**, **Green**, **Blue**.*
+
+1. Turn off the HVAC breaker.
+2. Remove the old thermostat and photograph the wiring.
+3. Identify the terminal labels: **R** (Red), **W** (White), **Y** (Yellow), **G** (Green), **C** (Blue).
+4. Mount the Nest base plate on the wall.
+5. Connect: **Red → Rh**, **White → W1**, **Yellow → Y1**, **Green → G**, **Blue → C**.
+6. Snap the Nest display onto the base.
+7. Restore power and follow the Nest app setup.
+
+**Result:** The Nest detects a conventional single-stage system with 1 heating stage, 1 cooling stage, and continuous C-wire power. No adapters needed.
+
+### Example 2: Wiring an Ecobee to a Heat Pump with Auxiliary Heat (6-Wire)
+
+*Scenario: You have a home in Charlotte, North Carolina with a Trane heat pump and electric auxiliary heat strips. The existing thermostat has 6 wires: **Red**, **Yellow**, **Green**, **Orange**, **Blue**, **White**.*
+
+1. Turn off the HVAC breaker.
+2. Photograph existing wiring: **R** (Red), **Y** (Yellow), **G** (Green), **O** (Orange), **C** (Blue), **AUX** (White).
+3. Mount the Ecobee backplate.
+4. Connect: **Red → Rc**, **Yellow → Y1**, **Green → G**, **Orange → O/B**, **Blue → C**, **White → W1** (Ecobee treats W1 as auxiliary heat in heat pump mode).
+5. During Ecobee setup, select "Heat Pump" as system type.
+6. Configure O/B as **O** (energized for cooling) — correct for Trane.
+7. Test: Call for cooling (compressor + fan should run). Call for heating (compressor + reversing valve should activate). Raise thermostat to trigger auxiliary heat (**AUX** indicator should appear).
+
+**Result:** Full heat pump control with auxiliary heat and continuous C-wire power.
+
+### Example 3: Adding a C Wire to an Old 4-Wire System Using a Venstar Add-A-Wire
+
+*Scenario: You have a home in Chicago, Illinois with a single-stage gas furnace + AC. Only 4 wires at the thermostat: **Red**, **White**, **Yellow**, **Green**. You want to install a Honeywell T6 Pro Smart but need a C wire.*
+
+1. Turn off the HVAC breaker.
+2. At the **furnace control board**: Disconnect the **Green** wire from the **G** terminal.
+3. Connect the **Green** wire to the Venstar Add-A-Wire module (this wire becomes your new **C** wire).
+4. Connect the Venstar module's **Green** output to the furnace **G** terminal.
+5. Connect the Venstar module's **Yellow** output to the furnace **Y** terminal.
+6. Add a **jumper wire** between **Y** and **G** on the Venstar module's thermostat side (the module's built-in diode separates the signals).
+7. At the **thermostat**: Connect **Red → R**, **White → W**, **Yellow → Y**, **Green → C** (yes, the Green wire is now carrying the C signal).
+8. Restore power and configure the Honeywell T6 Pro.
+
+**Result:** You now have continuous C-wire power without running new cable. Independent fan and cooling control are preserved through the Venstar diode module.
+
+### Example 4: Wiring a Honeywell T6 Pro to a Two-Stage Gas Furnace + AC (6-Wire)
+
+*Scenario: You have a home in Minneapolis, Minnesota with a two-stage gas furnace (96% AFUE) and a central AC. The cable has 8 wires but only 6 are connected: **Red**, **White**, **Brown**, **Yellow**, **Green**, **Blue**.*
+
+1. Turn off the HVAC breaker.
+2. Photograph the existing connections: **R** (Red), **W1** (White), **W2** (Brown), **Y** (Yellow), **G** (Green), **C** (Blue).
+3. Mount the Honeywell T6 Pro wall plate. Set the R slider to **UP** (single transformer).
+4. Connect: **Red → R**, **White → W**, **Brown → W2/AUX**, **Yellow → Y**, **Green → G**, **Blue → C**.
+5. During setup, configure: System type = **Conventional**, Heat stages = **2**, Cool stages = **1**.
+6. Test: Stage 1 heat should activate at normal demand. Stage 2 heat should kick in when the thermostat detects a large gap between setpoint and actual temperature.
+
+**Result:** Two-stage heating control with smart scheduling and remote access.
+
+### Example 5: Wiring a Sensi Touch 2 to a Dual Fuel System (7-Wire)
+
+*Scenario: You have a home in Denver, Colorado with a Carrier heat pump and a gas furnace backup (dual fuel). The cable has 8 wires with 7 connected: **Red**, **Yellow**, **Green**, **Orange**, **Blue**, **White**, **Brown**.*
+
+1. Turn off the HVAC breaker (both the air handler and outdoor unit breakers).
+2. Photograph existing wiring: **R** (Red), **Y** (Yellow), **G** (Green), **O/B** (Orange), **C** (Blue), **W** (White — gas furnace), **W2/AUX** (Brown — aux heat strips).
+3. Mount the Sensi Touch 2 backplate. Clip the internal Rh/Rc jumper (dual fuel systems often use dual transformers).
+4. Connect: **Red (from heat pump) → Rc**, **Red (from furnace) → RH** (if dual transformer), **Yellow → Y1**, **Green → G**, **Orange → O/B**, **Blue → C**, **White → W/E**, **Brown → W2/***. 
+5. During Sensi app setup, select **Heat Pump + Auxiliary Heat** as system type.
+6. Configure O/B as **O** (energized for cooling) — correct for Carrier.
+7. Set the balance point temperature (the outdoor temp below which the system switches from heat pump to gas furnace — typically **35°F** for the Denver climate).
+
+**Result:** Full dual fuel control with automatic switchover between heat pump and gas furnace based on outdoor temperature.
+
+---
+
+## Common Thermostat Wiring Mistakes and Troubleshooting
+
+Even experienced DIYers make wiring mistakes. Here are the most common problems and how to fix them.
+
+### No Power to Rh or Rc Wire
+
+If your thermostat displays "No power to Rh wire" or "No power to Rc wire" (common Nest error codes E73/E74), check these causes:
+
+- **Blown fuse on the furnace control board.** Most HVAC control boards have a **3A or 5A** automotive-style fuse. If you accidentally shorted two thermostat wires during installation, this fuse blows. Replace it (they cost about $1 at any hardware store).
+- **Tripped breaker.** Double-check that the HVAC breaker is actually on.
+- **Loose wire connection.** Tug gently on each wire at the thermostat terminals. If a wire pulls out, it wasn't seated properly.
+- **Wrong R wire terminal.** If you have separate Rh and Rc wires, make sure each is in the correct terminal. Swapping them can cause this error.
+
+If your [thermostat isn't reaching the set temperature](/thermostat-not-reaching-temperature) even after fixing wiring, there may be a deeper HVAC issue at play. Our guide on [AC tonnage and sizing](/ac-tonnage-calculator) can help you verify whether your system is correctly matched to your home.
+
+### Thermostat Wiring Mistakes That Damage Equipment
+
+These errors can cause real damage — not just a blown fuse:
+
+**Connecting W to Y (or vice versa).** This sends a heat call when the thermostat asks for cooling. Your furnace fires while the AC compressor also tries to run. This can damage the compressor and is a fire risk.
+
+**Connecting any wire to the wrong R terminal in a dual-transformer system.** This can backfeed voltage between two transformers, burning out one or both.
+
+**Connecting a W wire in a heat pump system.** Honeywell warns that connecting a wire to the W terminal on a heat pump thermostat can cause **heat to run continuously**. In heat pump mode, W1 is for auxiliary heat — the compressor is controlled by Y.
+
+**Using phone wire or ethernet cable instead of thermostat cable.** Cat5/Cat6 cable is **24 AWG** — far too thin for thermostat circuits. Standard thermostat wire is **18 AWG**. Using undersized wire can cause voltage drop, intermittent operation, and in rare cases, overheating. Per NEC Article 725, thermostat wiring must be **CL2-rated cable** designed for Class 2 circuits.
+
+If your [furnace is blowing cold air](/furnace-blowing-cold-air) after a thermostat swap, check for W and Y wire reversal first.
+
+---
+
+## Thermostat Wire Specifications and Building Code
+
+Thermostat wiring falls under **NEC Article 725** as a **Class 2 circuit** — low voltage (**24VAC**), power-limited to **100VA** or less. This classification gives thermostat wiring some advantages over regular electrical wiring.
+
+| Specification | Requirement |
+|---|---|
+| **Wire gauge** | **18 AWG** solid copper (standard); 20 AWG acceptable for short runs |
+| **Cable type** | CL2 (general), CL2R (riser-rated), CL2P (plenum-rated) |
+| **UL listing** | UL Standard 13 (Power-Limited Circuit Cable) |
+| **Voltage rating** | 150V maximum |
+| **Temperature rating** | -20°C to +60°C (-4°F to +140°F) |
+| **Raceway/conduit required?** | **No** — Class 2 circuits do not require conduit |
+| **Separation from power wiring** | **Must not** share enclosure/raceway with power conductors (NEC 725.136) |
+| **Conductor material** | Solid soft-drawn copper per ASTM B-3 |
+
+The key takeaway: you **don't need conduit** for thermostat wire, but you **must** keep it separated from your home's main electrical wiring (120V/240V). Never run thermostat cable through the same holes, conduit, or junction boxes as power wiring.
+
+Standard thermostat cable comes in configurations from **18/2** (2 conductors) through **18/8** (8 conductors). For new installations, we recommend **18/8** cable — the extra unused wires cost almost nothing and save you from re-running cable if you upgrade systems later.
+
+If you're working on your home's overall air distribution, our guides on [cold air return vents](/cold-air-return-vents) and [ceiling fan direction](/ceiling-fan-direction) cover related comfort topics.
+
+---
+
+## FAQ
+
+### What Color Wires Go Where on a Thermostat?
+
+**Red** goes to **R** (power), **White** goes to **W** (heat), **Yellow** goes to **Y** (cooling), **Green** goes to **G** (fan), and **Blue** goes to **C** (common). **Orange** goes to **O/B** in heat pump systems.
+
+However, these are conventions — not standards. Always match wires by the terminal label on your old thermostat, not by color.
+
+### What Is a C Wire and Do I Need One for a Smart Thermostat?
+
+The **C wire** (common wire) provides a continuous **24VAC** return path to power your thermostat. Most WiFi smart thermostats — including all Ecobee and Sensi models, all WiFi Honeywell models, and effectively all Nest models — need a C wire for reliable operation.
+
+If you don't have one, you can add one using an adapter like the **Ecobee PEK**, **Nest Power Connector**, or **Venstar Add-A-Wire** for **$25-$50** without running new cable.
+
+### Can I Install a Smart Thermostat With Only 2 Wires?
+
+It depends. A **2-wire system** (heat only, R + W) is compatible with some smart thermostats — but you'll need to add a **C wire** or use an adapter. The Ecobee with PEK requires a minimum of **4 wires**. The Nest can power itself from 2 wires in some configurations, but reliability varies.
+
+The most practical solution for 2-wire systems is installing an **external 24VAC transformer** to provide continuous power, or running new **18/5 cable** for full smart thermostat support.
+
+### What Is the Difference Between Rh and Rc on a Thermostat?
+
+**Rh** carries **24VAC** from the heating transformer. **Rc** carries **24VAC** from the cooling transformer. In single-transformer systems (the majority of homes), these terminals are jumpered together — they function as one **R** terminal.
+
+You only need separate Rh and Rc connections if your system uses **two transformers** — one for the furnace and one for the AC/heat pump. In that case, remove the jumper and connect each R wire to its respective terminal.
+
+### What Does the W2 Wire Do on a Thermostat?
+
+The **W2** wire activates **second-stage heating**. In a two-stage furnace, it fires the gas valve at a higher rate for more heat output. In a heat pump system, it activates the **auxiliary electric heat strips** that supplement the heat pump during cold weather.
+
+In dual fuel systems, the W wire may connect to the gas furnace while the heat pump compressor is controlled by the Y wire.
+
+### How Many Wires Do I Need for a Smart Thermostat?
+
+For a standard heating + cooling system, you need **5 wires** minimum: R (power), W (heat), Y (cool), G (fan), and C (common). This is the most common configuration and works with every smart thermostat brand.
+
+Heat pump systems need **6-7 wires** (adding O/B and AUX). Dual fuel systems need **7-8 wires**.
+
+When in doubt, install **18/8 cable** — it gives you every wire you'll ever need. For help calculating the right system size, our [heating BTU calculator](/heating-btu-calculator) and [heat pump sizing guide](/heat-pump-sizing) are good starting points.
+
+---
+
+## Sources and References
+
+1. Honeywell Home — "How Do I Wire My Thermostat?" — [honeywellhome.com](https://www.honeywellhome.com/blogs/support/how-do-i-wire-my-thermostat)
+2. Honeywell T6 Pro Smart Wiring Diagrams (PDF) — [customer.resideo.com](https://customer.resideo.com/resources/techlit/techlitdocuments/33-00000s/33-00324.pdf)
+3. Google Nest — "Identify a Thermostat Wire" — [support.google.com/googlenest](https://support.google.com/googlenest/answer/9452748)
+4. Google Nest — "Nest Thermostat Star Terminal" — [support.google.com/googlenest](https://support.google.com/googlenest/answer/9249351)
+5. Nest Learning Thermostat Pro Installation Guide (PDF) — [support-assets.nest.com](http://support-assets.nest.com/images/pro-faq/Nest-Pro-Installer-Guide.pdf)
+6. Ecobee — Power Extender Kit — [ecobee.com](https://www.ecobee.com/en-us/thermostat-accessories/power-extender-kit/)
+7. Ecobee Advanced Installation Guide (EB-STATE6CR-01) — [esmithair.com](https://esmithair.com/wp-content/uploads/2024/04/EBSTATE6CR.pdf)
+8. Sensi/Copeland — "How Do I Wire My Thermostat?" — [sensi.copeland.com](https://sensi.copeland.com/en-us/support/how-do-i-wire-my-thermostat)
+9. Sensi Touch 2 Installation Guide (PDF) — [rackcdn.com](https://f51bc3db37e56faea995-e1bb76206fbfaf9e6f07eb14e469f8b9.ssl.cf1.rackcdn.com/assets/guides/R-5556_Touch2_Install_Guide.pdf)
+10. iFixit — "What All Those Letters Mean on Your Thermostat's Wiring" — [ifixit.com](https://www.ifixit.com/News/30317/what-all-those-letters-mean-on-your-thermostats-wiring)
+11. EC&M Magazine — "Article 725, Class 2 and 3 Circuits" — [ecmweb.com](https://www.ecmweb.com/national-electrical-code/code-basics/article/20901694/article-725-class-2-and-3-circuits)
+12. Nassau National Cable — "NEC Article 725 Explained" — [nassaunationalcable.com](https://nassaunationalcable.com/blogs/blog/explaining-nec-article-725-on-power-limited-and-remote-control-circuits)
+13. HVAC Know It All — "Heat Pump Reversing Valves and Their Control Designation" — [hvacknowitall.com](https://hvacknowitall.com/blog/reversing-valves-and-their-control-designation)
+14. Refrigeration School Inc. — "Introduction to Thermostat Wiring" — [rsi.edu](https://www.rsi.edu/blog/hvacr/introduction-to-thermostat-wiring/)
+15. Qwik.com — "Thermostat Wiring: An In-Depth HVAC Guide" — [qwik.com](https://www.qwik.com/education/knowledgebase/thermostatic-wiring/)
+16. Aire Serv — "Thermostat Wire Color Codes You Need to Know" — [aireserv.com](https://www.aireserv.com/about/blog/2020/february/the-thermostat-wire-color-code-you-need-to-know/)
+17. Venstar — Add-A-Wire Accessory (ACC0410) — [venstar.com](https://venstar.com/thermostats/accessories/add-a-wire/)
+18. Smart Thermostat Guide — "C-Wire Adapter Review" — [smartthermostatguide.com](https://smartthermostatguide.com/c-wire-venstar-add-a-wire-adapter-review/)
+19. Vericom — 18 AWG Thermostat Cable Specifications — [vericomsolutions.com](https://vericomsolutions.com/p-4454-18-awg-5-conductor-thermostat-cable.aspx)
+20. High Performance HVAC — "Thermostat Terminal Designations" — [highperformancehvac.com](https://highperformancehvac.com/thermostat-terminal-designations/)
+
+---
+
+If you have any questions about thermostat wiring for your specific system, drop a comment below with your wire colors, terminal labels, and system type (furnace, heat pump, or dual fuel) and we'll do our best to help you out.

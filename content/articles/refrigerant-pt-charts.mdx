@@ -1,0 +1,583 @@
+---
+title: "Refrigerant Pressure-Temperature Charts — Interactive Reference"
+slug: "refrigerant-pt-charts"
+description: "Every HVAC technician has been there. You're on a service call, gauges are hooked up, and you need the saturation pressure for a specific refrigerant at..."
+pillar: "refrigerants"
+pillarHub: "/refrigerants"
+hasCalculator: true
+calculatorComponent: "RefrigerantPTChart"
+seoTitle: "Refrigerant Pressure-Temperature Charts — Interactive Reference"
+---
+
+# Refrigerant Pressure-Temperature (PT) Charts — Interactive Reference for All 8 Common Refrigerants
+
+> "I'm on a rooftop in August, gauges connected, and I need to know what 410A pressure should read at 95°F — right now."
+
+Every HVAC technician has been there. You're on a service call, gauges are hooked up, and you need the saturation pressure for a specific refrigerant at a specific temperature. You don't need a textbook — you need a number.
+
+This page puts **all 8 common refrigerant PT charts in one place**: R-134a, R-410A, R-404A, R-22, R-454B, R-407C, R-32, and R-290. Select your refrigerant, find your temperature, get your pressure in psig. We also cover how to read a PT chart, how to use PT data for [superheat and subcooling calculations](/superheat-and-subcooling), normal operating pressure ranges, and the critical difference between azeotropic and zeotropic blends.
+
+Before jumping into the data, here's what you should know:
+
+1. All pressure values are in **psig** (pounds per square inch gauge) — the unit your manifold gauges display.
+2. Data is sourced from **NIST REFPROP** via Arkema Forane®, Honeywell, and Goodman/Daikin manufacturer charts.
+3. For zeotropic blends (R-407C, R-454B), both **bubble point** (liquid) and **dew point** (vapor) pressures are provided.
+
+{/* CALCULATOR */}
+
+---
+
+## What Is a Refrigerant PT Chart?
+
+A pressure-temperature chart (PT chart) shows the relationship between a refrigerant's **saturation pressure** and its **saturation temperature**. When refrigerant exists as both liquid and vapor simultaneously — which happens inside every evaporator and condenser — the pressure and temperature are locked together in a fixed relationship.
+
+If you know the pressure, you know the temperature. If you know the temperature, you know the pressure. That's the entire concept.
+
+HVAC technicians use PT charts for three primary tasks: verifying proper [refrigerant charge](/ac-refrigerant-charge), calculating superheat and subcooling, and diagnosing system problems like [an AC not blowing cold air](/ac-not-blowing-cold). The chart is also a required reference during the EPA Section 608 certification exam, which all technicians handling refrigerants must pass per [federal regulations](https://www.epa.gov/section608/section-608-technician-certification-requirements).
+
+### How to Read a PT Chart
+
+Reading a PT chart is straightforward:
+
+1. Find your refrigerant (R-410A, R-22, etc.) in the chart.
+2. Locate the temperature row that matches your measured or ambient temperature.
+3. Read across to find the corresponding saturation pressure in psig.
+4. For zeotropic blends like R-407C, use the **dew point column** for superheat calculations and the **bubble point column** for subcooling calculations.
+
+That's it. The PT chart is a lookup table — nothing more. The skill is knowing *when* and *where* to apply it, which we cover in the [superheat and subcooling section](#how-to-use-pt-charts-for-superheat-and-subcooling-calculations) below.
+
+---
+
+## R-134a Pressure Temperature Chart
+
+R-134a (1,1,1,2-Tetrafluoroethane) is the workhorse of **automotive air conditioning** and **commercial refrigeration**. It's a single-component refrigerant — no blending, no temperature glide — so it has one pressure column. You'll find R-134a in car AC systems, household refrigerators, medium-temperature commercial coolers, and some centrifugal chillers.
+
+**R-134a key specs:** Boiling point **-15.1°F** at atmospheric pressure | [ASHRAE](/refrigerant-types) Safety Class **A1** (non-toxic, non-flammable) | GWP **1,430** | ODP **0**
+
+### R-134a PT Chart — Full Data Table (-40°F to 150°F)
+
+| Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) |
+|-----------|----------------|-----------|----------------|-----------|----------------|
+| -40 | *-14.8 (vacuum)* | 20 | **18.4 psig** | 80 | **86.7 psig** |
+| -35 | *-12.5 (vacuum)* | 25 | **22.1 psig** | 85 | **95.2 psig** |
+| -30 | *-9.8 (vacuum)* | 30 | **26.1 psig** | 90 | **104.3 psig** |
+| -25 | *-6.9 (vacuum)* | 35 | **30.4 psig** | 95 | **114.0 psig** |
+| -20 | *-3.7 (vacuum)* | 40 | **35.0 psig** | 100 | **124.2 psig** |
+| -15 | **0.1 psig** | 45 | **40.1 psig** | 105 | **135.0 psig** |
+| -10 | **1.9 psig** | 50 | **45.4 psig** | 110 | **146.4 psig** |
+| -5 | **4.1 psig** | 55 | **51.2 psig** | 115 | **158.4 psig** |
+| 0 | **6.5 psig** | 60 | **57.4 psig** | 120 | **171.2 psig** |
+| 5 | **9.1 psig** | 65 | **64.0 psig** | 130 | **198.7 psig** |
+| 10 | **11.9 psig** | 70 | **71.1 psig** | 140 | **229.2 psig** |
+| 15 | **15.0 psig** | 75 | **78.7 psig** | 150 | **262.9 psig** |
+
+*Source: [Arkema Forane® R-134a PT Chart](https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/products/fluorochemicals/forane-134a-pressure-temperature-chart.pdf) — generated from NIST REFPROP Database.*
+
+### R-134a Normal Operating Pressures
+
+For automotive AC systems, normal R-134a operating pressures typically fall in these ranges:
+
+| Measurement Point | Normal Range (psig) | Notes |
+|------------------|-------------------|-------|
+| Low side (suction) | **25–45 psig** | Varies with ambient temp and cabin load |
+| High side (discharge) | **150–250 psig** | Higher in extreme heat |
+| Static (system off, equalized) | **70–90 psig** | At ~75°F–85°F ambient |
+
+If your low side reads below **20 psig**, the system is likely low on charge — a common cause of [window AC units freezing up](/window-ac-freezing-up) and household refrigerators not cooling properly.
+
+### R-134a Pressure at Key Temperatures
+
+*What pressure should R-134a be at 72°F?* At 72°F, R-134a saturation pressure is **74.1 psig**. This is the static pressure you'd expect to see on gauges with the system off and equalized on a 72°F day.
+
+*What about at 85°F?* At 85°F, the pressure is **95.2 psig**.
+
+---
+
+## R-410A Pressure Temperature Chart
+
+R-410A (Puron) has been the **standard residential and light commercial refrigerant** for air conditioners and heat pumps. It's a near-azeotropic blend of R-32 (50%) and R-125 (50%), meaning its temperature glide is negligible — less than **0.5°F**. For all practical purposes, you can treat R-410A as a single-column PT chart.
+
+**R-410A key specs:** Boiling point **-61.0°F** | ASHRAE Safety Class **A1** | GWP **2,088** | ODP **0** | Composition: R-32 (50%) + R-125 (50%)
+
+*Note: R-410A production is being phased down under the EPA's AIM Act due to its high GWP. R-454B is the designated replacement for new equipment. Existing R-410A systems will continue to be serviced.*
+
+### R-410A PT Chart — Full Data Table (-40°F to 150°F)
+
+| Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) |
+|-----------|----------------|-----------|----------------|-----------|----------------|
+| -40 | **10.8 psig** | 30 | **97.4 psig** | 85 | **255.4 psig** |
+| -35 | **14.1 psig** | 32 | **101.4 psig** | 90 | **275.4 psig** |
+| -30 | **17.8 psig** | 35 | **107.7 psig** | 95 | **296.4 psig** |
+| -25 | **21.9 psig** | 40 | **118.8 psig** | 100 | **318.6 psig** |
+| -20 | **26.3 psig** | 45 | **130.6 psig** | 105 | **341.9 psig** |
+| -15 | **31.2 psig** | 50 | **143.2 psig** | 110 | **366.4 psig** |
+| -10 | **36.5 psig** | 55 | **156.5 psig** | 115 | **392.3 psig** |
+| -5 | **42.2 psig** | 60 | **170.7 psig** | 120 | **419.4 psig** |
+| 0 | **48.4 psig** | 65 | **185.8 psig** | 125 | **447.9 psig** |
+| 5 | **55.2 psig** | 70 | **201.8 psig** | 130 | **477.9 psig** |
+| 10 | **62.4 psig** | 72 | **208.4 psig** | 135 | **509.4 psig** |
+| 15 | **70.3 psig** | 75 | **218.7 psig** | 140 | **542.5 psig** |
+| 20 | **78.7 psig** | 78 | **229.3 psig** | 145 | **577.3 psig** |
+| 25 | **87.7 psig** | 80 | **236.5 psig** | 150 | **613.9 psig** |
+
+*Source: [Arkema Forane® R-410A PT Chart](https://forane.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/forane-410a-pressure-temperature-chart.pdf) — NIST REFPROP Database. Liquid pressure shown; vapor pressure is within 1 psig.*
+
+### R-410A Normal Operating Pressures
+
+| Measurement Point | Normal Range (psig) | Notes |
+|------------------|-------------------|-------|
+| Low side (suction) | **115–150 psig** | Varies with indoor wet-bulb temp |
+| High side (discharge) | **300–400 psig** | Increases with outdoor ambient temp |
+| Static (system off, equalized) | **118–140 psig** | At ~70°F–80°F ambient |
+
+R-410A operates at significantly higher pressures than R-22 — roughly **60% higher**. Never use R-22 equipment or gauges rated only for R-22 on an R-410A system.
+
+### R-410A Pressure Chart — High and Low Side by Outdoor Temperature
+
+This is the table techs use most in the field. Here are expected R-410A operating pressures at common outdoor ambient temperatures:
+
+| Outdoor Temp (°F) | Expected Suction/Low (psig) | Expected Discharge/High (psig) | Saturation Pressure (psig) |
+|-------------------|---------------------------|-------------------------------|---------------------------|
+| 65°F | 110–130 psig | 250–280 psig | **185.8 psig** |
+| 70°F | 115–135 psig | 265–295 psig | **201.8 psig** |
+| 75°F | 120–140 psig | 280–310 psig | **218.7 psig** |
+| 80°F | 125–145 psig | 295–330 psig | **236.5 psig** |
+| 85°F | 130–150 psig | 315–350 psig | **255.4 psig** |
+| 90°F | 135–155 psig | 330–370 psig | **275.4 psig** |
+| 95°F | 140–160 psig | 350–395 psig | **296.4 psig** |
+| 100°F | 145–165 psig | 370–415 psig | **318.6 psig** |
+
+*Actual operating pressures vary based on system sizing ([AC tonnage](/ac-tonnage-calculator)), indoor conditions, ductwork, and metering device type. These are field guidelines, not absolutes.*
+
+### R-410A Heat Pump Pressures
+
+In heating mode, R-410A [heat pump](/heat-pump-efficiency-temperature) pressures flip — the outdoor coil becomes the evaporator and runs at lower pressures while the indoor coil runs at higher pressures. At 40°F outdoor temp in heating mode, expect suction pressure around **100–120 psig** and head pressure around **250–300 psig**.
+
+### R-410A Mini Split Pressures
+
+Mini splits running R-410A operate within the same pressure-temperature relationship, but their typical operating pressures may run slightly different due to longer line sets and variable-speed compressors. The PT chart values remain identical — **236.5 psig** at 80°F regardless of whether it's a mini split or a ducted system.
+
+---
+
+## R-404A Pressure Temperature Chart
+
+R-404A is the dominant refrigerant in **commercial refrigeration** — walk-in coolers, walk-in freezers, supermarket display cases, and ice machines. It's a near-azeotropic blend with a glide under **1.1°F**, so the liquid and vapor pressures are very close. We show both columns below.
+
+**R-404A key specs:** Boiling point **-51.0°F** | ASHRAE Safety Class **A1** | GWP **3,922** (highest of all common refrigerants) | ODP **0** | Composition: R-125 (44%) + R-143a (52%) + R-134a (4%)
+
+### R-404A PT Chart — Full Data Table (-40°F to 150°F)
+
+| Temp (°F) | Liquid (psig) | Vapor (psig) | Temp (°F) | Liquid (psig) | Vapor (psig) |
+|-----------|--------------|--------------|-----------|--------------|--------------|
+| -40 | **4.9 psig** | **4.3 psig** | 60 | **126.0 psig** | **124.2 psig** |
+| -30 | **10.3 psig** | **9.6 psig** | 70 | **149.3 psig** | **147.4 psig** |
+| -20 | **16.8 psig** | **16.0 psig** | 75 | **162.0 psig** | **160.1 psig** |
+| -10 | **24.6 psig** | **23.6 psig** | 80 | **175.4 psig** | **173.4 psig** |
+| 0 | **33.7 psig** | **32.6 psig** | 85 | **189.5 psig** | **187.5 psig** |
+| 10 | **44.3 psig** | **43.1 psig** | 90 | **204.5 psig** | **202.4 psig** |
+| 20 | **56.6 psig** | **55.3 psig** | 95 | **220.2 psig** | **218.1 psig** |
+| 30 | **70.7 psig** | **69.3 psig** | 100 | **236.8 psig** | **234.6 psig** |
+| 40 | **86.9 psig** | **85.4 psig** | 110 | **272.5 psig** | **270.4 psig** |
+| 50 | **105.3 psig** | **103.6 psig** | 120 | **312.1 psig** | **309.9 psig** |
+| | | | 130 | **355.7 psig** | **353.5 psig** |
+| | | | 140 | **403.7 psig** | **401.7 psig** |
+| | | | 150 | **456.8 psig** | **455.1 psig** |
+
+*Source: [Arkema Forane® R-404A PT Chart](https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/products/fluorochemicals/forane-404a-pressure-temperature-chart.pdf) — NIST REFPROP Database.*
+
+### R-404A Normal Operating Pressures for Freezers and Coolers
+
+| Application | Typical Suction (psig) | Typical Discharge (psig) | Target Evap Temp |
+|------------|----------------------|------------------------|-----------------|
+| Walk-in freezer (-10°F box) | **20–25 psig** | **200–275 psig** | -20°F to -10°F |
+| Walk-in cooler (35°F box) | **45–60 psig** | **200–300 psig** | 20°F to 30°F |
+| Display case freezer | **15–22 psig** | **200–260 psig** | -25°F to -15°F |
+| Ice machine | **30–40 psig** | **200–250 psig** | 10°F to 20°F |
+
+R-404A has the **highest GWP (3,922)** of any refrigerant on this page. The EU has already banned it in new commercial refrigeration equipment, and US regulations are following suit. R-448A and R-449A are common lower-GWP replacements.
+
+---
+
+## R-22 Pressure Temperature Chart
+
+R-22 (Freon, chlorodifluoromethane) was the **standard residential AC refrigerant for decades**. Production has been phased out under the Montreal Protocol because of its ozone-depleting potential (ODP 0.055). Existing systems can still be serviced with recovered, recycled, or reclaimed R-22, but no new R-22 is manufactured.
+
+**R-22 key specs:** Boiling point **-41.4°F** | ASHRAE Safety Class **A1** | GWP **1,810** | ODP **0.055** | Single component (CHClF₂)
+
+### R-22 PT Chart — Full Data Table (-40°F to 150°F)
+
+| Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) |
+|-----------|----------------|-----------|----------------|-----------|----------------|
+| -40 | **0.6 psig** | 30 | **55.0 psig** | 85 | **155.7 psig** |
+| -35 | **2.6 psig** | 32 | **57.5 psig** | 90 | **168.4 psig** |
+| -30 | **4.9 psig** | 35 | **61.5 psig** | 95 | **181.8 psig** |
+| -25 | **7.4 psig** | 40 | **68.6 psig** | 100 | **195.9 psig** |
+| -20 | **10.2 psig** | 45 | **76.1 psig** | 105 | **210.8 psig** |
+| -15 | **13.2 psig** | 50 | **84.1 psig** | 110 | **226.4 psig** |
+| -10 | **16.5 psig** | 55 | **92.6 psig** | 115 | **242.8 psig** |
+| -5 | **20.1 psig** | 60 | **101.6 psig** | 120 | **260.0 psig** |
+| 0 | **24.0 psig** | 65 | **111.3 psig** | 130 | **296.9 psig** |
+| 10 | **32.8 psig** | 70 | **121.4 psig** | 140 | **337.4 psig** |
+| 20 | **43.1 psig** | 75 | **132.2 psig** | 150 | **381.7 psig** |
+| 25 | **48.8 psig** | 80 | **143.6 psig** | | |
+
+*Source: [Arkema Forane® R-22 PT Chart](https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/forane-22-pressure-temperature-chart.pdf) — NIST REFPROP Database.*
+
+### R-22 Normal Operating Pressures — High and Low Side
+
+| Measurement Point | Normal Range (psig) | Notes |
+|------------------|-------------------|-------|
+| Low side (suction) | **58–85 psig** | Higher with higher indoor heat load |
+| High side (discharge) | **150–250 psig** | Rule of thumb: ~2× ambient °F + 50 |
+| Static (system off, equalized) | **110–135 psig** | At ~70°F–80°F ambient |
+
+A common quick check: on a 75°F day, the static (off) pressure should read around **132.2 psig**. If it's significantly lower, the system has likely lost charge — which can cause [short cycling](/ac-short-cycling) and reduced cooling performance.
+
+### R-22 Pressures at Common Outdoor Temperatures
+
+*What is R-22 pressure at 75 degrees?* At 75°F, R-22 saturation pressure is **132.2 psig**.
+
+*What about at 80 degrees?* At 80°F, R-22 pressure is **143.6 psig**.
+
+*And at 85 degrees?* At 85°F, R-22 pressure climbs to **155.7 psig**.
+
+*90-degree day?* At 90°F, expect **168.4 psig** on the gauges.
+
+---
+
+## R-454B Pressure Temperature Chart
+
+R-454B is the **designated replacement for R-410A** in new residential and commercial HVAC equipment. Sold under brand names **Opteon XL41** (Chemours), **Solstice 454B** (Honeywell), and **Puron Advance** (Carrier/Daikin), it has a GWP of only **466** — a 78% reduction from R-410A's 2,088.
+
+R-454B is a zeotropic blend with a small temperature glide of approximately **1.5°F**. That means the bubble (liquid) and dew (vapor) pressures differ slightly. We provide both columns.
+
+**R-454B key specs:** Boiling point **-58.9°F** | ASHRAE Safety Class **A2L** (mildly flammable — requires A2L-rated equipment and tools) | GWP **466** | ODP **0** | Composition: R-32 (68.9%) + R-1234yf (31.1%)
+
+### R-454B PT Chart — Full Data Table (-40°F to 150°F)
+
+| Temp (°F) | Liquid (psig) | Vapor (psig) | Temp (°F) | Liquid (psig) | Vapor (psig) |
+|-----------|--------------|--------------|-----------|--------------|--------------|
+| -40 | **9.5 psig** | **8.4 psig** | 65 | **177.3 psig** | **169.3 psig** |
+| -30 | **16.7 psig** | **15.3 psig** | 70 | **192.5 psig** | **184.0 psig** |
+| -20 | **24.9 psig** | **23.0 psig** | 75 | **208.6 psig** | **199.6 psig** |
+| -10 | **34.6 psig** | **32.3 psig** | 80 | **225.6 psig** | **216.1 psig** |
+| 0 | **46.1 psig** | **43.3 psig** | 85 | **243.6 psig** | **233.5 psig** |
+| 10 | **59.5 psig** | **56.1 psig** | 90 | **262.5 psig** | **251.9 psig** |
+| 20 | **75.0 psig** | **70.9 psig** | 95 | **282.5 psig** | **271.4 psig** |
+| 30 | **92.9 psig** | **88.1 psig** | 100 | **303.6 psig** | **291.6 psig** |
+| 40 | **113.3 psig** | **107.7 psig** | 110 | **348.9 psig** | **336.4 psig** |
+| 50 | **136.6 psig** | **130.1 psig** | 120 | **399.1 psig** | **385.8 psig** |
+| 60 | **162.9 psig** | **155.4 psig** | 130 | **454.2 psig** | **440.5 psig** |
+| | | | 140 | **514.9 psig** | **501.0 psig** |
+| | | | 150 | **581.4 psig** | **568.2 psig** |
+
+*Sources: [Goodman/Daikin A1 vs A2L PT Chart](https://apps.goodmanmfg.com/brochures/files/666324eb72fb9PM-A2LPTC-USA_04-24.pdf) (data by Weitron); [Honeywell Solstice 454B PT Chart](https://prod-edam.honeywell.com/content/dam/honeywell-edam/pmt/oneam/en-us/refrigerants/documents/hon-ess-am-3161690-adm-tds-pt-chart-solstice-454b-ltr-en.pdf).*
+
+### R-454B vs R-410A Pressure Comparison
+
+Since R-454B is replacing R-410A, technicians need to understand how pressures compare:
+
+| Temp (°F) | R-410A (psig) | R-454B Liquid (psig) | R-454B Vapor (psig) | Difference (liquid) |
+|-----------|--------------|---------------------|--------------------|--------------------|
+| 70°F | **201.8 psig** | **192.5 psig** | **184.0 psig** | -9.3 psig (lower) |
+| 80°F | **236.5 psig** | **225.6 psig** | **216.1 psig** | -10.9 psig (lower) |
+| 90°F | **275.4 psig** | **262.5 psig** | **251.9 psig** | -12.9 psig (lower) |
+| 100°F | **318.6 psig** | **303.6 psig** | **291.6 psig** | -15.0 psig (lower) |
+
+R-454B operates at **slightly lower pressures** than R-410A across all temperatures. However, the two refrigerants are **not interchangeable** — R-454B is A2L classified and requires A2L-rated equipment, gauges, and leak detectors.
+
+You cannot retrofit R-454B into an existing R-410A system.
+
+---
+
+## R-407C Pressure Temperature Chart — Temperature Glide Warning
+
+R-407C is a zeotropic blend used as a **retrofit replacement for R-22** in existing systems. It has a similar pressure profile to R-22 but with one critical difference: R-407C has a **temperature glide of approximately 9–11°F**.
+
+This means at any given pressure, the saturated liquid temperature (bubble point) and saturated vapor temperature (dew point) are **different by about 10°F**. If you use the wrong column when calculating superheat or subcooling, your readings will be off by 10 degrees. That's a massive diagnostic error.
+
+**R-407C key specs:** Boiling point **-43.6°F** | ASHRAE Safety Class **A1** | GWP **1,774** | ODP **0** | Composition: R-32 (23%) + R-125 (25%) + R-134a (52%) | **Temperature glide: ~9–11°F**
+
+### R-407C PT Chart — Bubble Point and Dew Point Data
+
+| Temp (°F) | Bubble/Liquid (psig) | Dew/Vapor (psig) | Temp (°F) | Bubble/Liquid (psig) | Dew/Vapor (psig) |
+|-----------|---------------------|-------------------|-----------|---------------------|-------------------|
+| -20 | **14.7 psig** | **7.2 psig** | 70 | **108.6 psig** | **94.6 psig** |
+| -10 | **20.4 psig** | **12.5 psig** | 75 | **118.0 psig** | **103.0 psig** |
+| 0 | **28.1 psig** | **19.6 psig** | 80 | **126.2 psig** | **111.2 psig** |
+| 10 | **35.6 psig** | **25.8 psig** | 85 | **136.0 psig** | **120.0 psig** |
+| 20 | **44.9 psig** | **35.0 psig** | 90 | **145.7 psig** | **129.6 psig** |
+| 30 | **55.3 psig** | **44.0 psig** | 95 | **156.5 psig** | **139.6 psig** |
+| 40 | **65.7 psig** | **54.5 psig** | 100 | **167.2 psig** | **150.0 psig** |
+| 50 | **78.5 psig** | **66.3 psig** | 110 | **190.8 psig** | **172.3 psig** |
+| 60 | **92.7 psig** | **79.6 psig** | 120 | **216.7 psig** | **196.9 psig** |
+
+*Sources: [Honeywell Genetron 407C PT Chart](https://prod-edam.honeywell.com/content/dam/honeywell-edam/pmt/oneam/en-us/refrigerants/documents/pmt-am-genetron407c-pressure-temp-chart-tech-tool1.pdf); [iGas USA R-407C PT Chart](https://www.igasusa.com/files/R407C-PT-Chart.pdf); [ACHR News Temperature Glide Guide](https://www.achrnews.com/articles/147322-the-definitive-guide-to-temperature-glide-part-1).*
+
+**Critical reminder for R-407C:** Always use **dew point** (vapor column) for superheat calculations. Always use **bubble point** (liquid column) for subcooling calculations. The Chemours Freon [technical bulletin](https://www.freon.com/en/-/media/files/freon/temperature-glide-freon-mp-hp-407c-refrigerant-blends.pdf) provides additional detail on this.
+
+---
+
+## R-32 Pressure Temperature Chart
+
+R-32 (difluoromethane) is a **single-component refrigerant** that serves as the base component of both R-410A and R-454B. It's increasingly used on its own in residential air conditioning — particularly in Asia, Europe, and Australia — due to its lower GWP compared to R-410A.
+
+R-32 operates at the **highest pressures** of any common residential refrigerant. At 100°F, R-32 reaches **325.7 psig** compared to R-410A's **318.6 psig**.
+
+**R-32 key specs:** Boiling point **-61.1°F** | ASHRAE Safety Class **A2L** (mildly flammable) | GWP **675** | ODP **0** | Single component (CH₂F₂)
+
+### R-32 PT Chart — Key Temperature Data
+
+| Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) |
+|-----------|----------------|-----------|----------------|-----------|----------------|
+| -38 | **12.4 psig** | 40 | **121.0 psig** | 90 | **281.3 psig** |
+| -30 | **18.2 psig** | 50 | **145.8 psig** | 100 | **325.7 psig** |
+| -20 | **26.8 psig** | 60 | **174.0 psig** | 110 | **374.9 psig** |
+| -10 | **37.1 psig** | 70 | **205.8 psig** | 120 | **429.3 psig** |
+| 0 | **49.2 psig** | 75 | **219.6 psig** | 130 | **489.5 psig** |
+| 10 | **63.5 psig** | 80 | **241.5 psig** | 140 | **555.8 psig** |
+| 20 | **80.0 psig** | 85 | **256.9 psig** | 150 | **628.8 psig** |
+| 30 | **99.1 psig** | | | | |
+
+*Source: [Goodman/Daikin A1 vs A2L PT Chart](https://apps.goodmanmfg.com/brochures/files/666324eb72fb9PM-A2LPTC-USA_04-24.pdf) (data by Weitron); [Hudson Technologies R-32 PT Chart](https://www.hudsontech.com/pdfs/pt-charts/R-32-Pressure-Temperature-Chart.pdf).*
+
+---
+
+## R-290 Pressure Temperature Chart
+
+R-290 is **propane** — yes, the same propane used in grills. As a refrigerant, it offers excellent thermodynamic properties with an ultra-low GWP of just **3**. You'll find R-290 in self-contained commercial units like vending machines, stand-alone display coolers, small reach-in coolers, and some window AC units.
+
+The trade-off is simple: R-290 is classified **A3 — higher flammability**. Charge amounts are strictly limited (typically under 150g in the US per UL 60335-2-40), and technicians must follow specific safety protocols.
+
+**R-290 key specs:** Boiling point **-43.8°F** | ASHRAE Safety Class **A3** (higher flammability) | GWP **3** | ODP **0** | Single component — propane (C₃H₈, >99.5% purity)
+
+### R-290 PT Chart — Full Data Table (-40°F to 150°F)
+
+| Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) | Temp (°F) | Pressure (psig) |
+|-----------|----------------|-----------|----------------|-----------|----------------|
+| -40 | **1.4 psig** | 40 | **64.0 psig** | 100 | **174.3 psig** |
+| -30 | **5.7 psig** | 50 | **77.7 psig** | 110 | **199.6 psig** |
+| -20 | **10.7 psig** | 60 | **93.0 psig** | 120 | **227.8 psig** |
+| -10 | **16.7 psig** | 70 | **110.2 psig** | 130 | **258.7 psig** |
+| 0 | **23.7 psig** | 80 | **129.4 psig** | 140 | **292.3 psig** |
+| 10 | **31.8 psig** | 85 | **139.8 psig** | 150 | **329.0 psig** |
+| 20 | **41.1 psig** | 90 | **150.5 psig** | 160 | **368.8 psig** |
+| 30 | **51.8 psig** | 95 | **161.9 psig** | | |
+
+*Source: [Hudson Technologies R-290 PT Chart](https://www.hudsontech.com/pdfs/pt-charts/R-290-Pressure-Temperature-Chart.pdf); [National Refrigerants R-290 Data Sheet](https://refrigerants.com/wp-content/uploads/2020/01/NRI-R290-SS.pdf).*
+
+### R-290 Safety Note
+
+R-290 requires extra caution during service. Because propane is highly flammable, always use spark-free tools, avoid open flames near the equipment, use a combustible gas leak detector, and never exceed the manufacturer's maximum charge amount. For [window AC units](/recharge-window-ac) that use R-290, the charge is typically well under 150 grams — enough to cool effectively while staying within safety limits.
+
+---
+
+## How to Use PT Charts for Superheat and Subcooling Calculations
+
+The PT chart's most important practical application is calculating [superheat and subcooling](/superheat-and-subcooling). These two measurements tell you whether the system has the right amount of refrigerant charge.
+
+### Calculating Superheat with a PT Chart
+
+Superheat measures how much the refrigerant vapor has been heated *above* its saturation temperature. Here's the process:
+
+1. Connect your gauges and read the **suction pressure** at the service valve.
+2. Look up the saturation temperature on the PT chart for that pressure. For zeotropic blends like R-407C, use the **dew point** (vapor) column.
+3. Measure the **actual suction line temperature** with a pipe clamp thermometer near the compressor.
+4. Subtract: **Superheat = Actual suction temp − Saturation temp from chart**
+
+*Example:* You're servicing an R-410A system. Suction pressure reads **128 psig**. The PT chart shows that **128 psig** corresponds to approximately **48°F** saturation temperature. Your pipe thermometer reads **58°F** on the suction line.
+
+**Superheat = 58°F − 48°F = 10°F**
+
+A target superheat of **8–12°F** is typical for R-410A fixed-orifice systems. If superheat is too high, the system is likely undercharged. Too low, and it may be overcharged — risking liquid slugging the compressor.
+
+### Calculating Subcooling with a PT Chart
+
+Subcooling measures how much the liquid refrigerant has been cooled *below* its saturation temperature. The process:
+
+1. Read the **liquid line pressure** at the service valve.
+2. Look up the saturation temperature on the PT chart. For zeotropic blends, use the **bubble point** (liquid) column.
+3. Measure the **actual liquid line temperature** with a pipe clamp thermometer.
+4. Subtract: **Subcooling = Saturation temp from chart − Actual liquid temp**
+
+*Example:* Same R-410A system. Liquid line pressure reads **310 psig**. The PT chart shows approximately **100°F** saturation temperature. Your thermometer reads **90°F** on the liquid line.
+
+**Subcooling = 100°F − 90°F = 10°F**
+
+Target subcooling for R-410A TXV systems is typically **10–15°F**. Low subcooling suggests undercharge; high subcooling suggests overcharge or a restriction.
+
+### Superheat and Subcooling Target Ranges by Refrigerant
+
+| Refrigerant | Typical Superheat Target | Typical Subcooling Target | Charging Method |
+|-------------|------------------------|-------------------------|----------------|
+| R-410A | **8–12°F** (fixed orifice) / **5–10°F** (TXV) | **10–15°F** | Subcooling (TXV) or superheat (piston) |
+| R-22 | **8–18°F** | **10–15°F** | Superheat or subcooling |
+| R-134a | **8–12°F** | **10–15°F** | Varies by application |
+| R-404A | **8–12°F** | **8–12°F** | Subcooling preferred |
+| R-454B | **10–20°F** | **8–12°F** | Subcooling (A2L systems) |
+| R-407C | **8–15°F** (use dew point!) | **10–15°F** (use bubble point!) | Subcooling |
+| R-290 | **8–12°F** | **8–12°F** | Per manufacturer spec |
+
+---
+
+## Normal Operating Pressures for Residential AC Systems
+
+Here's the master comparison table showing what pressures to expect from each refrigerant in a running residential AC system under typical conditions:
+
+| Refrigerant | Typical Suction/Low Side (psig) | Typical Discharge/High Side (psig) | Saturation @ 80°F (psig) |
+|-------------|-------------------------------|-----------------------------------|-------------------------|
+| R-410A | **115–150 psig** | **300–400 psig** | **236.5 psig** |
+| R-454B | **110–145 psig** | **290–390 psig** | **225.6 psig** |
+| R-32 | **120–155 psig** | **310–420 psig** | **241.5 psig** |
+| R-22 | **58–85 psig** | **150–250 psig** | **143.6 psig** |
+| R-407C | **55–80 psig** | **150–250 psig** | **126.2 psig** (bubble) |
+| R-134a | **25–45 psig** | **150–250 psig** | **86.7 psig** |
+| R-404A | **20–60 psig** | **200–300 psig** | **175.4 psig** |
+| R-290 | **25–45 psig** | **130–200 psig** | **129.4 psig** |
+
+The clear takeaway: R-410A, R-454B, and R-32 all operate in the **high-pressure range** (300+ psig discharge), while R-22 and R-407C operate at moderate pressures, and R-134a and R-290 are the lowest. Always ensure your gauge set is rated for the refrigerant you're working with.
+
+---
+
+## Zeotropic Blends and Temperature Glide Explained
+
+Not all refrigerants behave the same during phase change. Understanding the difference between single-component, azeotropic, and zeotropic refrigerants is essential for accurate diagnostics.
+
+### Bubble Point vs Dew Point
+
+When a zeotropic blend evaporates, the more volatile component boils first. This means:
+
+- The **bubble point** is the temperature where the first bubble of vapor forms in the liquid — this is the saturation temperature for the liquid phase.
+- The **dew point** is the temperature where the last drop of liquid evaporates — this is the saturation temperature for the vapor phase.
+
+The temperature difference between bubble and dew point at a given pressure is called **temperature glide**. Single-component refrigerants have zero glide. Zeotropic blends can have significant glide.
+
+### Temperature Glide by Refrigerant
+
+| Refrigerant | Blend Type | Temperature Glide | PT Chart Columns Needed |
+|-------------|-----------|-------------------|------------------------|
+| R-22 | Single component | **0°F** | 1 column |
+| R-134a | Single component | **0°F** | 1 column |
+| R-32 | Single component | **0°F** | 1 column |
+| R-290 | Single component | **0°F** | 1 column |
+| R-410A | Near-azeotrope | **<0.5°F** | 1 column (effectively) |
+| R-404A | Near-azeotrope | **<1.1°F** | 2 columns (small diff) |
+| R-454B | Zeotrope | **~1.5°F** | 2 columns |
+| R-407C | Zeotrope | **~9–11°F** | **2 columns (critical!)** |
+
+For R-407C, using the wrong column creates a **10°F error** in your superheat or subcooling reading. That's enough to completely misdiagnose the system. Always check whether you're reading bubble or dew point.
+
+*Source: [ACHR News — The Definitive Guide to Temperature Glide](https://www.achrnews.com/articles/147322-the-definitive-guide-to-temperature-glide-part-1); [National Refrigerants PT Chart Guide](https://nationalref.com/technical/pt-chart/).*
+
+---
+
+## Quick-Reference: All 8 Refrigerants Side by Side at Common Temperatures
+
+This is the comparison table for techs who work with multiple refrigerant types:
+
+| Temp (°F) | R-22 | R-134a | R-404A | R-407C (bub) | R-410A | R-454B (liq) | R-32 | R-290 |
+|-----------|------|--------|--------|-------------|--------|-------------|------|-------|
+| 0°F | **24.0** | **6.5** | **33.7** | **28.1** | **48.4** | **46.1** | **49.2** | **23.7** |
+| 40°F | **68.6** | **35.0** | **86.9** | **65.7** | **118.8** | **113.3** | **121.0** | **64.0** |
+| 60°F | **101.6** | **57.4** | **126.0** | **92.7** | **170.7** | **162.9** | **174.0** | **93.0** |
+| 75°F | **132.2** | **78.7** | **162.0** | **118.0** | **218.7** | **208.6** | **219.6** | **119.5** |
+| 80°F | **143.6** | **86.7** | **175.4** | **126.2** | **236.5** | **225.6** | **241.5** | **129.4** |
+| 90°F | **168.4** | **104.3** | **204.5** | **145.7** | **275.4** | **262.5** | **281.3** | **150.5** |
+| 100°F | **195.9** | **124.2** | **236.8** | **167.2** | **318.6** | **303.6** | **325.7** | **174.3** |
+| 120°F | **260.0** | **171.2** | **312.1** | **216.7** | **419.4** | **399.1** | **429.3** | **227.8** |
+
+*All values in psig. Liquid/bubble pressures shown for blends.*
+
+---
+
+## ASHRAE Safety Classification Summary
+
+| Refrigerant | Class | Meaning | Key Consideration |
+|-------------|-------|---------|-------------------|
+| R-22 | **A1** | Non-toxic, non-flammable | Legacy; ODP concern (ozone depletion) |
+| R-134a | **A1** | Non-toxic, non-flammable | Widely used in automotive and commercial |
+| R-404A | **A1** | Non-toxic, non-flammable | Highest GWP (3,922); being phased down |
+| R-407C | **A1** | Non-toxic, non-flammable | Significant temperature glide (~10°F) |
+| R-410A | **A1** | Non-toxic, non-flammable | High GWP (2,088); being replaced by R-454B |
+| R-32 | **A2L** | Non-toxic, **mildly flammable** | Requires A2L-rated equipment; used globally |
+| R-454B | **A2L** | Non-toxic, **mildly flammable** | R-410A replacement; A2L tools required |
+| R-290 | **A3** | Non-toxic, **highly flammable** | Strict charge limits; propane safety protocols |
+
+Per [ASHRAE Standard 34](https://www.ashrae.org/technical-resources/standards-and-guidelines/ashrae-refrigerant-designations): **A** = lower toxicity, **B** = higher toxicity. **1** = no flame propagation, **2L** = lower flammability (burning velocity ≤10 cm/s), **3** = higher flammability.
+
+All technicians handling these refrigerants must hold an [EPA Section 608 certification](https://www.epa.gov/section608/section-608-technician-certification). Since January 2018, this requirement extends to all substitute refrigerants including HFCs, not just ozone-depleting substances.
+
+---
+
+## FAQ — Refrigerant PT Charts
+
+# What is a PT chart in HVAC?
+
+A PT chart (pressure-temperature chart) is a reference table showing the saturation pressure of a refrigerant at each temperature. HVAC technicians use it to verify [refrigerant charge](/ac-refrigerant-charge), calculate superheat and subcooling, and diagnose system performance issues. It's one of the most essential tools in any tech's toolkit, alongside a manifold gauge set and a thermometer.
+
+## What should R-410A pressures be on an 80-degree day?
+
+With the system off and equalized on an 80°F day, R-410A static pressure should read approximately **236.5 psig**. With the system running, expect suction (low side) around **125–145 psig** and discharge (high side) around **295–330 psig**, depending on indoor conditions and system [sizing](/ac-tonnage-calculator).
+
+## How do you calculate superheat using a PT chart?
+
+Measure the suction line pressure, find the corresponding saturation temperature on the PT chart, then subtract that from the actual measured suction line temperature. The result is superheat. For details and worked examples, see our dedicated [superheat and subcooling guide](/superheat-and-subcooling).
+
+## What is the difference between R-410A and R-454B pressures?
+
+R-454B operates at slightly lower pressures than R-410A — about **10–15 psig lower** at typical operating temperatures. At 80°F, R-410A reads **236.5 psig** while R-454B liquid pressure is **225.6 psig**. Despite similar pressure ranges, the two are not interchangeable. R-454B is an A2L (mildly flammable) refrigerant and requires purpose-built equipment. Learn more about [refrigerant types and properties](/refrigerant-types).
+
+## What is temperature glide in refrigerants?
+
+Temperature glide is the difference between the bubble point (where liquid starts to boil) and the dew point (where vapor finishes condensing) at a constant pressure. Single-component refrigerants like R-22 have zero glide. R-407C has the largest glide at approximately **9–11°F**.
+
+This means technicians must use a two-column PT chart and carefully select the correct column for superheat (dew point) vs. subcooling (bubble point) calculations.
+
+## Can you still use R-22 refrigerant?
+
+R-22 production has been phased out due to its ozone depletion potential. However, existing R-22 systems can still be serviced using recovered, recycled, or reclaimed R-22. No new R-22 is being manufactured, which means available supply is declining and prices remain elevated.
+
+Many homeowners eventually [replace R-22 systems](/ac-refrigerant-charge) with modern R-410A or R-454B equipment.
+
+---
+
+## Sources and References
+
+All data on this page is sourced from manufacturer publications and government databases. Full 1°F increment data is available in the linked PDFs.
+
+1. Arkema Forane® R-410A PT Chart — [NIST REFPROP Database](https://forane.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/forane-410a-pressure-temperature-chart.pdf)
+2. Arkema Forane® R-22 PT Chart — [NIST REFPROP Database](https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/forane-22-pressure-temperature-chart.pdf)
+3. Arkema Forane® R-134a PT Chart — [NIST REFPROP Database](https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/products/fluorochemicals/forane-134a-pressure-temperature-chart.pdf)
+4. Arkema Forane® R-404A PT Chart — [NIST REFPROP Database](https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/products/fluorochemicals/forane-404a-pressure-temperature-chart.pdf)
+5. Arkema Forane® Master PT Chart — [Multi-refrigerant comparison](https://forane.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/Forane%20Ref%20PT%20Regular%20Chart%20EN)
+6. Honeywell Solstice R-454B PT Chart — [Manufacturer data](https://prod-edam.honeywell.com/content/dam/honeywell-edam/pmt/oneam/en-us/refrigerants/documents/hon-ess-am-3161690-adm-tds-pt-chart-solstice-454b-ltr-en.pdf)
+7. Honeywell Genetron R-407C PT Chart — [Manufacturer data](https://prod-edam.honeywell.com/content/dam/honeywell-edam/pmt/oneam/en-us/refrigerants/documents/pmt-am-genetron407c-pressure-temp-chart-tech-tool1.pdf)
+8. Goodman/Daikin A1 vs A2L PT Chart — [Weitron data](https://apps.goodmanmfg.com/brochures/files/666324eb72fb9PM-A2LPTC-USA_04-24.pdf)
+9. Hudson Technologies — [R-290](https://www.hudsontech.com/pdfs/pt-charts/R-290-Pressure-Temperature-Chart.pdf), [R-32](https://www.hudsontech.com/pdfs/pt-charts/R-32-Pressure-Temperature-Chart.pdf), [R-410A](https://www.hudsontech.com/pdfs/pt-charts/R-410A-Pressure-Temperature-Chart.pdf) PT Charts
+10. National Refrigerants — [R-290 Data Sheet](https://refrigerants.com/wp-content/uploads/2020/01/NRI-R290-SS.pdf)
+11. ASHRAE Standard 34 — [Refrigerant Designations and Safety](https://www.ashrae.org/technical-resources/standards-and-guidelines/ashrae-refrigerant-designations)
+12. EPA Section 608 — [Technician Certification Requirements](https://www.epa.gov/section608/section-608-technician-certification-requirements)
+13. EPA — [Refrigerant Management Q&A](https://www.epa.gov/section608/epas-refrigerant-management-program-questions-and-answers-section-608-certified)
+14. ACHR News — [The Definitive Guide to Temperature Glide](https://www.achrnews.com/articles/147322-the-definitive-guide-to-temperature-glide-part-1)
+15. ACHR News — [Refrigerant Blends and Temperature Glide](https://www.achrnews.com/articles/130707-the-professor-the-correlation-between-refrigerant-blends-and-temperature-glide)
+16. National Refrigerants — [Two-Column PT Chart Guide](https://nationalref.com/technical/pt-chart/)
+17. Chemours Freon — [R-407C Temperature Glide Technical Bulletin](https://www.freon.com/en/-/media/files/freon/temperature-glide-freon-mp-hp-407c-refrigerant-blends.pdf)
+18. Copeland/Emerson — [R-407C Changeover Guidelines](https://webapps.copeland.com/online-product-information/Publication/LaunchPDF?Index=AEB&PDF=95-14)
+19. Bonneville Power Administration — [R-410A PT Chart](https://www.bpa.gov/-/media/Aep/energy-efficiency/residential/residential-ptcs-essentials/r-410a-pressure-temperature-chart.pdf)
+
+---
+
+## Interactive PT Chart Tool Specification
+
+## Tool functionality:
+- **Dropdown menu** to select any of the 8 refrigerants (R-134a, R-410A, R-404A, R-22, R-454B, R-407C, R-32, R-290)
+- Displays the **full PT data table** for the selected refrigerant (1°F increments from -40°F to 150°F)
+- Displays an **interactive line graph** (temperature on X-axis, pressure in psig on Y-axis) — user can hover to see the exact pressure at any temperature
+- For zeotropic blends (R-407C, R-454B, R-404A), shows **both bubble and dew point lines** on the graph
+- **Multi-refrigerant overlay mode**: toggle to display 2-4 refrigerants on the same graph for visual comparison
+- **Quick lookup field**: type a temperature (°F) and instantly see the pressure for the selected refrigerant
+- Mobile-responsive design with touch-friendly interaction
+
+---
+
+If you have any questions about using these PT charts in the field, or need help interpreting your gauge readings for a specific system, drop a comment below and we'll do our best to help you out.

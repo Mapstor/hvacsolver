@@ -1,0 +1,73 @@
+# https://www.robotstxt.org/robotstxt.html
+# HVAC Solver - robots.txt
+
+# Default: Allow all crawlers
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# AI Crawlers - Explicitly Welcome
+# These crawlers power AI search, chatbots, and assistants
+
+# OpenAI (ChatGPT, GPT-4)
+User-agent: GPTBot
+Allow: /
+
+# OpenAI SearchGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: Claude-Web
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI (Bard, Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft (Bing Copilot)
+User-agent: Bingbot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: FacebookBot
+Allow: /
+
+# Apple (Siri, Apple Intelligence)
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Amazon (Alexa)
+User-agent: Amazonbot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Common Crawl (used by many AI training datasets)
+User-agent: CCBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://hvacsolver.com/sitemap.xml
+
+# LLMs.txt for AI systems
+# See: https://hvacsolver.com/llms.txt

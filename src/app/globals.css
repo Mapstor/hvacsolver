@@ -1,26 +1,292 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Design system colors */
+  --slate-950: #020617;
+  --slate-700: #334155;
+  --slate-200: #e2e8f0;
+  --slate-50: #f8fafc;
+  --white: #ffffff;
+  --navy-700: #1e3a5f;
+  --navy-900: #0f2440;
+  --accent-600: #c2410c;
+  --accent-50: #fff7ed;
+  --green-700: #15803d;
+  --red-700: #b91c1c;
+  --amber-600: #d97706;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Article content styling */
+.article-content {
+  max-width: 780px;
+}
+
+.article-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--slate-950);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--slate-950);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--slate-200);
+}
+
+/* When h2 follows an hr, remove the h2's border to prevent double lines */
+.article-content hr + h2 {
+  border-top: none;
+  margin-top: 2rem;
+  padding-top: 0;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy-700);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--slate-950);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  color: var(--slate-700);
+}
+
+.article-content a {
+  color: var(--navy-700);
+  text-decoration: none;
+}
+
+.article-content a:hover {
+  color: var(--accent-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-content blockquote {
+  background: var(--slate-50);
+  border-left: 4px solid var(--accent-600);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--slate-700);
+  border-radius: 0 6px 6px 0;
+}
+
+.article-content blockquote p {
+  margin-bottom: 0;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: var(--slate-700);
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+.article-content strong {
+  font-weight: 600;
+  color: var(--navy-700);
+}
+
+/* Standalone formulas/calculations */
+.article-content .formula {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.95rem;
+  background: var(--slate-50);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  color: var(--slate-950);
+  font-weight: 500;
+}
+
+.article-content code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9em;
+  background: var(--slate-50);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+.article-content pre {
+  font-family: var(--font-mono), monospace;
+  background: var(--slate-950);
+  color: var(--slate-200);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.article-content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 1px solid var(--slate-200);
+  margin: 2rem 0;
+}
+
+/* Table wrapper for horizontal scroll */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+}
+
+/* Tables */
+.article-content table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 0;
+  border: 1px solid var(--slate-200);
+  border-radius: 8px;
+}
+
+.article-content thead {
+  background: var(--navy-700);
+  color: white;
+}
+
+.article-content th {
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.article-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.article-content tbody tr:nth-child(even) {
+  background: var(--slate-50);
+}
+
+.article-content tbody tr:hover {
+  background: #e8f4fd;
+}
+
+/* Responsive tables */
+@media (max-width: 640px) {
+  .article-content table {
+    font-size: 14px;
+  }
+
+  .article-content th,
+  .article-content td {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Sources & References section */
+.sources-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--slate-200);
+}
+
+.sources-section .sources-card {
+  background: var(--slate-50);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+
+.sources-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--slate-950);
+  margin: 0 0 1rem 0;
+  padding: 0;
+  border: none;
+}
+
+.sources-section p {
+  font-size: 14px;
+  color: var(--slate-700);
+  margin-bottom: 0.75rem;
+}
+
+.sources-section ol {
+  font-size: 14px;
+  color: var(--slate-700);
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style-type: decimal;
+}
+
+.sources-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.sources-section a {
+  color: var(--navy-700);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.sources-section a:hover {
+  color: var(--accent-600);
+  text-decoration: underline;
+}
+
+/* Truncate long URLs in sources */
+.sources-section .source-url {
+  display: inline-block;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+@media (max-width: 640px) {
+  .sources-section .source-url {
+    max-width: 150px;
+  }
+
+  .sources-section .sources-card {
+    padding: 1rem 1.25rem;
+  }
 }

@@ -1,0 +1,474 @@
+---
+title: "CFM Duct Sizing Chart & Calculator"
+slug: "cfm-duct-sizing"
+description: "Complete CFM duct sizing charts for rigid and flex duct, plus a calculator for supply and return duct sizing. ACCA Manual D methodology explained with worked examples."
+pillar: "calculators"
+pillarHub: "/hvac-calculators"
+hasCalculator: true
+calculatorComponent: "DuctSizingCalculator"
+seoTitle: "CFM Duct Sizing Chart & Calculator — Rigid & Flex Duct Sizes [2024]"
+---
+
+# CFM Duct Sizing Chart & Calculator
+
+> "I'm installing a new 3-ton AC, and my HVAC contractor says I need 1,200 CFM of airflow. How do I know what size ducts to use for supply and return — and will my existing ductwork handle it?"
+
+This is one of the most critical questions in any HVAC installation. The wrong duct size leads to noisy airflow, frozen coils, hot rooms, and energy bills that climb every month.
+
+Here's the good news: duct sizing follows predictable rules backed by decades of ASHRAE and ACCA engineering data. We've compiled every chart, formula, and rule of thumb you need into one complete reference — plus a calculator that does the math for you.
+
+Before we dive into the charts, you need three numbers:
+
+1. **Your system tonnage** (or total BTU capacity) — this determines how many CFM you need.
+2. **Your duct material** — rigid metal handles more airflow than flex duct at the same diameter.
+3. **Your duct shape** — round, rectangular, or oval — each has different sizing rules.
+
+Got those? Let's size your ducts.
+
+{/* CALCULATOR */}
+
+---
+
+## CFM Duct Sizing Chart (Master Reference Table)
+
+This is the chart you came for. It shows the recommended duct diameter for any CFM value from 50 to 3,000 CFM, for both rigid metal and flex duct, at a standard friction rate of 0.1" w.c. per 100 ft of duct length.
+
+**Bookmark this table — it's the single most useful duct sizing reference in residential HVAC.**
+
+| CFM Required | Rigid Round Duct | Flex Round Duct | Velocity in Rigid (FPM) | Rectangular Equivalent |
+|---|---|---|---|---|
+| 50 CFM | 5" | 6" | 370 FPM | 6×4 |
+| 80 CFM | 6" | 7" | 410 FPM | 8×4 |
+| 100 CFM | 7" | 8" | 375 FPM | 8×5 |
+| 125 CFM | 7" | 8" | 470 FPM | 10×5 |
+| 150 CFM | 8" | 9" | 430 FPM | 10×5 |
+| 200 CFM | 8" | 9" | 575 FPM | 10×7 |
+| 250 CFM | 9" | 10" | 565 FPM | 12×7 |
+| 300 CFM | 10" | 10" | 550 FPM | 12×8 |
+| 400 CFM | 10" | 12" | 735 FPM | 14×9 |
+| 500 CFM | 12" | 12" | 640 FPM | 14×10 |
+| 600 CFM | 12" | 14" | 770 FPM | 16×10 |
+| 800 CFM | 14" | 16" | 750 FPM | 18×12 |
+| 1,000 CFM | 14" | 16" | 940 FPM | 20×12 |
+| 1,200 CFM | 16" | 18" | 860 FPM | 22×12 |
+| 1,400 CFM | 18" | 20" | 795 FPM | 24×12 |
+| 1,600 CFM | 18" | 20" | 910 FPM | 24×14 |
+| 2,000 CFM | 20" | 22" | 915 FPM | 30×14 |
+| 2,400 CFM | 22" | 24" | 910 FPM | 30×14 |
+| 3,000 CFM | 24" | 26" | 955 FPM | 36×14 |
+
+*Based on ASHRAE duct friction chart data at 0.1" w.c./100 ft friction rate for galvanized steel (rigid) and wire-helix flex duct. Flex duct sizes assume fully stretched, properly supported installation.*
+
+### How To Read the Duct Sizing Chart
+
+Find your required CFM in the left column. Read across to your duct type (rigid or flex). That's your minimum duct diameter.
+
+If you're between two values — always round up to the next size. **Undersized ducts are far worse than slightly oversized ducts.** An undersized duct creates high velocity, noise, and pressure drop. A slightly oversized duct just moves air a bit slower, which is actually quieter.
+
+---
+
+## How Many CFM Per Ton of AC? (The 400 CFM Rule)
+
+The starting point for all duct sizing is knowing how much airflow your system needs. Here's the rule:
+
+**CFM = Tonnage × 400**
+
+This is the industry standard, supported by ACCA Manual D and used by HVAC contractors nationwide. A 3-ton system needs **1,200 CFM**. A 5-ton system needs **2,000 CFM**. Simple.
+
+### CFM Per Ton Chart
+
+| AC/Heat Pump Size | BTU Capacity | CFM (at 400/ton) | CFM Range (350–450/ton) |
+|---|---|---|---|
+| 1 Ton | 12,000 BTU | **400 CFM** | 350–450 CFM |
+| 1.5 Ton | 18,000 BTU | **600 CFM** | 525–675 CFM |
+| 2 Ton | 24,000 BTU | **800 CFM** | 700–900 CFM |
+| 2.5 Ton | 30,000 BTU | **1,000 CFM** | 875–1,125 CFM |
+| 3 Ton | 36,000 BTU | **1,200 CFM** | 1,050–1,350 CFM |
+| 3.5 Ton | 42,000 BTU | **1,400 CFM** | 1,225–1,575 CFM |
+| 4 Ton | 48,000 BTU | **1,600 CFM** | 1,400–1,800 CFM |
+| 5 Ton | 60,000 BTU | **2,000 CFM** | 1,750–2,250 CFM |
+
+If you know your system's tonnage but not your CFM, simply use our [AC tonnage calculator](/ac-tonnage-calculator) to find the right starting point.
+
+### When Does the 400 CFM Per Ton Rule Change?
+
+The 400 CFM/ton number works for most standard residential installations. But it can shift:
+
+**Lower (350 CFM/ton):** In humid climates (Florida, Gulf Coast), some contractors deliberately slow the airflow to **350 CFM per ton**. Slower air over the evaporator coil means more moisture removal (dehumidification). The trade-off is slightly less sensible cooling capacity.
+
+**Higher (450 CFM/ton):** In dry climates (Arizona, Nevada), airflow can increase to **450 CFM per ton** because humidity removal is less important. More airflow means more sensible cooling, which is what you want when the air is already dry.
+
+**Bottom line:** 400 CFM/ton is the standard. Only deviate if your HVAC contractor has specifically calculated a different value based on your [heating BTU load](/heating-btu-calculator) and local climate.
+
+---
+
+## CFM Per Square Foot: How Much Airflow Does Your Home Need?
+
+If you don't know your system tonnage, you can estimate CFM requirements from your home's square footage.
+
+**Rule of thumb: 1 CFM per 1 to 1.25 sq ft of floor area.**
+
+A **1,500 sq ft home** needs approximately **1,200–1,500 CFM** of total airflow. A **2,500 sq ft home** needs approximately **2,000–2,500 CFM**.
+
+### CFM Per Square Foot Chart (Residential)
+
+| Home Square Footage | Estimated Total CFM | Approximate Tonnage |
+|---|---|---|
+| 600 sq ft | 480–600 CFM | 1–1.5 Ton |
+| 800 sq ft | 640–800 CFM | 1.5–2 Ton |
+| 1,000 sq ft | 800–1,000 CFM | 2–2.5 Ton |
+| 1,200 sq ft | 960–1,200 CFM | 2.5–3 Ton |
+| 1,500 sq ft | 1,200–1,500 CFM | 3–3.5 Ton |
+| 2,000 sq ft | 1,600–2,000 CFM | 4–5 Ton |
+| 2,500 sq ft | 2,000–2,500 CFM | 5–6 Ton |
+| 3,000 sq ft | 2,400–3,000 CFM | 6+ Ton |
+
+*These are estimates. Actual CFM depends on insulation quality, climate zone, window area, ceiling height, and occupancy. For precise numbers, use a [Manual J load calculation](/furnace-sizing-calculator).*
+
+This 1 CFM/sq ft rule is most useful as a quick sanity check. If your 2,000 sq ft home has a system delivering only 800 CFM, something is seriously wrong — likely undersized ductwork or a restricted filter. Check our [furnace filter guide](/furnace-filter-guide) to make sure your filter isn't choking the system.
+
+---
+
+## Supply Duct Sizing by CFM (Round Duct Diameter Chart)
+
+Supply ducts carry conditioned air from the air handler to each room. They need to be sized based on the CFM each branch must deliver.
+
+### Flex Duct CFM Chart: Airflow Capacity by Diameter
+
+Flex duct is the most common duct material in residential construction. But it carries **10–20% less airflow** than rigid metal duct of the same diameter due to its corrugated inner surface.
+
+| Flex Duct Diameter | Max CFM (at 0.1" FR) | Typical Use |
+|---|---|---|
+| 5" flex | 30 CFM | Bathroom exhaust supplement |
+| 6" flex | 75 CFM | Small [bathroom fan](/bathroom-fan-cfm) vent |
+| 7" flex | 95 CFM | Small bedroom branch |
+| 8" flex | 130 CFM | Standard bedroom branch |
+| 9" flex | 190 CFM | Larger bedroom / small living room |
+| 10" flex | 275 CFM | Large room / multiple registers |
+| 12" flex | 480 CFM | Trunk line / large zone |
+| 14" flex | 680 CFM | Trunk for 1.5–2 ton zone |
+| 16" flex | 1,000 CFM | Trunk for 2.5 ton system |
+| 18" flex | 1,300 CFM | Trunk for 3–3.5 ton system |
+| 20" flex | 1,700 CFM | Trunk for 4–4.5 ton system |
+
+*Values assume fully stretched flex duct with proper support. Compressed or sagging flex duct can lose 50% or more of its capacity.*
+
+### Rigid Metal Duct CFM Chart
+
+| Rigid Duct Diameter | Max CFM (at 0.1" FR) | Velocity (FPM) |
+|---|---|---|
+| 5" rigid | 40 CFM | 290 FPM |
+| 6" rigid | 85 CFM | 435 FPM |
+| 7" rigid | 110 CFM | 410 FPM |
+| 8" rigid | 160 CFM | 460 FPM |
+| 10" rigid | 325 CFM | 595 FPM |
+| 12" rigid | 525 CFM | 670 FPM |
+| 14" rigid | 800 CFM | 750 FPM |
+| 16" rigid | 1,050 CFM | 755 FPM |
+| 18" rigid | 1,400 CFM | 795 FPM |
+| 20" rigid | 2,000 CFM | 915 FPM |
+| 24" rigid | 3,000 CFM | 955 FPM |
+
+---
+
+## Return Duct Sizing Chart
+
+Return ducts are the most commonly undersized component in residential HVAC. A starved return creates negative pressure, pulls in unconditioned air through gaps, and makes your entire system work harder.
+
+**The return duct must be large enough to handle 100% of the system's CFM at lower velocities than the supply.** ACCA Manual D recommends a maximum return duct velocity of **700 FPM** (compared to 900 FPM for supply ducts).
+
+### Return Duct Size for 2, 3, 4, and 5 Ton Units
+
+| System Size | Total CFM | Min. Round Return | Rectangular Options | Min. Return Grille Area |
+|---|---|---|---|---|
+| 1 Ton | 400 CFM | 12" round | 10×10, 12×8 | 200 sq in |
+| 1.5 Ton | 600 CFM | 14" round | 14×10, 12×12 | 300 sq in |
+| 2 Ton | 800 CFM | 16" round | 16×12, 20×10 | 400 sq in |
+| 2.5 Ton | 1,000 CFM | 18" round | 18×14, 20×12 | 500 sq in |
+| 3 Ton | 1,200 CFM | 18" round | 20×14, 22×12 | 600 sq in |
+| 3.5 Ton | 1,400 CFM | 20" round | 22×14, 24×12 | 700 sq in |
+| 4 Ton | 1,600 CFM | 20" round | 24×14, 26×12 | 800 sq in |
+| 5 Ton | 2,000 CFM | 24" round | 30×14, 34×12 | 1,000 sq in |
+
+*For systems 3.5 tons and above, many contractors split into two return ducts for practical reasons. Two 16" returns work for a 3.5-ton system; two 18" returns work for a 5-ton system.*
+
+If you're troubleshooting comfort problems related to undersized returns, check our guide on [cold air return vents](/cold-air-return-vents). And if your [AC isn't blowing cold](/ac-not-blowing-cold), restricted return airflow is one of the most common culprits.
+
+### Return Air Grille CFM Chart
+
+The return grille itself must be sized for low-velocity, low-noise performance. Maximum face velocity across a return grille should be **300–400 FPM**.
+
+| Return Grille Size | Free Area (sq in) | Max CFM at 400 FPM | Suitable For |
+|---|---|---|---|
+| 14×6 | 50 sq in | 140 CFM | Branch return only |
+| 16×8 | 75 sq in | 210 CFM | Branch return |
+| 20×12 | 144 sq in | 400 CFM | 1 Ton central return |
+| 20×20 | 240 sq in | 670 CFM | 1.5 Ton central return |
+| 20×25 | 300 sq in | 835 CFM | 2 Ton central return |
+| 24×24 | 350 sq in | 975 CFM | 2.5 Ton central return |
+| 30×20 | 360 sq in | 1,000 CFM | 3 Ton central return |
+| 30×24 | 430 sq in | 1,200 CFM | 3.5 Ton central return |
+
+*Free area is approximately 60% of total grille face area due to louvers/frame. Always check the manufacturer's rated CFM for your specific grille.*
+
+---
+
+## Round vs. Rectangular Duct Equivalent Sizes
+
+Space constraints often require rectangular ducts instead of round. But a 12" round duct is NOT the same as a 12×12" rectangular duct — the rectangular duct actually moves significantly more air.
+
+To find the correct equivalence, engineers use the ASHRAE equivalent diameter formula:
+
+**De = 1.30 × [(a × b)^0.625 / (a + b)^0.250]**
+
+Where **a** and **b** are the rectangular duct dimensions in inches, and **De** is the equivalent round diameter for equal friction and capacity.
+
+### Rectangular to Round Duct Conversion Table
+
+| Round Equivalent | Rectangular Size | Area (sq in) |
+|---|---|---|
+| 6" round | 8×4 | 32 sq in |
+| 7" round | 8×5 | 40 sq in |
+| 8" round | 10×6 | 60 sq in |
+| 9" round | 12×6 | 72 sq in |
+| 10" round | 12×8 | 96 sq in |
+| 12" round | 14×10 | 140 sq in |
+| 14" round | 18×10 | 180 sq in |
+| 16" round | 22×10 or 18×12 | 216–220 sq in |
+| 18" round | 26×10 or 22×12 | 260–264 sq in |
+| 20" round | 28×12 or 24×14 | 336 sq in |
+| 22" round | 30×14 or 26×16 | 416–420 sq in |
+| 24" round | 34×14 or 30×16 | 476–480 sq in |
+
+**Key tip:** Keep your rectangular duct aspect ratio (width ÷ height) at **4:1 or less**. A 40×4 duct might have enough area on paper, but the extreme aspect ratio dramatically increases friction loss per ASHRAE guidance. Stick to aspect ratios of 2:1 to 3:1 for best performance.
+
+---
+
+## Flex Duct vs. Rigid Duct: Why Flex Ducts Need Upsizing
+
+Flex duct is cheaper and faster to install. But it comes with a significant performance penalty that most homeowners don't know about.
+
+The corrugated inner liner of flex duct creates turbulence that increases friction loss compared to smooth rigid metal duct. Research from Texas A&M University (cited in ACCA Manual D, Appendix 17) showed that even perfectly installed flex duct has measurably higher resistance than rigid duct.
+
+### Flex Duct Derating Factor
+
+**Rule of thumb: Increase flex duct diameter by 1 inch over the rigid duct size to achieve equivalent airflow.**
+
+| Rigid Duct Size | Equivalent Flex Duct Size | CFM Difference |
+|---|---|---|
+| 6" rigid (85 CFM) | 7" flex (95 CFM) | Flex must be 1" larger |
+| 8" rigid (160 CFM) | 9" flex (190 CFM) | Flex must be 1" larger |
+| 10" rigid (325 CFM) | 12" flex (480 CFM) | Flex 2" larger is safest |
+| 12" rigid (525 CFM) | 14" flex (680 CFM) | Flex must be 2" larger |
+| 14" rigid (800 CFM) | 16" flex (1,000 CFM) | Flex must be 2" larger |
+
+This derating only applies to **properly installed** flex duct — fully stretched, properly supported, with no kinks, sags, or compression. A flex duct at just 15% compression (not fully stretched) can lose **30–50% of its airflow capacity**. At 30% compression, the pressure drop can increase by a factor of 4–10x compared to rigid duct.
+
+If your flex duct runs are longer than 25 feet or make more than one turn, seriously consider rigid duct for those sections. For more on proper [bathroom fan venting](/bathroom-fan-venting) with flex duct, see our dedicated guide.
+
+---
+
+## Duct Velocity Reference Chart
+
+Air velocity determines noise, comfort, and efficiency. Move air too fast and you get whistling ducts. Move it too slow and rooms don't get conditioned properly.
+
+### Recommended Duct Velocities for Residential HVAC
+
+| Duct Section | Recommended (FPM) | Maximum (FPM) | What Happens If Exceeded |
+|---|---|---|---|
+| Main supply trunk | 700–900 | 1,000 | Audible rushing noise |
+| Branch supply ducts | 500–700 | 900 | Register noise, drafts |
+| Supply register face | 300–500 | 500 | Uncomfortable air blasts |
+| Main return trunk | 600–700 | 700 | Low rumble, vibration |
+| Branch return ducts | 400–600 | 600 | Whistling at grilles |
+| Return grille face | 200–400 | 400 | Dust disturbance, noise |
+
+*Per ASHRAE Handbook of Fundamentals and ACCA Manual D for residential low-velocity systems.*
+
+### Duct Velocity Formula
+
+Calculating velocity is straightforward:
+
+**Velocity (FPM) = CFM ÷ Duct Area (sq ft)**
+
+For round ducts, the area formula is:
+
+**Area (sq ft) = π × (Diameter in inches / 24)²**
+
+Or simplified: **Area (sq ft) = (Diameter²) × 0.005454**
+
+Let's say you have **800 CFM** flowing through a **14-inch round duct**. The area is 14² × 0.005454 = **1.069 sq ft**. The velocity is 800 ÷ 1.069 = **748 FPM**.
+
+That's right in the sweet spot for a main supply trunk.
+
+If your [thermostat isn't reaching the set temperature](/thermostat-not-reaching-temperature), high duct velocity from undersized ducts is a common cause — the air blows fast but doesn't deliver enough total volume.
+
+---
+
+## What Size Duct Do I Need for 400, 600, 800, 1,000, and 1,200 CFM?
+
+These are the five most common CFM values in residential HVAC. Here are the answers — no calculator needed.
+
+### What Size Duct for 400 CFM?
+
+**10" rigid round duct** or **12" flex duct.** Rectangular equivalent: **14×9** or **12×10**. This handles a 1-ton zone or a large branch run. Velocity in a 10" rigid duct at 400 CFM is approximately **735 FPM** — well within acceptable limits.
+
+### What Size Duct for 600 CFM?
+
+**12" rigid round duct** or **14" flex duct.** Rectangular equivalent: **16×10** or **14×12**. This is the trunk size for a 1.5-ton system. Velocity in a 12" rigid duct is approximately **770 FPM**.
+
+### What Size Duct for 800 CFM?
+
+**14" rigid round duct** or **16" flex duct.** Rectangular equivalent: **18×12** or **20×10**. This covers a 2-ton system's supply trunk. Velocity in a 14" rigid duct is approximately **750 FPM**.
+
+### What Size Duct for 1,000 CFM?
+
+**14" rigid round duct** (pushing the limit at ~940 FPM) or a **16" rigid duct** for a quieter installation. **Flex duct: 16" minimum.** Rectangular equivalent: **20×12** or **22×10**. For a 2.5-ton system, the 16" duct is the better choice to keep velocity under 900 FPM. Use our [CFM calculator](/cfm-calculator) to verify for your specific system.
+
+### What Size Duct for 1,200 CFM?
+
+**16" rigid round duct** or **18" flex duct.** Rectangular equivalent: **22×12** or **20×14**. This is the standard trunk size for a 3-ton system. Velocity in a 16" duct is approximately **860 FPM**.
+
+---
+
+## Worked Examples
+
+### Example 1: Sizing Ductwork for a 2-Ton System
+
+Let's say you have a **2-ton central air conditioner** in a **1,000 sq ft home** in Atlanta, Georgia.
+
+1. **Total system CFM:** 2 tons × 400 CFM/ton = **800 CFM**
+2. **Supply trunk size (rigid):** From the master chart, 800 CFM requires a **14" round rigid duct**.
+3. **Supply trunk size (flex):** Same CFM requires a **16" flex duct** (1 size up for flex derating).
+4. **Return duct:** 800 CFM needs a minimum **16" round return** or **16×12 rectangular** return.
+5. **Branch ducts:** With 4 bedrooms each needing ~150 CFM, use **8" rigid** or **9" flex** branches.
+
+**Verification:** Velocity in the 14" rigid trunk = 800 ÷ 1.069 = **748 FPM**. That's within the 700–900 FPM recommended range. ✓
+
+### Example 2: Sizing Ductwork for a 3-Ton System
+
+A **3-ton heat pump** for a **1,500 sq ft home** in Dallas, Texas.
+
+1. **Total system CFM:** 3 tons × 400 CFM/ton = **1,200 CFM**
+2. **Supply trunk (rigid):** **16" round** — handles up to 1,050 CFM, so we're slightly over. Use an **18" trunk** at the plenum tapering to **16"** after the first branch takeoff.
+3. **Supply trunk (flex):** **18" flex** for the main run.
+4. **Return duct:** 1,200 CFM needs an **18" round return** or **22×12 rectangular**.
+5. **Branch ducts:** Master bedroom needs 250 CFM → **10" rigid** or **10" flex**. Standard bedrooms need 120 CFM → **7" rigid** or **8" flex**. Kitchen/living area needs 300 CFM → **10" rigid** or **12" flex**.
+
+**Verification:** Velocity in the 18" trunk = 1,200 ÷ 1.767 = **679 FPM**. Comfortable and quiet. ✓
+
+### Example 3: Sizing Ductwork for a 5-Ton System
+
+A **5-ton system** for a **2,500 sq ft home** in Phoenix, Arizona. In this dry climate, we'll use **425 CFM/ton** for slightly increased airflow.
+
+1. **Total system CFM:** 5 tons × 425 CFM/ton = **2,125 CFM**
+2. **Supply trunk (rigid):** **20" round** — handles up to 2,000 CFM. Start with 20" and reduce to 18" after the first major branch.
+3. **Return duct:** 2,125 CFM needs **two return ducts** — either 2× 18" round or 2× 24×12 rectangular.
+4. **Main branch ducts:** The trunk splits into two main branches of ~1,060 CFM each → **16" rigid** per branch.
+5. **Room branches:** Bedrooms at 150–200 CFM → **8" rigid**. Living room at 400 CFM → **12" rigid**.
+
+**Verification:** Velocity in the 20" trunk = 2,125 ÷ 2.182 = **974 FPM**. That's close to the 1,000 FPM max — we might upsize to a **22" trunk** for a quieter system. ✓
+
+### Example 4: Return Duct Sizing for a 3.5-Ton System
+
+Your **3.5-ton system** produces **1,400 CFM**. You want a central return in the hallway.
+
+1. **Single return option:** 1,400 CFM needs a **20" round return duct** — that's a big hole in the ceiling.
+2. **Dual return option:** Split into two returns of 700 CFM each. Each return needs a **14" round** or **14×12 rectangular** duct.
+3. **Return grille sizing:** At 400 FPM max face velocity, you need 1,400 ÷ 400 = 3.5 sq ft = **504 sq in** of free grille area. A single 30×24 grille provides ~430 sq in of free area — not quite enough. **Use two return grilles.**
+
+**Pro tip:** Most HVAC professionals recommend ducted returns for every bedroom, den, and library per ACCA guidelines. Each bedroom return can be a **6" or 8" duct** routed back to the main return trunk.
+
+### Example 5: Branch Duct Sizing for a Bedroom
+
+A **150 sq ft bedroom** with one exterior wall, moderate insulation. The Manual J load calc says it needs **120 CFM** of cooling air.
+
+1. **Rigid duct:** 120 CFM → **7" round rigid**. Velocity = 120 ÷ 0.267 = **449 FPM**. Quiet and adequate.
+2. **Flex duct:** 120 CFM → **8" flex** (one size up from rigid). Velocity = 120 ÷ 0.349 = **344 FPM**. Even quieter.
+3. **Register size:** A 10×6 supply register is appropriate for 120 CFM at comfortable face velocity.
+
+For [air changes per hour](/air-changes-per-hour) context: this 120 CFM in a 150 sq ft room with 8-ft ceilings (1,200 cu ft) provides 6 air changes per hour — excellent for comfort and air quality.
+
+---
+
+## Manual D Duct Design Methodology (Simplified)
+
+Everything in this article is based on simplified rules of thumb derived from **ACCA Manual D** — the ANSI-recognized standard for residential duct design. If you want to understand *why* these duct sizes work, here's the underlying methodology in plain English.
+
+### How Friction Rate Works
+
+Friction rate is the pressure drop per 100 feet of duct. Think of it as the "resistance budget" for your ductwork.
+
+**Friction Rate (FR) = Available Static Pressure × 100 ÷ Total Effective Length**
+
+ACCA Manual D says your friction rate should land between **0.06 and 0.18 IWC per 100 ft** — this range is called "the wedge." Below 0.06 means your ducts are oversized (wasting money). Above 0.18 means they're undersized (choking airflow).
+
+Most residential systems design to a friction rate of **0.08–0.12 IWC/100 ft**, which is right in the middle of the wedge. The **0.1 IWC/100 ft** value used in this article's charts is the most common design target.
+
+### Available Static Pressure and Total Effective Length
+
+The two inputs for friction rate are:
+
+**Available Static Pressure (ASP):** Start with your air handler's total external static pressure (from the manufacturer's data — typically 0.5" w.c.). Then subtract the pressure drops from your coil (~0.15"), filter (~0.10–0.20"), registers (~0.03" each), and return grille (~0.03"). What's left over is your ASP. A typical residential system has **0.15–0.30 IWC** of available static pressure.
+
+**Total Effective Length (TEL):** Measure the longest duct run (supply side) plus the longest return run, then add equivalent lengths for every fitting (elbows, tees, transitions). ACCA Manual D provides equivalent length tables — a standard 90° elbow adds about **20 equivalent feet**, a supply register boot adds **30–40 equivalent feet**. A typical residential system has a TEL of **150–300 feet**.
+
+For a deeper understanding of furnace and system sizing that drives these calculations, see our [furnace sizing calculator](/furnace-sizing-calculator) and [insulation R-value chart](/insulation-r-value-chart).
+
+---
+
+## FAQ
+
+### How many CFM does a 6-inch duct carry?
+
+A **6-inch round rigid metal duct** carries approximately **85 CFM** at a friction rate of 0.1" w.c./100 ft. A **6-inch flex duct** carries about **75 CFM** — roughly 12% less. This is enough for a small bedroom or a [bathroom exhaust fan](/bathroom-fan-cfm) rated at 80 CFM.
+
+### What is the 400 CFM per ton rule?
+
+The 400 CFM per ton rule states that every ton of air conditioning capacity (12,000 BTU) requires **400 cubic feet per minute** of airflow across the evaporator coil. This is the ACCA/ASHRAE standard for residential cooling system design, ensuring proper heat transfer, adequate dehumidification, and optimal efficiency. The acceptable range is 350–450 CFM per ton depending on humidity conditions.
+
+### What size return duct do I need for a 3-ton AC?
+
+A 3-ton AC requires **1,200 CFM** of return airflow. Use an **18-inch round return duct** or a rectangular duct of **20×14 inches** (or equivalent area). Alternatively, split into two returns — two **14-inch round** returns work well.
+
+Always pair with an appropriately sized return grille that provides at least **600 sq in of free area**.
+
+### Can I use flex duct for my entire duct system?
+
+Technically, yes — but it's not recommended for main trunk lines. Flex duct works best for **branch runs of 25 feet or less** from a rigid trunk to the register. For main trunks, rigid metal duct provides significantly less friction loss and maintains consistent airflow.
+
+If you must use all flex, increase every duct diameter by **1–2 inches** over the rigid duct sizing charts and ensure every run is fully stretched with no sags or kinks.
+
+### How do I convert round duct size to rectangular?
+
+Use the ASHRAE equivalent diameter formula: **De = 1.30 × [(a × b)^0.625 / (a + b)^0.250]**. For a quick reference, a 12" round duct is equivalent to a 14×10 rectangular duct — see the full conversion table in the "Round vs. Rectangular" section above. Keep the rectangular aspect ratio at 4:1 or less for best performance.
+
+### Why are my ducts making noise?
+
+Noisy ducts almost always mean **air velocity is too high**. The most common causes are undersized ducts, closed dampers that force air through a smaller path, dirty [furnace filters](/furnace-filter-guide) that increase static pressure, or crimped flex duct. Use the velocity chart above to verify your ducts are sized for the recommended 600–900 FPM range.
+
+If velocity is fine but you still hear noise, check fittings — a sharp 90° elbow creates far more turbulence than a long-radius turn.
+
+---
+
+## Sources and References
+
+1. ACCA (Air Conditioning Contractors of America). *Manual D — Residential Duct Systems*, 3rd Edition. [acca.org](https://hvac-blog.acca.org/definitive-design-accas-manual-d-revised/)
+2. ACCA Manual D Verification Brochure. [eepartnership.org](https://eepartnership.org/wp-content/uploads/2012/08/Manual-D-Brochure.pdf)
+3. AHR Institute. Verifying ACCA Manual D Procedures. [ahrinet.org](https://www.ahrinet.org/sites/default/files/2022-10/manual%20D%20calculation.pdf)
+4. ASHRAE. *Handbook of Fundamentals*, Chapter 21: Duct Design. 2021 Edition.
+5. ASHRAE. Circular Equivalents of Rectangular Ducts (Huebscher equation). [gustafsonduct.com](https://gustafsonduct.com/wp-content/uploads/2015/12/Rect-to-Round-Chart.pdf)
+6. ASHRAE. Recommended Duct Velocities for Low Velocity Systems, Table 6. [amca.org](https://www.amca.org/assets/resources/public/Smithart-Reints.pdf)
+7. SMACNA (Sheet Metal and Air Conditioning Contractors' National Association). *HVAC Systems Duct Design*, 4th Edition. [smacna.org](https://www.smacna.org/resources/technical/technical-standards)
+8. SMACNA. Duct Design Fundamentals presentation. [utahashrae.org](https://utahashrae.org/images/meeting/011119/Slides/smacna_duct_design_fundamentals.pdf)
+9. CED Engineering. *HVAC — How to Size and Design Ducts*, Course M06-032. [cedengineering.com](https://www.cedengineering.com/userfiles/M06-032%20-%20HVAC%20-%20How%20to%20Size%20and%20Design%20Ducts%20-%20US.pdf)
+10. King, Russell, M.E. "How to Quickly Evaluate a Residential HVAC Duct Layout." [russellking.me](https://russellking.me/2017/09/06/how-to-quickly-evaluate-a-residential-hvac-duct-layout/)
+11. King, Russell, M.E. "Friction Rate Explained (Maybe)." [russellking.me](https://russellking.me/2020/07/05/friction-rate-explained-maybe/)
+12. Bailes, Allison III, PhD. "The Best Velocity for Moving Air Through Ducts." Energy Vanguard. [energyvanguard.com](https://www.energyvanguard.com/blog/best-velocity-moving-air-through-ducts/)
+13. Bailes, Allison III, PhD. "The Science of Sag — Flex Duct and Air Flow." Energy Vanguard. [energyvanguard.com](https://www.energyvanguard.com/blog/the-science-of-sag-flex-duct-and-air-flow/)
+14. HVAC School. "Manual D Speedsheet Walkthrough." [hvacrschool.com](https://www.hvacrschool.com/manual-d-speedsheet-walkthrough/)
+15. PDH Online. Course M246: HVAC Ducting — Principles and Fundamentals. [pdhonline.com](https://pdhonline.com/courses/m246/m246content.pdf)
+16. Engineering Toolbox. "HVAC Ducts — Air Velocities." [engineeringtoolbox.com](https://www.engineeringtoolbox.com/duct-velocity-d_928.html)
+17. Engineering Toolbox. "Equivalent Diameter — Rectangular vs. Circular HVAC Ducts." [engineeringtoolbox.com](https://www.engineeringtoolbox.com/equivalent-diameter-d_443.html)
+18. Enginist. "HVAC Duct Sizing Guide." [enginist.co](https://www.enginist.co/en/guides/ventilation/understanding-duct-sizing)
+19. ServiceTitan. "HVAC Duct Calculator." [servicetitan.com](https://www.servicetitan.com/tools/hvac-duct-calculator)

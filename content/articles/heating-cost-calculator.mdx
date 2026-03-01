@@ -1,0 +1,390 @@
+---
+title: "Heating Cost Per Square Foot Calculator"
+slug: "heating-cost-calculator"
+description: "If your heating bill made you do a double-take, you're not alone. The average U.S. household spends $640 per winter on natural gas heating — but that nu..."
+pillar: "calculators"
+pillarHub: "/hvac-calculators"
+hasCalculator: true
+calculatorComponent: "HeatingCostCalculator"
+seoTitle: "Heating Cost Per Square Foot Calculator"
+---
+
+# Heating Cost Per Square Foot Calculator (By Fuel Type and Home Size)
+
+> "Our gas bill hit $320 last month for a 2,200 sq ft house. Is that normal? What should it actually cost to heat our home?"
+
+If your heating bill made you do a double-take, you're not alone. The average U.S. household spends **$640 per winter on natural gas heating** — but that number swings wildly depending on your fuel type, home size, local energy prices, and climate zone.
+
+Here's the deal: a homeowner in Charlotte, North Carolina heating with a [heat pump](/heat-pump-running-cost) might spend **$900 per winter**, while someone in Chicago with an old gas furnace could easily top **$1,200**. Same size house, completely different cost.
+
+We built this heating cost calculator to give you a real, data-backed estimate. Before you use it, you'll need to know three things:
+
+1. **Your heating fuel type** — natural gas, electricity (heat pump or baseboard), propane, or heating oil
+2. **Your home's square footage** — the heated living area, not total lot size
+3. **Your system's efficiency rating** — [AFUE for furnaces](/afue-rating), [COP for heat pumps](/cop-calculator), or [HSPF for heat pump seasonal rating](/hspf-rating)
+
+{/* CALCULATOR */}
+
+## Quick Answer: How Much Does It Cost to Heat a House?
+
+At current national average fuel prices, here's what you can expect to pay annually based on your home size and heating system:
+
+### Average Annual Heating Cost by Fuel Type and Home Size
+
+| Home Size | Gas Furnace (95% AFUE) | Heat Pump (COP 3.0) | Propane Furnace (90% AFUE) | Electric Baseboard (100%) | Heating Oil (85% AFUE) |
+|---|---|---|---|---|---|
+| 1,000 sq ft | **$600/yr** | **$700/yr** | **$1,070/yr** | **$2,110/yr** | **$1,190/yr** |
+| 1,500 sq ft | **$900/yr** | **$1,050/yr** | **$1,600/yr** | **$3,170/yr** | **$1,780/yr** |
+| 2,000 sq ft | **$1,200/yr** | **$1,400/yr** | **$2,140/yr** | **$4,220/yr** | **$2,370/yr** |
+| 2,500 sq ft | **$1,500/yr** | **$1,760/yr** | **$2,670/yr** | **$5,280/yr** | **$2,970/yr** |
+| 3,000 sq ft | **$1,800/yr** | **$2,110/yr** | **$3,200/yr** | **$6,330/yr** | **$3,560/yr** |
+
+*Assumptions: Moderate climate (~4,500 heating degree days), average insulation, national average fuel prices: natural gas $1.43/therm, electricity $0.18/kWh, propane $2.46/gallon, heating oil $3.50/gallon. Your actual costs will vary by location, insulation quality, and thermostat habits. Sources: EIA Electric Power Monthly, EIA Natural Gas Monthly, EIA Winter Fuels Outlook 2025–26.*
+
+As you can see, **natural gas is the cheapest way to heat a home** in most situations, followed closely by heat pumps. Electric baseboard heating is by far the most expensive — roughly **3.5x the cost of gas heating** for the same home.
+
+Let's break this down further.
+
+---
+
+## Cost Per Million BTU: The Universal Fuel Comparison
+
+If you want an apples-to-apples comparison of heating fuels, you need to look at the **cost per million BTU (MMBTU) of delivered heat**. This accounts for both the fuel price AND the system's efficiency.
+
+Here's the formula:
+
+**Cost per MMBTU = (Fuel Price per Unit ÷ BTU per Unit × 1,000,000) ÷ System Efficiency**
+
+### Heating Cost Per Million BTU by Fuel Type
+
+| Fuel Type | System Type | Efficiency | Fuel Price | BTU per Unit | Cost per MMBTU |
+|---|---|---|---|---|---|
+| Natural Gas | High-efficiency furnace | 95% AFUE | $1.43/therm | 100,000 BTU/therm | **$15.05** |
+| Natural Gas | Standard furnace | 80% AFUE | $1.43/therm | 100,000 BTU/therm | **$17.88** |
+| Geothermal Heat Pump | Ground-source HP | COP 4.0 | $0.18/kWh | 3,412 BTU/kWh | **$13.19** |
+| Air-Source Heat Pump | ASHP | COP 3.0 | $0.18/kWh | 3,412 BTU/kWh | **$17.58** |
+| Wood Pellets | Pellet stove | 80% eff | $367/ton | 16,000,000 BTU/ton | **$28.67** |
+| Propane | High-efficiency furnace | 95% AFUE | $2.46/gal | 91,500 BTU/gal | **$28.30** |
+| Heating Oil | Standard furnace | 85% AFUE | $3.50/gal | 138,500 BTU/gal | **$29.71** |
+| Propane | Standard furnace | 80% AFUE | $2.46/gal | 91,500 BTU/gal | **$33.61** |
+| Electricity | Baseboard / electric furnace | 100% | $0.18/kWh | 3,412 BTU/kWh | **$52.75** |
+
+*Sources: EIA residential fuel prices (national averages); BTU content from EIA energy conversion factors; efficiency assumptions based on DOE standards. Prices reflect current national averages and vary significantly by state.*
+
+The takeaway is clear. At current prices, **geothermal heat pumps deliver the cheapest heat** at **$13.19 per MMBTU**, followed by high-efficiency natural gas at **$15.05 per MMBTU**. Electric resistance heating (baseboard) costs **$52.75 per MMBTU** — more than 3x the cost of gas.
+
+This is exactly why the [gas vs. electric heating debate](/gas-vs-electric-heating) almost always favors gas where it's available, unless you're using a heat pump (which is an entirely different equation thanks to [COP efficiency](/cop-calculator)).
+
+---
+
+## Average Heating Cost by State: Cheapest and Most Expensive
+
+Your state has a massive impact on heating costs because of two factors: **local fuel prices** and **climate severity** (measured in [heating degree days](/heating-btu-calculator)). Here are the extremes:
+
+### 10 Cheapest States for Heating (Natural Gas)
+
+| Rank | State | Avg Gas Price ($/therm) | Annual HDD | Est. Annual Gas Heat Cost (2,000 sq ft) |
+|---|---|---|---|---|
+| 1 | Idaho | $0.70/therm | 6,300 HDD | **$780/yr** |
+| 2 | Utah | $0.85/therm | 5,600 HDD | **$800/yr** |
+| 3 | Montana | $0.82/therm | 7,000 HDD | **$960/yr** |
+| 4 | North Dakota | $0.87/therm | 8,500 HDD | **$1,230/yr** |
+| 5 | Oklahoma | $0.95/therm | 3,500 HDD | **$560/yr** |
+| 6 | Texas | $1.00/therm | 2,000 HDD | **$340/yr** |
+| 7 | Louisiana | $1.05/therm | 1,600 HDD | **$280/yr** |
+| 8 | Mississippi | $1.00/therm | 2,200 HDD | **$370/yr** |
+| 9 | Arkansas | $1.05/therm | 3,000 HDD | **$530/yr** |
+| 10 | Kansas | $1.10/therm | 4,200 HDD | **$770/yr** |
+
+### 10 Most Expensive States for Heating
+
+| Rank | State | Primary Fuel | Est. Annual Heat Cost (2,000 sq ft) | Why It's Expensive |
+|---|---|---|---|---|
+| 1 | Hawaii | Electricity | **$4,800+/yr** | Highest electricity rates ($0.41+/kWh), no natural gas |
+| 2 | Connecticut | Heating oil | **$3,500+/yr** | Heavy oil dependence, high fuel prices |
+| 3 | Massachusetts | Gas/Oil mix | **$3,200+/yr** | High gas rates, severe winters, 5,600 HDD |
+| 4 | New Hampshire | Heating oil | **$3,100+/yr** | Oil-dependent, 6,500+ HDD |
+| 5 | Maine | Heating oil | **$3,000+/yr** | 50% of homes use oil, cold winters |
+| 6 | Vermont | Oil/Propane | **$2,900+/yr** | Rural, limited gas infrastructure |
+| 7 | Alaska | Natural gas | **$2,800+/yr** | 11,000+ HDD despite low gas prices |
+| 8 | Rhode Island | Gas/Electric | **$2,700+/yr** | High electricity and gas rates |
+| 9 | New York | Natural gas | **$2,500+/yr** | High gas rates ($1.74/therm) |
+| 10 | Minnesota | Natural gas | **$2,200+/yr** | Extreme cold (7,500 HDD) |
+
+*Sources: EIA Natural Gas Monthly; EIA Electric Power Monthly; NOAA Climate Prediction Center heating degree day data; EIA Winter Fuels Outlook 2025–26. Estimates based on 2,000 sq ft home with average insulation and moderate system efficiency.*
+
+Notice a pattern? The most expensive states are either oil-dependent (New England) or have extreme cold (Alaska, Minnesota). The cheapest states combine low fuel prices with mild winters (the South) or rock-bottom gas prices (Mountain West).
+
+---
+
+## Average Winter Heating Expenditure by Fuel Type and Region (EIA Data)
+
+The EIA publishes a Winter Fuels Outlook each year with detailed projections for household heating expenditure. Here's the data for the current heating season (November through March):
+
+### EIA Projected Winter Heating Expenditures
+
+| Heating Fuel | U.S. Average | Northeast | Midwest | South | West | Change vs. Last Winter |
+|---|---|---|---|---|---|---|
+| Natural Gas | **$640** | $870 | $610 | $510 | $600 | -1% |
+| Electricity | **$1,130** | $1,520 | $1,280 | $1,030 | $1,120 | +4% |
+| Propane | **$1,270** | $1,670 | $1,100 | $1,210 | N/A | -8% |
+| Heating Oil | **$1,390** | ~$1,390 | N/A | N/A | N/A | -9% |
+
+*Source: EIA Winter Fuels Outlook 2025–2026, released October 15, 2025. Electricity expenditures include ALL electric end uses for electrically-heated homes, not just space heating. Heating oil is concentrated almost entirely in the Northeast.*
+
+A key detail: the electricity figure (**$1,130**) looks high compared to gas (**$640**), but electricity expenditures for electrically-heated homes include lighting, appliances, and other end uses — not just heating. Space heating itself represents a smaller share of total consumption in electric homes compared to gas homes, where heating dominates the bill.
+
+The EIA projects that only households heating with electricity will see increased costs this season, driven by a **4.8% national increase in residential electricity prices**. Propane and heating oil households will pay less, thanks to lower wholesale fuel prices.
+
+---
+
+## How We Estimate Your Heating BTU Load
+
+Before we can calculate cost, we need to know how much heat your home requires. The simplified method uses your climate zone's BTU-per-square-foot factor:
+
+**Annual BTU Load = Square Footage × BTU per Sq Ft Factor**
+
+| Climate Zone | BTU per Sq Ft | Example Cities | Annual HDD Range |
+|---|---|---|---|
+| Hot/Mild (Zone 1–2) | 25–30 BTU/sq ft | Miami, Houston, Phoenix | 500–2,000 HDD |
+| Moderate (Zone 3–4) | 30–40 BTU/sq ft | Atlanta, Charlotte, Nashville | 2,000–4,500 HDD |
+| Cold (Zone 5) | 40–50 BTU/sq ft | Chicago, Philadelphia, Denver | 4,500–6,000 HDD |
+| Very Cold (Zone 6–7) | 50–60 BTU/sq ft | Minneapolis, Milwaukee, Burlington | 6,000–9,000 HDD |
+
+*These are simplified estimates. For a precise calculation, use our [heating BTU calculator](/heating-btu-calculator) which accounts for insulation quality, window area, ceiling height, and number of exterior walls.*
+
+The relationship between heating degree days and fuel consumption is roughly linear: if City A has twice the HDD of City B, a home in City A will use roughly twice as much fuel (all else being equal). This is why your [average electricity usage](/average-electricity-usage) baseline matters — it gives you a reference point for how much of your bill goes to heating versus other end uses.
+
+---
+
+## Heating Cost by Fuel Type: Deep Dive
+
+### How Much Does Natural Gas Heating Cost?
+
+Natural gas remains the most popular heating fuel in the U.S., used by **46% of American households** (about 60.9 million homes). At current national average prices, here's the math:
+
+**Annual Gas Heating Cost = (Home BTU Load ÷ Furnace AFUE) × Price per Therm ÷ 100,000**
+
+The national average residential natural gas price is about **$1.43 per therm** ($14.87 per MCF, where 1 MCF ≈ 10.37 therms). A typical 2,000 sq ft home needs roughly 80 million BTU of heat per season in a moderate climate.
+
+With a 95% AFUE furnace ([what AFUE means for your furnace](/afue-rating)):
+
+**80,000,000 BTU ÷ 0.95 = 84,210,526 BTU of gas consumed**
+
+**84,210,526 ÷ 100,000 = 842 therms × $1.43 = $1,204 per year**
+
+That works out to about **$240/month over 5 winter months**. The EIA's Winter Fuels Outlook confirms this range: the average U.S. household heating with natural gas is projected to spend **$640 over the winter** (November through March). This includes many smaller homes and milder climates in the average.
+
+If your furnace is older (80% AFUE), that same house costs **$1,430/year** — upgrading to a [properly sized high-efficiency furnace](/furnace-sizing-calculator) saves roughly **$225 per year**.
+
+### How Much Does Electric Heating Cost? (Resistance vs. Heat Pump)
+
+Here's where it gets interesting. "Electric heating" means two very different things:
+
+**Electric resistance heating** (baseboard, electric furnace) converts electricity directly to heat at 100% efficiency. The formula is simple:
+
+**Annual Cost = (Annual BTU ÷ 3,412 BTU per kWh) × Price per kWh**
+
+For that same 2,000 sq ft home: 80,000,000 ÷ 3,412 = 23,448 kWh × $0.18 = **$4,221 per year**. That's roughly **3.5x the cost of gas**.
+
+**Heat pump heating** is a completely different story. A heat pump doesn't generate heat — it moves it from outside to inside, achieving [COP values of 2.0 to 4.0+](/cop-calculator) depending on outdoor temperature. The formula includes the COP divisor:
+
+**Annual Cost = (Annual BTU ÷ 3,412 ÷ COP) × Price per kWh**
+
+With a COP of 3.0 ([how heat pump efficiency changes with temperature](/heat-pump-efficiency-temperature)): 80,000,000 ÷ 3,412 ÷ 3.0 = 7,816 kWh × $0.18 = **$1,407 per year**
+
+That makes heat pump heating **competitive with natural gas** at current prices — and potentially cheaper in mild climates where the COP stays high. You can run the full comparison in our [heat pump running cost calculator](/heat-pump-running-cost).
+
+### How Much Does Propane Heating Cost?
+
+Propane is the go-to fuel in rural areas without natural gas pipelines. At a national average of **$2.46 per gallon** with 91,500 BTU per gallon:
+
+**Annual Cost = (80,000,000 BTU ÷ 0.90 AFUE) × ($2.46 ÷ 91,500) = $2,389 per year**
+
+That's roughly double the cost of natural gas. Propane prices are also highly variable — East Coast averages around **$3.42/gallon** while the Midwest sees closer to **$2.10/gallon**.
+
+### How Much Does Heating Oil Cost?
+
+Heating oil is concentrated in the Northeast, where it heats about **3% of U.S. homes** (4.4 million households). At the current average of **$3.50 per gallon** with 138,500 BTU per gallon:
+
+**Annual Cost = (80,000,000 ÷ 0.85 AFUE) × ($3.50 ÷ 138,500) = $2,378 per year**
+
+The EIA projects average oil-heated households will spend about **$1,390 over the winter months** (many oil-heated homes in the Northeast are smaller/older). If you're heating with oil and considering alternatives, the [cost comparison with heat pumps](/heat-pump-running-cost) is worth running.
+
+---
+
+## How Much Does Baseboard Heating Cost Per Month?
+
+Baseboard heaters deserve their own section because they're one of the most common reader questions — and one of the most expensive heating methods.
+
+### Baseboard Heater Specs and Cost
+
+| Baseboard Heater Size | Wattage | Room Size Heated | Cost per Hour ($0.18/kWh) | Cost per Day (8 hrs) | Cost per Month (8 hrs/day) |
+|---|---|---|---|---|---|
+| 2 ft (small) | 500 watts | ~50 sq ft | $0.09/hr | $0.72/day | **$21.60/mo** |
+| 3 ft | 750 watts | ~75 sq ft | $0.14/hr | $1.08/day | **$32.40/mo** |
+| 4 ft | 1,000 watts | ~100 sq ft | $0.18/hr | $1.44/day | **$43.20/mo** |
+| 6 ft (standard) | 1,500 watts | ~150 sq ft | $0.27/hr | $2.16/day | **$64.80/mo** |
+| 8 ft (large) | 2,000 watts | ~200 sq ft | $0.36/hr | $2.88/day | **$86.40/mo** |
+
+*Based on standard rating of 250 watts per linear foot at national average electricity rate of $0.18/kWh. Sources: DOE, Gunnison County Electric Association.*
+
+Here's the critical insight: baseboard heaters produce **250 watts per linear foot**. A standard 6-foot unit draws 1,500 watts. You need roughly **10 watts per square foot** of well-insulated space (or 12–15 watts per sq ft for older, poorly-insulated homes).
+
+**What about baseboard heaters on a 20-amp circuit?** A 20-amp circuit at 240 volts provides 4,800 watts total, but the NEC 80% rule limits continuous loads to **3,840 watts** (16 amps × 240V). That's enough for two 6-foot baseboard heaters (3,000 watts combined) with room to spare, or one 8-foot unit plus one 4-foot unit.
+
+### Whole-Home Baseboard Heating Cost
+
+Running baseboard heat throughout a home is expensive. For a 1,500 sq ft house needing 15,000 watts of baseboard capacity running 8–10 hours per day:
+
+**15 kW × 8 hours × $0.18/kWh × 30 days = $648/month**
+
+Over a 5-month heating season, that's **$3,240**. You can run exact numbers for [electric heater operating cost here](/cost-to-run-electric-heater).
+
+---
+
+## How to Reduce Your Heating Cost (Data-Backed Strategies)
+
+Every dollar you spend on heating is a function of three variables: **how much heat your home loses**, **your system efficiency**, and **your fuel price**. Here's what the data says about reducing each one:
+
+1. **Add insulation (saves 15–25% on heating cost).** The [R-value of your insulation](/insulation-r-value-chart) determines how fast heat escapes. Upgrading attic insulation from R-19 to R-49 in a cold climate can reduce heating loads by 20% or more, per DOE estimates. For a $1,200/year gas bill, that's a **$240–$300 annual savings**.
+
+2. **Thermostat setback (saves 10–15%).** The DOE estimates that setting your thermostat back 7–10°F for 8 hours per day saves roughly 10% per year on heating. If your [thermostat isn't reaching the set temperature](/thermostat-not-reaching-temperature), fix that first — you might be overheating some zones while under-heating others.
+
+3. **Upgrade system efficiency (saves 10–20%).** Replacing an 80% AFUE furnace with a 95% AFUE model saves about **$225/year** on a $1,200 gas bill. Switching from electric baseboard to an air-source heat pump saves even more — potentially **$1,500–$2,500 per year** for a whole-home system.
+
+4. **Air seal the building envelope (saves 5–15%).** Air leaks around windows, doors, ductwork, and electrical outlets can account for 25–30% of heating energy loss. Professional air sealing costs $350–$600 and pays for itself within one to two heating seasons.
+
+---
+
+## Worked Examples: Real Heating Cost Calculations
+
+### Example 1: Gas Furnace in a 2,000 Sq Ft House in Chicago, Illinois
+
+1. Home square footage: 2,000 sq ft
+2. Climate zone: Cold (Chicago, ~5,600 HDD)
+3. System: 95% AFUE gas furnace
+4. BTU heating load: 2,000 × 45 BTU/sq ft = 90,000,000 BTU/year
+5. Local gas price: $1.50/therm (Illinois average, slightly above national)
+
+**Calculation:**
+
+**Annual Cost = (90,000,000 ÷ 0.95) × ($1.50 ÷ 100,000) = $1,421/year**
+
+**That's about $284/month over 5 winter months, or $0.71 per sq ft per year.** This is consistent with the EIA's data showing Midwest households spending an average of $610 over the winter.
+
+### Example 2: Heat Pump in a 1,500 Sq Ft Home in Charlotte, North Carolina
+
+1. Home square footage: 1,500 sq ft
+2. Climate zone: Moderate (Charlotte, ~3,200 HDD)
+3. System: Air-source heat pump, seasonal COP 3.2 ([HSPF ~10.9](/hspf-rating))
+4. BTU heating load: 1,500 × 35 BTU/sq ft = 52,500,000 BTU/year
+5. Local electricity price: $0.14/kWh (Carolinas average)
+
+**Calculation:**
+
+**Annual Cost = (52,500,000 ÷ 3,412 ÷ 3.2) × $0.14 = $673/year**
+
+**That's about $135/month over 5 winter months, or $0.45 per sq ft per year.** Heat pumps shine in moderate climates like Charlotte, where they maintain high COP values through most of winter.
+
+### Example 3: Propane Furnace in a 1,800 Sq Ft Rural Home in Pennsylvania
+
+1. Home square footage: 1,800 sq ft
+2. Climate zone: Cold (rural PA, ~5,200 HDD)
+3. System: 90% AFUE propane furnace
+4. BTU heating load: 1,800 × 42 BTU/sq ft = 75,600,000 BTU/year
+5. Local propane price: $3.00/gallon (East Coast average)
+
+**Calculation:**
+
+**Annual Cost = (75,600,000 ÷ 0.90) × ($3.00 ÷ 91,500) = $2,754/year**
+
+**That's $551/month over 5 winter months, or $1.53 per sq ft per year.** This is why many rural Northeast homeowners are seriously looking at heat pump conversions — the savings can be dramatic.
+
+### Example 4: Baseboard Heater in a 150 Sq Ft Bedroom
+
+1. Room size: 150 sq ft (12×12.5 ft bedroom)
+2. Heater: 6-foot baseboard heater (1,500 watts)
+3. Daily runtime: 10 hours (cold climate)
+4. Local electricity price: $0.18/kWh (national average)
+
+**Calculation:**
+
+**Monthly Cost = 1.5 kW × 10 hours × 30 days × $0.18 = $81/month**
+
+**That's $81 per month to heat ONE bedroom.** Multiply that across a whole house and you see why the DOE calls electric baseboard heating one of the most expensive options.
+
+### Example 5: Switching From Heating Oil to a Heat Pump in Connecticut
+
+1. Home: 1,800 sq ft, currently using heating oil
+2. Current system: 85% AFUE oil furnace, oil at $3.75/gallon (CT average)
+3. Proposed: Air-source heat pump, COP 2.5 (lower due to cold CT winters), electricity at $0.30/kWh (CT rate)
+4. Annual heating load: 1,800 × 45 BTU/sq ft = 81,000,000 BTU
+
+**Current oil cost:** (81,000,000 ÷ 0.85) × ($3.75 ÷ 138,500) = **$2,580/year**
+
+**Heat pump cost:** (81,000,000 ÷ 3,412 ÷ 2.5) × $0.30 = **$2,847/year**
+
+In this scenario, **the heat pump is actually MORE expensive** because of Connecticut's high electricity rates and cold winters reducing COP. This is an important reality check — heat pumps don't always save money, especially in the Northeast where [electricity prices are among the highest in the nation](/average-electricity-usage) and winters are severe.
+
+---
+
+## Heating Cost Calculator FAQ
+
+### How much does it cost to heat a 2,000 sq ft house per month?
+
+With natural gas at current national average rates, expect **$200–$300/month** during winter for a 2,000 sq ft house in a moderate climate. With a heat pump, it's closer to **$200–$280/month**. With electric baseboard, you could pay **$650–$850/month** or more.
+
+### What is the cheapest way to heat a house?
+
+**Natural gas** is the cheapest for most Americans, at roughly **$15 per million BTU** of delivered heat. Geothermal heat pumps are even cheaper (**$13/MMBTU**) but have much higher upfront installation costs ($20,000–$30,000). Air-source heat pumps are competitive with gas in mild-to-moderate climates.
+
+### How much does heating cost per square foot?
+
+The national average is roughly **$0.60–$1.25 per sq ft per year** for heating, depending on fuel type, climate, and system efficiency. Gas heating in a mild climate can be as low as **$0.30/sq ft**, while oil heating in New England can exceed **$1.50/sq ft**.
+
+### Is baseboard heating expensive to run?
+
+Yes. Electric baseboard heating is the most expensive common heating method, costing **$52.75 per million BTU** at national average electricity rates. That's **3.5x more expensive than natural gas**. A whole-home baseboard system running 8–10 hours per day can cost **$480–$900+ per month**.
+
+### How many heating degree days affect my cost?
+
+Heating degree days (HDD) directly determine how much fuel your home consumes. Every 1,000 HDD adds roughly **$100–$200 to an annual gas heating bill** for a typical home. Florida has ~600 HDD annually while Minnesota has ~7,500 HDD — a 12x difference in heating demand.
+
+### Should I switch from oil to a heat pump?
+
+It depends on your local electricity rate and climate. In states with cheap electricity (under $0.15/kWh) and moderate winters, a heat pump can save **$500–$1,500/year** over oil. In New England with expensive electricity ($0.25–$0.35/kWh), the savings may be minimal or non-existent. Run the numbers with our calculator using your local rates.
+
+---
+
+## Sources and References
+
+1. U.S. Energy Information Administration (EIA), Electric Power Monthly — Residential electricity prices by state. [eia.gov/electricity/state/](https://www.eia.gov/electricity/state/)
+2. EIA, Natural Gas Monthly — Residential natural gas prices by state. [eia.gov/dnav/ng/ng_pri_sum_a_epg0_prs_dmcf_m.htm](https://www.eia.gov/dnav/ng/ng_pri_sum_a_epg0_prs_dmcf_m.htm)
+3. EIA, Heating Oil and Propane Update — Weekly residential prices. [eia.gov/petroleum/heatingoilpropane/](https://www.eia.gov/petroleum/heatingoilpropane/)
+4. EIA, Winter Fuels Outlook 2025–2026 — Average household heating expenditure forecasts. [eia.gov/outlooks/steo/report/perspectives/2025/10-winterfuels/article.php](https://www.eia.gov/outlooks/steo/report/perspectives/2025/10-winterfuels/article.php)
+5. EIA, Residential Energy Consumption Survey (RECS) 2020 — Household consumption and expenditure data. [eia.gov/consumption/residential/data/2020/](https://www.eia.gov/consumption/residential/data/2020/)
+6. EIA, FAQ: "How do I compare the cost of heating fuels?" [eia.gov/tools/faqs/faq.php?id=987&t=7](https://www.eia.gov/tools/faqs/faq.php?id=987&t=7)
+7. NOAA Climate Prediction Center — Heating degree day statistics by state. [cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/degree_days/)
+8. EPA Climate Change Indicators — Heating and cooling degree days. [epa.gov/climate-indicators/climate-change-indicators-heating-and-cooling-degree-days](https://www.epa.gov/climate-indicators/climate-change-indicators-heating-and-cooling-degree-days)
+9. Oklahoma State University Extension — True Cost of Energy Comparisons. [extension.okstate.edu/fact-sheets/true-cost-of-energy-comparisons](https://extension.okstate.edu/fact-sheets/true-cost-of-energy-comparisons-apples-to-apples.html)
+10. Energy Kinetics — Fuel comparison data with current EIA prices. [energykinetics.com/savingsheatingfuelcomparisons/](https://energykinetics.com/savingsheatingfuelcomparisons/)
+11. U.S. DOE — Energy Saver: heating fuel heat content and efficiency guidelines. [energy.gov](https://www.energy.gov/)
+12. U.S. Census Bureau, American Community Survey — Main space heating fuel by state.
+13. EIA, Today in Energy — "Electricity use is becoming more common for residential heating." [eia.gov/todayinenergy/detail.php?id=66324](https://www.eia.gov/todayinenergy/detail.php?id=66324)
+14. EIA, Today in Energy — "Winter residential energy expenditures vary by heating fuel." [eia.gov/todayinenergy/detail.php?id=66364](https://www.eia.gov/todayinenergy/detail.php?id=66364)
+15. EIA, RECS 2020 — "The majority of U.S. households used natural gas in 2020." [eia.gov/todayinenergy/detail.php?id=55940](https://www.eia.gov/todayinenergy/detail.php?id=55940)
+
+---
+
+## Related Calculators and Articles
+
+- [Heating BTU Calculator](/heating-btu-calculator) — Calculate how many BTU your home needs based on square footage and climate zone
+- [Furnace Sizing Calculator](/furnace-sizing-calculator) — Find the right furnace size for your home
+- [AFUE Rating Explained](/afue-rating) — Understand furnace efficiency and how it affects your bill
+- [Gas vs. Electric Heating Cost Comparison](/gas-vs-electric-heating) — Side-by-side analysis of the two most common fuel types
+- [Heat Pump Running Cost Calculator](/heat-pump-running-cost) — Calculate your heat pump's annual operating cost
+- [Cost to Run an Electric Heater](/cost-to-run-electric-heater) — Per-hour and per-month electric heating costs
+- [Insulation R-Value Chart](/insulation-r-value-chart) — How insulation quality affects your heating bill
+
+If you have any questions about your specific heating cost situation, use the calculator above with your local fuel prices and home details — or drop a question in the comments below and we'll do our best to help you out.

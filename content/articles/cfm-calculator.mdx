@@ -1,0 +1,447 @@
+---
+title: "CFM Calculator — How To Calculate Airflow"
+slug: "cfm-calculator"
+description: "We get this kind of question all the time. Figuring out the right CFM (Cubic Feet per Minute) for your HVAC system is one of the most fundamental — and ..."
+pillar: "calculators"
+pillarHub: "/hvac-calculators"
+hasCalculator: true
+calculatorComponent: "CFMCalculator"
+seoTitle: "CFM Calculator — How To Calculate Airflow"
+---
+
+# CFM Calculator — How To Calculate Airflow (CFM)
+
+> "I'm designing ductwork for a 3-ton AC system. How do I calculate the CFM I need and what size ducts to use?"
+
+We get this kind of question all the time. Figuring out the right CFM (Cubic Feet per Minute) for your HVAC system is one of the most fundamental — and most commonly botched — calculations in residential and commercial HVAC.
+
+Here's the deal: a 3-ton AC system needs roughly **1,200 CFM of airflow** (based on the 400 CFM/ton rule of thumb). But that quick number only scratches the surface — you also need to know CFM per room, CFM for ventilation, CFM per square foot, and how to measure actual airflow at your vents.
+
+Before you jump into our CFM calculator below, here are the 3 things you need to know:
+
+1. **Which CFM formula applies to your situation.** There are 4 core CFM formulas, and the right one depends on whether you're sizing ducts, calculating ventilation, or checking system airflow.
+2. **Your input values.** Depending on the formula, you'll need air velocity (FPM), duct dimensions, room volume, air changes per hour (ACH), BTU capacity, or AC tonnage.
+3. **What the result means.** CFM tells you the *volume* of air moved per minute — but airflow must be balanced with [duct sizing](/cfm-duct-sizing), static pressure, and [filter restriction](/furnace-filter-guide) to actually work in the real world.
+
+Let's get into it.
+
+{/* CALCULATOR */}
+
+## What Is CFM in HVAC?
+
+**CFM stands for Cubic Feet per Minute.** It measures the *volume* of air flowing through an HVAC system, duct, vent, or fan every 60 seconds.
+
+Think of it this way: if your blower motor pushes **1,200 cubic feet of air per minute**, that means a box of air measuring roughly 10 ft × 10 ft × 12 ft passes through your system every minute. That's a lot of air — and it needs to be exactly the right amount.
+
+Too little CFM and your [AC won't blow cold enough](/ac-not-blowing-cold), your rooms won't reach [set temperature](/thermostat-not-reaching-temperature), and your evaporator coil may freeze. Too much CFM and you lose dehumidification (the air moves too fast across the coil to remove moisture), get noisy ducts, and waste energy.
+
+Here's the bottom line: **CFM is the single most important airflow measurement in HVAC.** Every duct, every register, every [return air vent](/cold-air-return-vents), and every piece of equipment in your system is designed around a target CFM number. Even [air purifiers](/air-purifier-sizing) use CFM — their [CADR rating](/cadr-rating) is essentially a clean-air CFM measurement.
+
+---
+
+## How To Calculate CFM — 4 CFM Formulas
+
+There are 4 primary formulas for calculating CFM. Which one you use depends entirely on what information you have and what you're trying to figure out.
+
+### CFM Formula #1: Air Velocity × Duct Area
+
+This is the fundamental CFM equation — the definition of cubic feet per minute:
+
+**CFM = Air Velocity (FPM) × Duct Cross-Section Area (sq ft)**
+
+It works in any situation where you know (or can measure) how fast air is moving and the size of the opening it's passing through. HVAC technicians use this formula every day when taking anemometer or pitot tube readings in [ductwork](/cfm-duct-sizing).
+
+## To calculate duct area:
+
+- **Round duct:** Area = π × (diameter ÷ 2)² ÷ 144 (result in sq ft)
+- **Rectangular duct:** Area = Width × Height ÷ 144 (result in sq ft)
+
+*Example:* Air moves at **700 FPM** through a **10-inch round duct**. The area is π × 5² ÷ 144 = **0.545 sq ft**. So: CFM = 700 × 0.545 = **382 CFM**.
+
+### How To Calculate CFM for a Room (Volume × ACH ÷ 60)
+
+This formula calculates how much airflow a room needs based on how many times per hour you want to completely replace all the air in it:
+
+**CFM = Room Volume (cu ft) × Air Changes Per Hour (ACH) ÷ 60**
+
+Room volume is simply Length × Width × Ceiling Height. The [ACH value](/air-changes-per-hour) depends on the room type — residential living spaces typically need **5–7 ACH**, while offices need **4–8 ACH** and kitchens may need **15–30 ACH**.
+
+*Example:* A **200 sq ft bedroom** with **8-ft ceilings** and a target of **6 ACH**: Volume = 200 × 8 = 1,600 cu ft. CFM = 1,600 × 6 ÷ 60 = **160 CFM**.
+
+### BTU to CFM Conversion Formula
+
+When you know the heating or cooling capacity (in BTU/hr) and the temperature difference between supply and return air, you can calculate the CFM needed to deliver that capacity:
+
+**CFM = BTU/hr ÷ (1.08 × ΔT)**
+
+The **1.08 constant** comes from multiplying three properties of standard air: air density (0.075 lb/ft³) × 60 minutes/hour × specific heat of air (0.24 BTU/lb·°F) = **1.08** (source: ACHR News, MEP Academy). This formula only accounts for *sensible* heat (temperature change), not latent heat (moisture removal).
+
+**ΔT** is the temperature difference between the return air entering the system and the supply air leaving it. For cooling, a typical ΔT is **18–22°F**; for heating, it's **40–70°F** depending on equipment type.
+
+*Example:* A furnace rated at **60,000 BTU/hr** with a **50°F temperature rise**: CFM = 60,000 ÷ (1.08 × 50) = 60,000 ÷ 54 = **1,111 CFM**.
+
+### How Many CFM Per Ton of Cooling?
+
+This is the simplest and most widely used CFM rule of thumb for air conditioning:
+
+**CFM = AC Tonnage × 400**
+
+The **400 CFM per ton** standard represents the optimal balance between sensible cooling (temperature reduction) and latent cooling (humidity removal) at standard indoor conditions of 80°F and 50% relative humidity (source: ACCA). One ton of cooling equals **12,000 BTU/hr**.
+
+However, 400 CFM/ton is a baseline — not a universal rule. Here's when to adjust:
+
+| Climate / Application | CFM Per Ton | Why |
+|---|---|---|
+| **Standard residential (baseline)** | **400 CFM/ton** | Optimal 70/30 sensible/latent balance |
+| Hot-humid (Southeast, Gulf Coast) | 350–375 CFM/ton | Prioritizes moisture removal |
+| Hot-dry (Southwest, desert) | 425–450 CFM/ton | Maximizes sensible cooling |
+| Mixed-humid (Mid-Atlantic, Midwest) | 380–400 CFM/ton | Balanced approach |
+| Heat pump systems | 450–500 CFM/ton | Higher airflow for heating mode |
+| Data centers / server rooms | 500–600 CFM/ton | Nearly all sensible load |
+
+*Source: ACCA Blog, FSEC (Florida Solar Energy Center)*
+
+**Important:** Below **350 CFM/ton**, the evaporator coil can ice up. Above **450 CFM/ton**, moisture may blow off the coil before it drains. The acceptable operating range is **350–450 CFM/ton** for standard residential equipment (source: FSEC research).
+
+### CFM by AC System Size (Quick Reference)
+
+| AC Size (Tons) | CFM at 350/ton | CFM at 400/ton | CFM at 450/ton |
+|---|---|---|---|
+| **1.5 ton** | 525 CFM | 600 CFM | 675 CFM |
+| **2 ton** | 700 CFM | 800 CFM | 900 CFM |
+| **2.5 ton** | 875 CFM | 1,000 CFM | 1,125 CFM |
+| **3 ton** | 1,050 CFM | 1,200 CFM | 1,350 CFM |
+| **3.5 ton** | 1,225 CFM | 1,400 CFM | 1,575 CFM |
+| **4 ton** | 1,400 CFM | 1,600 CFM | 1,800 CFM |
+| **5 ton** | 1,750 CFM | 2,000 CFM | 2,250 CFM |
+
+To find the right tonnage for your home in the first place, use our [AC tonnage calculator](/ac-tonnage-calculator). For [furnace sizing](/furnace-sizing-calculator), the BTU-to-CFM formula above is more accurate than the tonnage method.
+
+---
+
+## CFM Per Square Foot Table
+
+One of the most common questions we get is: *"How many CFM per square foot do I need?"*
+
+The answer depends heavily on the type of space. Residential cooling typically requires around **1 CFM per square foot** as a rough rule of thumb (assuming standard 8-ft ceilings and average insulation). Commercial spaces vary widely depending on occupancy, lighting loads, and activity levels.
+
+| Building / Space Type | Approx. CFM/sq ft (Total Supply Air) | Basis |
+|---|---|---|
+| **Residential (cooling, standard)** | **1.0 CFM/sq ft** | ~400 CFM/ton, 1 ton per 400–600 sq ft |
+| Residential (high solar gain/windows) | 1.5–2.0 CFM/sq ft | Additional cooling load from glass |
+| **Office (general)** | **1.0–1.5 CFM/sq ft** | Typical loads, 8-ft ceilings |
+| Retail store | 1.5–2.0 CFM/sq ft | Higher occupancy, lighting |
+| **Restaurant / dining** | **2.0–3.0 CFM/sq ft** | High occupancy, cooking heat |
+| Classroom | 1.5–2.5 CFM/sq ft | High occupant density |
+| Server room / data center | 3.0–5.0 CFM/sq ft | Very high sensible heat |
+
+*Note: These are total supply air estimates. ASHRAE 62.1 ventilation (outdoor air only) rates are lower — see the next section.*
+
+---
+
+## CFM Per Person — ASHRAE Ventilation Requirements
+
+ASHRAE Standard 62.1 specifies minimum outdoor air ventilation rates for commercial buildings. The standard uses a two-component formula that accounts for both occupant-generated and building-generated contaminants:
+
+**Breathing Zone Outdoor Airflow (Vbz) = (Rp × Number of People) + (Ra × Floor Area in sq ft)**
+
+Here are the key rates from ASHRAE 62.1 Table 6-1:
+
+| Occupancy Category | CFM/Person (Rp) | CFM/sq ft (Ra) | Default Occupancy (#/1,000 sq ft) |
+|---|---|---|---|
+| **Office space** | **5** | **0.06** | 5 |
+| **Retail store** | **7.5** | **0.12** | 15 |
+| **Restaurant dining** | **7.5** | **0.18** | 70 |
+| **Classroom (ages 5–8)** | **10** | **0.12** | 25 |
+| **Classroom (ages 9+)** | **10** | **0.12** | 35 |
+| Lecture hall | 7.5 | 0.06 | 65 |
+| Library | 5 | 0.12 | 10 |
+| Conference room | 5 | 0.06 | 50 |
+| Gym / exercise room | 20 | 0.06 | 7 |
+| Hotel bedroom | 5 | 0.06 | 10 |
+| Lobby / reception | 5 | 0.06 | 30 |
+
+*Source: ASHRAE Standard 62.1-2022, Table 6-1*
+
+For **residential buildings**, ASHRAE Standard 62.2 uses a different approach. The whole-building ventilation formula is:
+
+**Required CFM = (Floor Area ÷ 100) + ((Number of Bedrooms + 1) × 7.5)**
+
+| Home Size (sq ft) | Bedrooms | Occupants (BR+1) | Required Ventilation CFM |
+|---|---|---|---|
+| 1,200 | 2 | 3 | **34.5 CFM** |
+| 1,800 | 3 | 4 | **48 CFM** |
+| 2,200 | 4 | 5 | **59.5 CFM** |
+| 2,800 | 4 | 5 | **65.5 CFM** |
+| 3,500 | 5 | 6 | **80 CFM** |
+
+ASHRAE 62.2 also recommends a minimum of **0.35 air changes per hour** for all homes, with not less than **15 CFM per person** of outdoor air (source: US EPA).
+
+*Source: ASHRAE 62.2, EPA Indoor Air Quality Guidelines*
+
+---
+
+## How To Measure CFM
+
+Knowing how to *calculate* CFM is one thing. Knowing how to *measure* it in an actual system is another. Here are the primary methods HVAC professionals use.
+
+### How To Measure CFM in a Duct (Pitot Tube Method)
+
+The pitot tube is the gold standard for measuring air velocity (and therefore CFM) inside ductwork. Here's the process:
+
+1. Insert the pitot tube through a small hole in the duct, pointed directly into the airflow.
+2. Connect the total pressure port (tip) to the high side and the static pressure port (side holes) to the low side of a manometer.
+3. Read the velocity pressure (ΔP) in inches of water column (in. w.c.).
+4. Convert to velocity: **V (FPM) = 4,005 × √ΔP** (at standard air density of 0.075 lb/ft³).
+5. Take **20+ readings** at equal-area points across the duct cross-section (a "traverse") and average them.
+6. Calculate CFM: **CFM = Average Velocity (FPM) × Duct Area (sq ft)**.
+
+The pitot tube is most accurate above **600 FPM**. For lower velocities, use a thermal anemometer instead (source: Fluke, Dwyer Instruments).
+
+### How To Measure CFM at a Vent
+
+For supply registers and return grilles, you have two practical options:
+
+1. **Capture hood (balometer):** Place the hood over the grille and read CFM directly. This is the fastest and most common method for balancing work. Accuracy is typically ±3%.
+2. **Anemometer + traverse:** Hold a vane or hot-wire anemometer at multiple points across the grille face, average the velocity readings, and multiply by the grille's net free area.
+
+For [bathroom fan CFM](/bathroom-fan-cfm) and [exhaust venting](/bathroom-fan-venting), a capture hood is by far the easiest measurement tool.
+
+### How To Measure CFM in a Room
+
+To estimate total CFM delivered to a room, measure the CFM at each supply register using one of the methods above, then add them together. Compare the total against the room's calculated requirement to check whether the system is delivering adequate airflow.
+
+---
+
+## Exhaust Fan CFM Requirements
+
+Exhaust fans in bathrooms, kitchens, and utility rooms must meet minimum CFM requirements per ASHRAE Standard 62.2. Here's the full breakdown:
+
+| Room Type | Demand-Controlled (Intermittent) | Continuous Operation | Notes |
+|---|---|---|---|
+| **Bathroom** | **50 CFM minimum** | 20 CFM minimum | Or 1 CFM/sq ft, whichever is greater |
+| **Kitchen (vented range hood)** | **100 CFM minimum** | 5 ACH of kitchen volume | Must exhaust to outdoors |
+| Kitchen (non-enclosed, other exhaust) | 300 CFM minimum | — | For ceiling/wall fans without range hood |
+| Kitchen (downdraft) | 300 CFM minimum | — | Low capture efficiency noted by ASHRAE |
+
+*Source: ASHRAE 62.2, Air King, Fantech*
+
+**Sound requirements:** Intermittent exhaust fans must be rated at **3.0 sones or less**. Continuous fans must be **1.0 sone or less** — if the fan is too loud, occupants will turn it off, defeating the purpose (source: ASHRAE 62.2).
+
+For help sizing a [bathroom exhaust fan](/bathroom-fan-cfm) specifically, we have a dedicated calculator that accounts for room size, shower presence, and duct length.
+
+---
+
+## CFM Duct Sizing Chart
+
+This is the reference table that ties everything together. Once you know how many CFM you need (from the formulas above), this chart tells you what size [duct](/cfm-duct-sizing) will carry that airflow.
+
+### Round Duct CFM Chart
+
+| Duct Diameter (in) | Area (sq ft) | CFM @ 400 FPM | CFM @ 600 FPM | CFM @ 700 FPM | CFM @ 900 FPM |
+|---|---|---|---|---|---|
+| **4** | 0.087 | 35 | 52 | 61 | 79 |
+| **5** | 0.136 | 55 | 82 | 95 | 123 |
+| **6** | 0.196 | 78 | 118 | 137 | 177 |
+| **7** | 0.267 | 107 | 160 | 187 | 240 |
+| **8** | 0.349 | 140 | 209 | 244 | 314 |
+| **9** | 0.442 | 177 | 265 | 309 | 398 |
+| **10** | 0.545 | 218 | 327 | 382 | 491 |
+| **12** | 0.785 | 314 | 471 | 550 | 707 |
+| **14** | 1.069 | 428 | 641 | 748 | 962 |
+| **16** | 1.396 | 558 | 838 | 977 | 1,257 |
+| **18** | 1.767 | 707 | 1,060 | 1,237 | 1,590 |
+| **20** | 2.182 | 873 | 1,309 | 1,527 | 1,964 |
+| **24** | 3.142 | 1,257 | 1,885 | 2,199 | 2,827 |
+
+**How to read this table:** Find the CFM you need, then select a duct diameter that handles that CFM at your target velocity. For residential supply ducts, target **600–900 FPM** (per ACCA Manual D). For return ducts, target **400–600 FPM**.
+
+*Source: Calculated from Area = π × (d/2)² ÷ 144; validated against CED Engineering, ASHRAE duct fitting data*
+
+### Recommended Air Velocities by Application
+
+| Location | Target Velocity (FPM) | Maximum (FPM) | Source |
+|---|---|---|---|
+| **Supply duct (main trunk)** | **700–900** | 900 | ACCA Manual D |
+| Supply duct (branch run) | 600–700 | 700 | ACCA Manual D |
+| **Return duct** | **400–600** | 700 | ACCA Manual D |
+| Return grille face | < 300 | 400 | Fluke |
+| Supply register/diffuser | — | 800 | Fluke |
+| Occupant zone (room level) | 25–50 | 65 | NREL/DOE |
+
+For complete duct sizing guidance including flex duct and rectangular duct charts, see our [CFM duct sizing guide](/cfm-duct-sizing).
+
+---
+
+## Air Changes Per Hour (ACH) Reference Table
+
+When using the **CFM = Volume × ACH ÷ 60** formula, you need the right [ACH value](/air-changes-per-hour) for your space type:
+
+| Room / Building Type | Recommended ACH |
+|---|---|
+| Residential (general living spaces) | 5–7 |
+| Residential (minimum outdoor air, ASHRAE 62.2) | 0.35 ACH |
+| Office | 4–8 |
+| Classroom | 6–20 |
+| Retail / shopping | 6–10 |
+| Restaurant / dining | 8–12 |
+| Hospital patient room | 4–6 |
+| Hospital operating room | 20+ |
+| Commercial kitchen | 15–30 |
+| Warehouse | 6–30 |
+| Gym / fitness center | 6–8 |
+
+*Source: Engineering Toolbox, ASHRAE 170, Atlantic Environmental*
+
+---
+
+## CFM Calculation Worked Examples
+
+Let's put all 4 formulas into practice with real-world scenarios.
+
+### Example 1: Calculating CFM for a 3-Ton AC System
+
+**Scenario:** You're installing a 3-ton central air conditioning system in a 1,500 sq ft home in Houston, Texas.
+
+1. AC tonnage: **3 tons**
+2. Climate: **Hot-humid** (Houston) → use **350 CFM/ton** for better dehumidification
+
+**Calculation:**
+
+CFM = 3 tons × 350 CFM/ton = **1,050 CFM**
+
+At the standard 400 CFM/ton, you'd get 1,200 CFM. But in Houston's humid climate, the lower airflow gives the coil more time to condense moisture, improving comfort significantly.
+
+**Result: This system needs approximately 1,050 CFM of airflow** for optimal cooling and humidity control. Use a manometer and the manufacturer's blower table to verify the blower is actually delivering this at the installed static pressure.
+
+### Example 2: Ventilation CFM for a 200 sq ft Office (ASHRAE 62.1)
+
+**Scenario:** You're designing ventilation for a 200 sq ft private office in a commercial building.
+
+1. Space type: Office → **Rp = 5 CFM/person**, **Ra = 0.06 CFM/sq ft**
+2. Occupant density: 5 per 1,000 sq ft → 200 sq ft = **1 person**
+3. Floor area: **200 sq ft**
+
+**Calculation:**
+
+Vbz = (5 CFM/person × 1 person) + (0.06 CFM/sq ft × 200 sq ft)
+Vbz = 5 + 12 = **17 CFM of outdoor air**
+
+**Result: This office needs a minimum of 17 CFM of outdoor (ventilation) air.** The total supply air will be higher (around 200–300 CFM for cooling), but at least 17 CFM of that must be fresh outdoor air.
+
+### Example 3: Bathroom Exhaust Fan CFM
+
+**Scenario:** You're selecting a [bathroom exhaust fan](/bathroom-fan-cfm) for an 80 sq ft master bathroom with a shower.
+
+1. Room area: **80 sq ft**
+2. ASHRAE 62.2 minimum: **50 CFM** (demand-controlled)
+3. Area-based calculation: 80 sq ft × 1 CFM/sq ft = **80 CFM**
+
+**Calculation:**
+
+Use the **greater** of the two values: 80 CFM (area-based) vs. 50 CFM (ASHRAE minimum).
+
+**Result: Install a fan rated at 80 CFM minimum.** We'd recommend going slightly higher — an **80–110 CFM fan** — to account for duct resistance. The longer and more restrictive the [vent duct run](/bathroom-fan-venting), the more rated capacity you need to actually deliver 80 CFM at the fan outlet.
+
+### Example 4: Measuring Airflow at a 10-Inch Round Vent
+
+**Scenario:** You're using a vane anemometer to check airflow at a 10-inch round supply register.
+
+1. Average anemometer reading across the grille face: **350 FPM**
+2. Duct diameter: **10 inches**
+3. Duct area: π × (5)² ÷ 144 = **0.545 sq ft**
+
+**Calculation:**
+
+CFM = 350 FPM × 0.545 sq ft = **191 CFM**
+
+**Result: This register is delivering approximately 191 CFM.** Compare this against the room's required CFM from the load calculation. If it's short, check for [duct restrictions](/furnace-filter-guide) or damper settings.
+
+### Example 5: Converting a Pitot Tube Reading to CFM
+
+**Scenario:** You take a pitot tube traverse in a 12-inch round supply duct and get an average velocity pressure of **0.25 inches w.c.**
+
+1. Velocity pressure (ΔP): **0.25 in. w.c.**
+2. Duct diameter: **12 inches**
+3. Duct area: π × (6)² ÷ 144 = **0.785 sq ft**
+
+**Calculation:**
+
+Step 1: V = 4,005 × √0.25 = 4,005 × 0.5 = **2,003 FPM**
+
+Step 2: CFM = 2,003 FPM × 0.785 sq ft = **1,572 CFM**
+
+**Result: This duct is carrying approximately 1,572 CFM** — that's about right for a 4-ton system at 400 CFM/ton. The velocity of 2,003 FPM is high for residential work (target is under 900 FPM), which suggests this duct may be undersized and should be checked for noise issues.
+
+### Example 6: Sizing a Duct for 400 CFM
+
+**Scenario:** A bedroom needs 400 CFM of supply air. What size round duct do you need?
+
+1. Required CFM: **400 CFM**
+2. Target velocity: **700 FPM** (residential supply branch, per ACCA Manual D)
+
+**Calculation:**
+
+Step 1: Required area = CFM ÷ Velocity = 400 ÷ 700 = **0.571 sq ft** (82.3 sq in)
+
+Step 2: Required diameter = √(82.3 × 4 ÷ π) = **10.2 inches**
+
+Step 3: Round up to standard size → **use a 10-inch duct** (0.545 sq ft, actual CFM at 700 FPM = 382 CFM)
+
+**Result: A 10-inch round duct gets you close at 382 CFM.** If you need the full 400 CFM with margin, step up to a **12-inch duct** (550 CFM at 700 FPM). Check our [duct sizing chart](/cfm-duct-sizing) for flex duct equivalents — flex duct has higher friction, so you may need one size larger.
+
+---
+
+## CFM FAQ
+
+### How do you calculate CFM for a room?
+
+Use the formula **CFM = Room Volume × ACH ÷ 60**. Multiply the room's length × width × ceiling height to get volume in cubic feet, then multiply by the desired [air changes per hour](/air-changes-per-hour) and divide by 60. For a typical 150 sq ft bedroom with 8-ft ceilings and 6 ACH: 1,200 cu ft × 6 ÷ 60 = **120 CFM**.
+
+### How many CFM per ton of AC?
+
+The industry standard is **400 CFM per ton** of cooling capacity — a 3-ton system needs about 1,200 CFM. Adjust down to 350 CFM/ton in humid climates for better dehumidification, or up to 450 CFM/ton in dry climates for more sensible cooling (source: ACCA).
+
+Use our [AC tonnage calculator](/ac-tonnage-calculator) to find your system's tonnage first.
+
+### How many CFM per square foot do I need?
+
+For residential cooling, plan on approximately **1 CFM per square foot** as a starting point. Homes with large windows or high solar exposure may need 1.5–2 CFM/sq ft. Commercial spaces vary: offices need ~1–1.5, restaurants need 2–3, and server rooms may need 3–5 CFM/sq ft.
+
+### How do you measure CFM at a vent?
+
+The easiest method is a **capture hood (balometer)** — place it over the register and read the CFM directly. Alternatively, use a **vane anemometer** to measure velocity (FPM) across the face of the grille, then multiply the average velocity by the grille's net free area. For in-duct measurements, a **pitot tube + manometer** is the most accurate tool above 600 FPM.
+
+### What is a good CFM for HVAC?
+
+It depends entirely on system size. A **3-ton residential AC** needs about **1,200 CFM**, while a **5-ton system** needs about **2,000 CFM**.
+
+The real question is whether the system is actually *delivering* its target CFM — and that depends on [duct sizing](/cfm-duct-sizing), [filter condition](/furnace-filter-guide), and static pressure. Always verify with field measurements.
+
+### How do you convert air velocity (FPM) to CFM?
+
+Multiply the velocity in feet per minute by the duct's cross-section area in square feet: **CFM = FPM × Area**. For a 12-inch round duct (area = 0.785 sq ft) with 800 FPM airflow: 800 × 0.785 = **628 CFM**. This is the same fundamental formula used by all CFM calculators.
+
+---
+
+## Sources and References
+
+1. **ASHRAE Standard 62.1-2022** — Ventilation for Acceptable Indoor Air Quality (https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2)
+2. **ASHRAE Standard 62.2** — Ventilation and Acceptable Indoor Air Quality in Residential Buildings (https://www.ashrae.org/technical-resources/bookstore/standards-62-1-62-2)
+3. **ACCA Manual D** — Residential Duct Systems (https://www.acca.org/standards/technical-manuals/manual-d)
+4. **ACCA Blog** — "400 CFM Per Ton — Or Is It?" (https://hvac-blog.acca.org/400-cfm-per-ton-or-is-it/)
+5. **FSEC (Florida Solar Energy Center)** — Residential AC Airflow Study (http://www.fsec.ucf.edu/en/publications/html/FSEC-PF-321-97/)
+6. **US EPA** — Indoor Air Quality Ventilation Guidelines (https://www.epa.gov/indoor-air-quality-iaq/how-much-ventilation-do-i-need-my-home-improve-indoor-air-quality)
+7. **MEP Academy** — How to Calculate Ventilation Air per ASHRAE 62.1 (https://mepacademy.com/how-to-calculate-ventilation-air/)
+8. **NREL/DOE** — Advanced Strategy Guideline: Air Distribution Basics (https://docs.nrel.gov/docs/fy12osti/53352.pdf)
+9. **CED Engineering** — HVAC Duct Sizing and Design (https://www.cedengineering.com/userfiles/M06-032%20-%20HVAC%20-%20How%20to%20Size%20and%20Design%20Ducts%20-%20US.pdf)
+10. **Dwyer Instruments** — Air Velocity Measurement Guide (https://legacy.dwyer-inst.com/ApplicationGuides/?ID=16)
+11. **Fluke** — Measuring Air Velocity with the 975 AirMeter (https://www.fluke.com/en-us/learn/blog/hvac/measuring-air-velocity-with-the-fluke-975-airmeter-using-the-velocity-probe)
+12. **ACHR News** — Understanding the Formula to Calculate BTUH (https://www.achrnews.com/articles/145073-understanding-the-formula-to-calculate-btuh)
+13. **HVAC School** — Sensible Heat in Air and Water (http://www.hvacrschool.com/sensible-heat-in-air-and-water/)
+14. **Belimo** — HVAC Formulas and Calculations Guide (https://www.belimo.com/ca/en_US/blog/hvac-formulas-and-calculations-guide)
+15. **Engineering Toolbox** — Air Change Rates by Room Type (https://www.engineeringtoolbox.com/air-change-rate-room-d_867.html)
+
+---
+
+If you have any questions about calculating CFM for your specific HVAC setup, you can use the calculator above or drop your details in the comments below — include your system tonnage, duct sizes, and what you're trying to figure out, and we'll do our best to help you out.

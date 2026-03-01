@@ -1,0 +1,490 @@
+---
+title: "Heat Pump Sizing Calculator"
+slug: "heat-pump-sizing"
+description: "Heat pumps are sized differently than furnaces or air conditioners. A furnace only heats. An AC only cools. A heat pump does both — and it has to satisf..."
+pillar: "calculators"
+pillarHub: "/hvac-calculators"
+hasCalculator: true
+calculatorComponent: "HeatPumpSizingCalculator"
+seoTitle: "Heat Pump Sizing Calculator"
+---
+
+# Heat Pump Sizing Calculator: What Size Heat Pump Do You Need?
+
+> "We're replacing our old furnace and AC with a heat pump. The contractor says we need a 4-ton unit, but another guy quoted us a 3-ton. Who's right — and how do we figure this out ourselves?"
+
+Heat pumps are sized differently than furnaces or air conditioners. A furnace only heats. An AC only cools. A heat pump does both — and it has to satisfy **both** your heating load and your cooling load without being oversized for either one.
+
+That makes sizing trickier. Get it wrong, and you're stuck with a system that short-cycles in summer (killing humidity control) or can't keep up on the coldest winter nights.
+
+We built this calculator to give you a solid starting point. It factors in the variables that actually move the needle — climate zone, insulation quality, square footage, ceiling height — and outputs your recommended tonnage, BTU requirements at multiple temperatures, balance point, and estimated annual cost.
+
+Before you use it, you need three things:
+
+1. Your home's **total conditioned square footage** (heated and cooled areas only — skip the unfinished basement and detached garage).
+2. Your **IECC climate zone** (check the map below or use your city from the design temperature table).
+3. A rough sense of your home's **insulation quality** — good (newer construction, R-38+ attic, double-pane windows), average (1980s–2000s build, R-19 attic), or poor (pre-1980, minimal insulation, single-pane windows).
+
+---
+
+## Heat Pump Sizing Calculator
+
+{/* CALCULATOR */}
+
+## Heat Pump Sizing Chart by Square Footage
+
+This is the reference table most readers are looking for. Find your square footage in the left column, then move across to your climate zone.
+
+**Every cell shows the recommended heat pump tonnage.** These values assume average insulation, 8-foot ceilings, and standard windows. If your home has excellent insulation (new construction, R-38+ attic, low-e windows), size down half a ton. Poor insulation? Size up half a ton.
+
+| Home Sq Ft | Zone 1–2 (Hot) | Zone 3 (Warm) | Zone 4 (Mixed) | Zone 5 (Cool) | Zone 6–7 (Cold) |
+|---|---|---|---|---|---|
+| **800 sq ft** | 1.0–1.5 ton | 1.5–2.0 ton | 2.0 ton | 2.0–2.5 ton | 2.5–3.0 ton |
+| **1,000 sq ft** | 1.5–2.0 ton | 2.0 ton | 2.0–2.5 ton | 2.5–3.0 ton | 3.0–3.5 ton |
+| **1,200 sq ft** | 1.5–2.0 ton | 2.0–2.5 ton | 2.5–3.0 ton | 3.0–3.5 ton | 3.5–4.0 ton |
+| **1,500 sq ft** | 2.0–2.5 ton | 2.5–3.0 ton | 3.0–3.5 ton | 3.5–4.0 ton | 4.0–5.0 ton |
+| **1,800 sq ft** | 2.5–3.0 ton | 3.0–3.5 ton | 3.0–3.5 ton | 3.5–4.5 ton | 4.5–5.0 ton |
+| **2,000 sq ft** | 2.5–3.0 ton | 3.0–3.5 ton | 3.5–4.0 ton | 4.0–4.5 ton | 5.0+ ton |
+| **2,500 sq ft** | 3.0–3.5 ton | 3.5–4.0 ton | 4.0–5.0 ton | 4.5–5.0 ton | 5.0+ ton (or 2 units) |
+| **3,000 sq ft** | 3.5–4.0 ton | 4.0–5.0 ton | 5.0 ton | 5.0+ ton (or 2 units) | 2 units required |
+
+*Sources: ACCA Manual J methodology, ASHRAE climate zone data, aggregated manufacturer sizing guides. These are estimates — a proper [Manual J load calculation](https://www.acca.org/standards/technical-manuals/manual-j) provides 10–15% accuracy vs. 25–50% variance with square footage rules.*
+
+One ton of heat pump capacity equals **12,000 BTU/h**. A 3-ton heat pump delivers 36,000 BTU/h of cooling at rated conditions (95°F outdoor). Heating capacity varies by outdoor temperature — we cover that in the [cold climate section](#cold-climate-heat-pump-sizing) below.
+
+---
+
+### What Size Heat Pump for 1,000 Sq Ft
+
+A **1,000 sq ft** home typically needs a **2.0 to 3.0 ton heat pump** depending on climate. In warm climates (Zones 1–2 like Miami or Houston), a 1.5-ton unit often handles the load. In cold climates (Zones 5–6 like Chicago or Minneapolis), you're looking at 2.5–3.5 tons.
+
+The heating load drives the size up in cold climates. A 1,000 sq ft home in Zone 5 loses roughly **30,000–40,000 BTU/h** at design temperature. At 47°F, a 2.5-ton heat pump delivers about 30,000 BTU — but at 5°F, that same unit might only produce 18,000–22,000 BTU without [cold climate technology](/heat-pump-temperature-range).
+
+### What Size Heat Pump for 1,200 Sq Ft
+
+For **1,200 sq ft**, most homeowners land on a **2.0 to 3.5 ton** heat pump. In Zone 3 (Atlanta, Dallas, Charlotte), a 2.5-ton unit is the sweet spot. In Zone 5 (Boston, Denver, Indianapolis), step up to 3.0–3.5 tons.
+
+This is one of the most common home sizes, and it's also where oversizing becomes tempting. Resist it. A 2.5-ton variable-speed heat pump running continuously will deliver better comfort, humidity control, and efficiency than a 3.5-ton unit short-cycling every 8 minutes.
+
+### What Size Heat Pump for 1,500 Sq Ft
+
+A **1,500 sq ft** home falls into the **2.5 to 4.0 ton** range. Zone 3? A 3-ton unit handles it well. Zone 5? You'll likely need a 3.5-ton system, possibly with a [5 kW auxiliary heat strip](/heating-btu-calculator) for design-day backup.
+
+At 1,500 sq ft, the heating load in cold climates starts pulling firmly ahead of the cooling load. In Zone 5, heating demand is roughly **45,000–55,000 BTU/h** at design conditions, while cooling demand sits around **28,000–35,000 BTU/h**. This is where the heat pump sizing challenge really shows up — you need enough capacity for winter without wrecking summer dehumidification. Variable-speed units solve this elegantly.
+
+### What Size Heat Pump for 1,800 Sq Ft
+
+For **1,800 sq ft**, expect a **3.0 to 4.5 ton** heat pump. This is a popular home size and one where the right answer varies a lot by climate zone.
+
+In Zone 4 (Nashville, Washington DC, St. Louis), a **3.0–3.5 ton** heat pump typically covers both loads. In Zone 6 (Minneapolis), you're looking at **4.5–5.0 tons** — and strongly consider a [cold climate heat pump](/heat-pump-efficiency-temperature) rated by the [NEEP ccASHP database](https://ashp.neep.org) to ensure capacity holds at low temperatures.
+
+### What Size Heat Pump for 2,000 Sq Ft
+
+**2,000 sq ft** is the most-searched sizing question. The answer: **3.0 to 5.0 tons** depending on climate.
+
+In Zone 2 (Houston, Phoenix), a 3.0-ton unit handles 2,000 sq ft comfortably — the cooling load dominates and runs about **40,000–48,000 BTU/h**. In Zone 5 (Chicago), the heating load jumps to **60,000–70,000 BTU/h** at design temperature, pushing you toward a 4.0–4.5 ton system with [supplemental heat](/heating-btu-calculator).
+
+For Zone 6–7, a single 5-ton heat pump may not be the best approach. Two smaller systems (say, a 3-ton upstairs and a 2-ton downstairs) often deliver better comfort, better zoning, and lower total operating cost than one oversized unit.
+
+### What Size Heat Pump for 2,500 Sq Ft
+
+At **2,500 sq ft**, you're in **3.5 to 5.0+ ton** territory. In warm climates, a 4-ton unit does the job. In cold climates, you're almost certainly looking at either a 5-ton system with auxiliary heat or two separate systems.
+
+The practical ceiling for residential heat pumps is 5 tons (60,000 BTU/h). Above that, you're either moving into commercial equipment or — far more sensibly — splitting the home into two zones with separate heat pumps.
+
+### What Size Heat Pump for 3,000 Sq Ft
+
+For **3,000 sq ft**, the recommendation is **4.0 to 5.0+ tons** — and in Zones 5–7, two systems is almost always the right call. A single 5-ton unit simply can't deliver enough heating BTU in cold climates while also maintaining proper airflow and dehumidification in summer.
+
+We recommend a dual-zone approach: calculate each zone separately using the [heating BTU calculator](/heating-btu-calculator), then size individual heat pumps for each zone. Link to our [mini-split sizing calculator](/mini-split-sizing) if you're considering ductless for part of the home.
+
+---
+
+## How to Size a Heat Pump (Step-by-Step)
+
+Here's the methodology behind the calculator. The gold standard is an ACCA [Manual J load calculation](https://www.acca.org/standards/technical-manuals/manual-j) — a detailed, room-by-room analysis that accounts for insulation, window type, orientation, air leakage, and dozens of other factors. Manual J provides accuracy within **10–15%**, compared to 25–50% variance with square footage rules (source: [Rewiring America study of MassCEC data](https://homes.rewiringamerica.org/articles/heating-and-cooling/heat-pump-sizing-guide)).
+
+If you want a solid estimate before the HVAC contractor arrives, follow these steps:
+
+1. **Measure your conditioned square footage.** Include all heated and cooled rooms. Skip the garage, unfinished attic, and unheated basement.
+2. **Identify your climate zone.** Use the [ASHRAE design temperature table](#ashrae-design-temperatures) below. Your heating design temperature is the outdoor temp your system must handle.
+3. **Estimate your heating load.** Multiply square footage by the BTU-per-sq-ft factor for your climate zone (see table below).
+4. **Estimate your cooling load.** Multiply square footage by the cooling BTU factor. In most climates, the cooling load is 60–80% of the heating load.
+5. **Determine which load governs.** In cold climates (Zones 5–7), the heating load governs — size the heat pump to cover heating demand. In warm/humid climates (Zones 1–3), the cooling load often governs because oversizing kills dehumidification.
+6. **Select tonnage.** Divide the governing load by 12,000 BTU/ton and round to the nearest half-ton.
+7. **Verify capacity at design temperature.** Check the manufacturer's [expanded performance data at 47°F, 17°F, and 5°F](/heat-pump-efficiency-temperature). The heat pump must deliver enough BTU at your design temperature — not just at the rated 47°F condition.
+8. **Calculate supplemental heat.** If the heat pump can't meet the full heating load at design temp, the gap is your auxiliary heat requirement. See the [balance point section](#heat-pump-balance-point-calculator) below.
+
+The critical difference between heat pump sizing and [furnace sizing](/furnace-sizing-calculator) or [AC tonnage sizing](/ac-tonnage-calculator): **a heat pump must do both jobs.** A furnace can be sized purely for heating. An AC can be sized purely for cooling. A heat pump sized only for cooling may leave you freezing in January. A heat pump sized only for heating may short-cycle and fail to dehumidify in July.
+
+---
+
+## Heat Pump BTU Per Square Foot: The Sizing Rule
+
+The simplest sizing rule: multiply your square footage by a BTU-per-square-foot factor based on climate zone and insulation quality. This is a rule of thumb — not a replacement for Manual J — but it gets you within striking distance.
+
+| Climate Zone | Heating BTU/sq ft (Average Insulation) | Cooling BTU/sq ft | Example Cities |
+|---|---|---|---|
+| Zone 1 (Hot-Humid) | 20–25 BTU/sq ft | 20–25 BTU/sq ft | Miami, Key West |
+| Zone 2 (Hot) | 22–28 BTU/sq ft | 20–25 BTU/sq ft | Houston, Phoenix, Tampa |
+| Zone 3 (Warm) | 25–30 BTU/sq ft | 18–22 BTU/sq ft | Atlanta, Dallas, Charlotte |
+| Zone 4 (Mixed) | 28–35 BTU/sq ft | 18–22 BTU/sq ft | Nashville, DC, Portland OR |
+| Zone 5 (Cool) | 30–40 BTU/sq ft | 15–20 BTU/sq ft | Chicago, Boston, Denver |
+| Zone 6 (Cold) | 40–50 BTU/sq ft | 15–18 BTU/sq ft | Minneapolis, Burlington VT |
+| Zone 7 (Very Cold) | 50–60 BTU/sq ft | 12–15 BTU/sq ft | Duluth, Anchorage |
+
+*For good insulation (new construction, R-38+ attic, low-e windows), use the lower end of the range. For poor insulation (pre-1980, single-pane windows, minimal attic insulation), use the higher end or add 20–30%.*
+
+The formula:
+
+**Heating BTU = Square Footage × Heating BTU Factor**
+
+**Cooling BTU = Square Footage × Cooling BTU Factor**
+
+**Tonnage = Higher of (Heating BTU, Cooling BTU) ÷ 12,000**
+
+Let's run a quick example. A 2,000 sq ft home in Nashville (Zone 4) with average insulation:
+
+- Heating BTU: 2,000 × 32 = **64,000 BTU**
+- Cooling BTU: 2,000 × 20 = **40,000 BTU**
+- Heating governs: 64,000 ÷ 12,000 = **5.3 tons**
+
+Wait — that seems high. And it is, because we sized purely for heating at design conditions. In practice, you'd select a **3.5–4.0 ton heat pump** that covers the cooling load with capacity to spare, then add auxiliary heat (electric strip or [gas furnace in a dual fuel system](/gas-vs-electric-heating)) to cover the gap on the coldest nights. This is exactly what the [balance point calculation](#heat-pump-balance-point-calculator) determines.
+
+---
+
+## How Many Square Feet Does Each Heat Pump Tonnage Cover?
+
+This reverses the question. If you already know the tonnage you're considering, here's the approximate coverage by climate zone.
+
+| Heat Pump Size | BTU (Cooling, 95°F) | Zone 1–2 Coverage | Zone 3–4 Coverage | Zone 5–6 Coverage |
+|---|---|---|---|---|
+| **1.5 ton** | 18,000 BTU | 800–1,000 sq ft | 600–800 sq ft | 400–600 sq ft |
+| **2.0 ton** | 24,000 BTU | 1,000–1,300 sq ft | 800–1,100 sq ft | 600–800 sq ft |
+| **2.5 ton** | 30,000 BTU | 1,300–1,600 sq ft | 1,000–1,300 sq ft | 800–1,000 sq ft |
+| **3.0 ton** | 36,000 BTU | 1,600–2,000 sq ft | 1,200–1,600 sq ft | 1,000–1,200 sq ft |
+| **3.5 ton** | 42,000 BTU | 1,800–2,300 sq ft | 1,400–1,800 sq ft | 1,100–1,400 sq ft |
+| **4.0 ton** | 48,000 BTU | 2,000–2,700 sq ft | 1,600–2,100 sq ft | 1,300–1,600 sq ft |
+| **5.0 ton** | 60,000 BTU | 2,500–3,300 sq ft | 2,000–2,700 sq ft | 1,600–2,000 sq ft |
+
+Notice the dramatic difference between climate zones. A 3-ton heat pump covers **2,000 sq ft** in Miami but only **1,000–1,200 sq ft** in Chicago. Climate zone isn't a minor adjustment — it's the single biggest factor in sizing.
+
+---
+
+## How Heat Pump Sizing Differs From AC and Furnace Sizing
+
+If you've used our [AC tonnage calculator](/ac-tonnage-calculator) or [furnace sizing calculator](/furnace-sizing-calculator), you might assume heat pump sizing works the same way. It doesn't, and here's why.
+
+An air conditioner is sized to handle the **cooling load only**, based on the 1% ASHRAE cooling design temperature (the outdoor temp exceeded only 1% of annual hours). A furnace is sized to handle the **heating load only**, based on the 99% ASHRAE heating design temperature.
+
+A heat pump must handle **both** — and the two loads pull in opposite directions. In humid climates, the cooling load demands a smaller unit to ensure long run times and adequate dehumidification. In cold climates, the heating load demands a larger unit to maintain indoor comfort when outdoor temps plunge.
+
+The other critical difference: **heat pump capacity drops as outdoor temperature falls.** A furnace rated at 80,000 BTU produces 80,000 BTU whether it's 30°F or -10°F outside. A heat pump rated at 36,000 BTU at 47°F might deliver only 22,000 BTU at 17°F and 15,000 BTU at 5°F. This is a fundamental physical limitation — less heat in the outdoor air means less heat to pump indoors.
+
+That's why the ACCA's updated [Manual S (2023 edition)](https://hvac-blog.acca.org/correctly-sizing-variable-capacity-heat-pump-equipment/) now includes specific guidance for sizing variable-capacity heat pumps for cold climates. The standard requires checking capacity at the minimum compressor speed (must be ≤80% of heating load to prevent short cycling) and at maximum speed (must meet the design heating load).
+
+---
+
+## Cold Climate Heat Pump Sizing: Capacity at Low Temperatures
+
+This is where sizing gets serious. Standard heat pumps lose **40–55% of rated capacity** at 5°F. Cold climate heat pumps (ccASHP) retain **70–85%** at the same temperature (source: [NEEP ccASHP Specification v4.0](https://neep.org/heating-electrification/ccashp-specification-product-list)).
+
+Here's what the capacity drop looks like in practice:
+
+| Outdoor Temperature | Standard Heat Pump (% of Rated) | Cold Climate Heat Pump (% of Rated) | COP Range (ccASHP) |
+|---|---|---|---|
+| **47°F** (8.3°C) | 100% | 100% | 3.5–5.0 |
+| **17°F** (-8.3°C) | 60–75% | 80–90% | 2.0–3.0 |
+| **5°F** (-15°C) | 45–60% | 70–85% | 1.75–2.5 |
+| **0°F** (-17.8°C) | 30–50% (may shut down) | 65–75% | 1.5–2.0 |
+| **-13°F** (-25°C) | N/A (shutdown) | 60–70% | 1.0–1.5 |
+
+*Sources: AHRI 210/240 rating data, [NEEP ccASHP database](https://ashp.neep.org), [Mitsubishi](https://www.mitsubishicomfort.com/products/heat-pumps) and Trane manufacturer specifications.*
+
+For a concrete example: the Mitsubishi SUZ-AK36NLHZ (H2i Hyper-Heat, 3-ton nominal) delivers **40,000 BTU at 47°F**, **38,000 BTU at 17°F**, and **31,000 BTU at -13°F**. That's 78% capacity retention at -13°F — remarkable for an air-source unit. Compare that to a standard 3-ton heat pump that delivers 36,000 BTU at 47°F but drops to roughly 18,000 BTU at 5°F before shutting down.
+
+The NEEP ccASHP specification requires a minimum **COP of 1.75 at 5°F** at maximum capacity. Over 40,000 systems from 100+ brands are listed in the [NEEP database](https://ashp.neep.org). Before purchasing any heat pump for Zones 5–7, verify your selected model appears in this database.
+
+### Heat Pump Balance Point Calculator
+
+The **balance point** is the outdoor temperature where your heat pump's capacity exactly equals your home's heating load. Above this temperature, the heat pump handles everything. Below it, you need supplemental heat.
+
+Here's how to find it:
+
+1. **Plot your building's heat loss line.** It's a straight line from 0 BTU at 65°F (the base temperature) to your design heating load at your design temperature.
+2. **Plot your heat pump's capacity line.** It runs from rated capacity at 47°F down through the manufacturer's published capacity at 17°F (and 5°F if available).
+3. **The intersection is your balance point.**
+
+The simplified formula (source: [Energy Vanguard](https://www.energyvanguard.com/blog/simple-way-calculate-heat-pump-balance-point/)):
+
+**Balance Point ≈ 65°F − (65°F − Design Temp) × (HP Capacity at 47°F ÷ Design Heating Load)**
+
+For a worked example: a home in Denver (design temp = -4°F) with a 48,000 BTU design load and a heat pump rated at 36,000 BTU at 47°F:
+
+Balance Point ≈ 65 − (65 − (-4)) × (36,000 ÷ 48,000) = 65 − 69 × 0.75 = 65 − 51.75 = **13.25°F**
+
+Below 13°F, this home needs supplemental heat. The supplemental heat requirement at design temperature: **48,000 − (estimated HP capacity at -4°F) = gap BTU**. A 10 kW electric strip (34,130 BTU) would cover it, and we'd recommend activating it at about **18°F** (5°F above the balance point, per industry practice — source: [Cene Tech Support balance point worksheet](https://cenetechsupport.com)).
+
+| Electric Strip Heat Size | BTU Output | Covers Gap Of |
+|---|---|---|
+| 5 kW | 17,065 BTU | Small gap (mild climate) |
+| 10 kW | 34,130 BTU | Medium gap (Zone 4–5) |
+| 15 kW | 51,195 BTU | Large gap (Zone 5–6) |
+| 20 kW | 68,260 BTU | Full backup (Zone 6–7) |
+
+### When You Need Supplemental Heat
+
+If your balance point is **above** your heating design temperature, supplemental heat is required. In Zones 1–3, many properly sized heat pumps have balance points below the design temp — meaning no auxiliary heat is needed at all. In Zones 5–7, supplemental heat is almost always part of the system.
+
+You have two options: **electric strip heat** (simpler, cheaper to install, expensive to run) or a **[dual fuel system](/gas-vs-electric-heating)** (gas furnace backup, cheaper to operate, more complex).
+
+The economic crossover formula for dual fuel systems (source: [CEE](https://cee1.org)):
+
+**Crossover COP = ($/kWh × AFUE × 100,000) ÷ ($/therm × 3,412)**
+
+At $0.14/kWh and $1.20/therm with a 92% AFUE furnace, the crossover COP is **3.15** — which corresponds to roughly **32°F** on most standard heat pumps. Above 32°F, the heat pump is cheaper. Below 32°F, gas is cheaper. With cold climate heat pumps that maintain higher COPs at low temps, the crossover drops to **15–20°F**, making the heat pump cheaper for 80%+ of heating hours.
+
+For more on [COP at different temperatures](/cop-calculator) and [heat pump operating costs](/heat-pump-running-cost), check those dedicated calculators.
+
+---
+
+## How Many BTU to Heat a Garage (Garage Heat Pump Sizing)
+
+Garages are the hardest spaces to heat. They have massive uninsulated doors, concrete slab floors, minimal wall insulation, and they hemorrhage heat every time the overhead door opens. Standard residential sizing rules **do not apply**.
+
+The rule of thumb for garages: **40–60 BTU per sq ft for uninsulated spaces**, dropping to **25–35 BTU per sq ft for insulated garages**. Compare that to 20–40 BTU/sq ft for a typical house — garages need significantly more heating per square foot.
+
+| Garage Type | Sq Ft Range | Uninsulated BTU | Insulated BTU | Recommended Heater Size |
+|---|---|---|---|---|
+| 1-car garage | 200–300 sq ft | 8,000–18,000 BTU | 5,000–10,500 BTU | 9,000–12,000 BTU mini split |
+| 2-car garage | 400–576 sq ft | 16,000–35,000 BTU | 10,000–20,000 BTU | 18,000–24,000 BTU mini split |
+| 3-car garage | 600–900 sq ft | 24,000–54,000 BTU | 15,000–31,500 BTU | 24,000–36,000 BTU mini split |
+| Large workshop | 750–1,200 sq ft | 30,000–72,000 BTU | 19,000–42,000 BTU | 36,000–48,000 BTU (or 2 units) |
+
+### Garage Heater BTU Calculator
+
+The volume-based formula is more accurate than square footage alone because garages often have 10–12 foot ceilings:
+
+**BTU = Cubic Feet × Temperature Rise × 0.133 × Insulation Factor**
+
+Where:
+- Cubic Feet = Length × Width × Height
+- Temperature Rise = Desired Indoor Temp − Outdoor Design Temp
+- Insulation Factor: Good = 1.0, Average = 1.5, Poor = 2.0, None = 2.5
+
+Example: a 24 × 24 ft detached garage with 10-foot ceilings, uninsulated, in Zone 5 (design temp 0°F), target 50°F:
+
+- Volume: 24 × 24 × 10 = **5,760 cubic feet**
+- Temp rise: 50 − 0 = **50°F**
+- BTU: 5,760 × 50 × 0.133 × 2.0 = **76,608 BTU**
+
+That's a lot of heat — which is why most uninsulated garages use gas unit heaters rather than heat pumps. If you insulate first (bringing the factor to 1.0–1.5), the requirement drops to **38,000–57,000 BTU** — well within heat pump range.
+
+For [ductless mini-split sizing for garages](/mini-split-sizing), the most common successful size for a standard 2-car garage is **18,000 BTU** (1.5 tons). For 3-car garages or extreme climates, step up to **24,000 BTU** (2 tons).
+
+### Workshop and Uninsulated Space Sizing
+
+Workshops get the same treatment as garages, but with an additional consideration: if you open the door frequently (for material handling, vehicle access), add **10–15% to your calculated BTU** to account for the continuous air exchange. Every time that garage door opens, all your conditioned air escapes.
+
+The best investment before sizing: **insulate the ceiling first** (it's where the most heat escapes), then add weather stripping to the garage door seals. These low-cost upgrades can cut your required BTU by 30–40% and let you use a smaller, more efficient heat pump.
+
+---
+
+## Mini Split Heat Pump Sizing Calculator
+
+Mini splits (ductless heat pumps) follow the same BTU methodology as ducted systems, but with a few differences. They're sized per zone rather than for the whole house, they have broader modulation ranges (often 3:1 or 4:1 turndown), and many models carry [cold climate ccASHP ratings](/heat-pump-temperature-range).
+
+For a detailed room-by-room approach, use our dedicated [mini-split sizing calculator](/mini-split-sizing). For a quick estimate:
+
+| Room/Zone Size | Recommended Mini Split Size | Notes |
+|---|---|---|
+| 150–350 sq ft | 9,000 BTU (0.75 ton) | Single bedroom, home office |
+| 350–550 sq ft | 12,000 BTU (1.0 ton) | Large bedroom, living room |
+| 550–800 sq ft | 18,000 BTU (1.5 ton) | Open floor plan, great room |
+| 800–1,100 sq ft | 24,000 BTU (2.0 ton) | Large open space, garage |
+| 1,100–1,500 sq ft | 36,000 BTU (3.0 ton) | Multi-room ducted mini split |
+
+---
+
+## ASHRAE Heating and Cooling Design Temperatures
+
+Your local design temperature is the outdoor temperature your heating system must be capable of handling. These are based on the 99.6% annual cumulative frequency — meaning outdoor temps fall below this value only 0.4% of annual hours (roughly 35 hours per year).
+
+| City | State | Heating Design Temp (°F) | Climate Zone |
+|---|---|---|---|
+| Miami | FL | 46°F | 1A |
+| Houston | TX | 28°F | 2A |
+| Phoenix | AZ | 37°F | 2B |
+| Atlanta | GA | 19°F | 3A |
+| Dallas | TX | 20°F | 3A |
+| Charlotte | NC | 19°F | 3A |
+| Los Angeles | CA | 44°F | 3B |
+| Nashville | TN | 12°F | 4A |
+| Washington DC | — | 16°F | 4A |
+| Portland | OR | 22°F | 4C |
+| Seattle | WA | 24°F | 4C |
+| Denver | CO | -4°F | 5B |
+| Boston | MA | 8°F | 5A |
+| Chicago | IL | -5°F | 5A |
+| Indianapolis | IN | -2°F | 5A |
+| Detroit | MI | 0°F | 5A |
+| Salt Lake City | UT | 7°F | 5B |
+| Minneapolis | MN | -15°F | 6A |
+| Milwaukee | WI | -5°F | 6A |
+| Bismarck | ND | -21°F | 6A |
+| Anchorage | AK | -11°F | 7 |
+
+*Source: [ASHRAE Handbook of Fundamentals](https://ashrae-meteo.info/v3.0/), via [FGIA published data](https://fgiaonline.org/wp-content/uploads/2025/02/ASHRAE-Temperatures-for-Major-US-Cities.pdf). Values rounded to nearest integer. Full county-level data available from [RESNET](https://www.resnet.us/) and the ACCA Outdoor Design Conditions Guide.*
+
+---
+
+## Heat Pump Sizing Worked Examples
+
+### Example 1: Mild Climate Whole-House (2,000 Sq Ft in Atlanta, GA)
+
+**Inputs:** 2,000 sq ft, Zone 3A, average insulation, 8 ft ceilings, heat pump only (no gas backup). Design temp: 19°F.
+
+- Heating load: 2,000 × 28 = **56,000 BTU** at design temp
+- Cooling load: 2,000 × 20 = **40,000 BTU**
+- Start with cooling: 40,000 ÷ 12,000 = **3.3 tons → select 3.5 ton**
+- Check heating at 17°F: A 3.5-ton ccASHP delivers ~38,000–42,000 BTU at 17°F
+- Balance point: roughly **25°F** — well above the 19°F design temp
+- Supplemental gap at design: 56,000 − ~35,000 = **21,000 BTU → 7.5 kW strip heat**
+- **Result: 3.5-ton cold climate heat pump + 10 kW electric strip heat**
+
+### Example 2: Cold Climate With Auxiliary Heat (1,800 Sq Ft in Chicago, IL)
+
+**Inputs:** 1,800 sq ft, Zone 5A, average insulation, 9 ft ceilings (add 12.5% for extra height). Design temp: -5°F.
+
+- Adjusted sq ft for ceilings: 1,800 × 1.125 = **2,025 equivalent sq ft**
+- Heating load: 2,025 × 38 = **76,950 BTU** at design temp
+- Cooling load: 2,025 × 18 = **36,450 BTU**
+- Cooling size: 36,450 ÷ 12,000 = **3.0 tons**
+- Select 4.0-ton ccASHP to handle more heating load
+- Capacity at 5°F: ~34,000 BTU (at 75% rated). At -5°F: ~28,000 BTU
+- Supplemental at design: 76,950 − 28,000 = **48,950 BTU → 15 kW strip heat**
+- Balance point: approximately **18°F**
+- **Result: 4.0-ton cold climate heat pump + 15 kW electric auxiliary heat**
+
+### Example 3: Garage/Workshop Heating (576 Sq Ft 2-Car Garage in Denver, CO)
+
+**Inputs:** 24 × 24 ft garage, 10 ft ceilings, partially insulated walls, insulated garage door. Zone 5B, design temp: -4°F. Target: 50°F.
+
+- Volume: 5,760 cubic feet
+- Temp rise: 50 − (-4) = **54°F**
+- Insulation factor: 1.5 (average — walls insulated, but concrete floor and large door)
+- BTU: 5,760 × 54 × 0.133 × 1.5 = **62,060 BTU**
+- Select: **24,000 BTU mini split** (covers working-temp heating most days) + **30,000–40,000 BTU gas unit heater** for the coldest days
+- **Result: 2-ton ductless mini split for daily use + propane unit heater backup**
+
+### Example 4: New Construction (2,500 Sq Ft in Nashville, TN)
+
+**Inputs:** 2,500 sq ft, Zone 4A, excellent insulation (R-49 attic, R-21 walls, low-e windows, tight air sealing), 9 ft ceilings. Design temp: 12°F.
+
+- With excellent insulation, use the low end: 22 BTU/sq ft heating, 15 BTU/sq ft cooling
+- Ceiling adjustment: × 1.125
+- Heating load: 2,500 × 1.125 × 22 = **61,875 BTU**
+- Cooling load: 2,500 × 1.125 × 15 = **42,188 BTU**
+- A 4.0-ton ccASHP delivers ~42,000 BTU at 17°F. At 12°F: ~38,000 BTU
+- Supplemental: 61,875 − 38,000 = **23,875 BTU → 7.5 kW strip heat**
+- Balance point: approximately **22°F**
+- **Result: 4.0-ton cold climate heat pump + 10 kW auxiliary heat. New construction's tight envelope means the heat pump covers the vast majority of heating hours.**
+
+### Example 5: Replacing Furnace + AC With Heat Pump (1,500 Sq Ft in Boston, MA)
+
+**Inputs:** 1,500 sq ft ranch, Zone 5A, average insulation (1990s build), 8 ft ceilings. Current system: 80,000 BTU gas furnace + 2.5-ton AC. Design temp: 8°F.
+
+Don't match the old furnace size. The 80,000 BTU furnace was likely oversized (a common problem — [research shows 70–90% of systems have performance issues from installation errors](https://www.contractingbusiness.com/residential-hvac/article/55089577/what-hvac-contractors-need-to-know-to-perform-acca-approved-manuals-j-and-s-correctly)).
+
+- Heating load: 1,500 × 35 = **52,500 BTU** (significantly less than the old 80k furnace)
+- Cooling load: 1,500 × 18 = **27,000 BTU** (the old 2.5-ton AC was roughly right)
+- Select: 3.0-ton ccASHP with [HSPF2 ≥ 8.5](/hspf-rating) and [SEER2 ≥ 16](/seer-rating)
+- Capacity at 17°F: ~27,000 BTU. At 5°F: ~22,000 BTU
+- Supplemental: 52,500 − 22,000 = **30,500 BTU → 10 kW strip heat**
+- Balance point: approximately **22°F**
+- Annual [heating cost savings](/heat-pump-running-cost) vs. old 80% AFUE furnace: estimated 25–40% reduction
+- **Result: 3.0-ton cold climate heat pump + 10 kW aux heat. Smaller than the old furnace, but properly sized and far more efficient.**
+
+### Example 6: Dual Fuel System Sizing (2,000 Sq Ft in Indianapolis, IN)
+
+**Inputs:** 2,000 sq ft, Zone 5A, average insulation, 8 ft ceilings. Keeping existing 60,000 BTU, 92% AFUE gas furnace. Design temp: -2°F.
+
+With dual fuel, the heat pump handles heating when it's cheaper than gas, and the [furnace takes over](/gas-vs-electric-heating) when gas wins economically. The heat pump doesn't need to cover 100% of the heating load — the furnace provides full backup.
+
+- Cooling load: 2,000 × 18 = **36,000 BTU** — this drives the heat pump size
+- Select: **3.0-ton heat pump** (36,000 BTU cooling, matches cooling load perfectly)
+- At 47°F: ~36,000 BTU heating. At 17°F: ~22,000 BTU heating
+- Economic crossover: at $0.14/kWh and $1.10/therm, crossover COP ≈ **2.8 → ~25°F**
+- Above 25°F: heat pump runs (cheaper). Below 25°F: furnace kicks in
+- In Indianapolis, roughly **75–80% of heating hours** are above 25°F
+- **Result: 3.0-ton standard heat pump + existing 60,000 BTU gas furnace. The heat pump saves money most of winter; the furnace handles the coldest 20% of hours. No auxiliary electric heat needed.**
+
+---
+
+## Heat Pump Sizing FAQ
+
+### What size heat pump do I need for a 2,000 sq ft house?
+
+For a **2,000 sq ft** home, you typically need a **3.0 to 5.0 ton** heat pump depending on your climate zone and insulation. In warm climates (Zones 1–3), a 3.0–3.5 ton unit is sufficient. In cold climates (Zones 5–6), expect 4.0–5.0 tons with auxiliary heat. Always verify the unit's capacity at your [local design temperature](/heat-pump-efficiency-temperature), not just the rated 47°F capacity.
+
+### How many BTU do I need to heat my garage?
+
+Most 2-car garages (400–576 sq ft) need **16,000–35,000 BTU** for uninsulated spaces, or **10,000–20,000 BTU** if insulated. Use the volume-based formula: **BTU = Cubic Feet × Temperature Rise × 0.133 × Insulation Factor**. Garages require 2–3 times more BTU per square foot than living spaces due to massive doors, concrete floors, and frequent air exchange.
+
+### How many tons per square foot for a heat pump?
+
+The rough rule is **1 ton per 400–600 sq ft** in warm climates and **1 ton per 300–400 sq ft** in cold climates. More precisely, the BTU-per-square-foot method yields 20–30 BTU/sq ft in Zones 1–3 and 30–50 BTU/sq ft in Zones 5–7. Divide total BTU by 12,000 to get tonnage. These are starting estimates — [insulation quality](/insulation-r-value-chart), window area, air sealing, and ceiling height all shift the number significantly.
+
+### Can a heat pump heat a house in cold weather?
+
+Yes. Modern cold climate heat pumps (ccASHP) operate effectively down to **-13°F to -22°F** and maintain 60–85% of rated capacity at 5°F. The [NEEP database](https://ashp.neep.org) lists 40,000+ certified cold climate systems. In the coldest climates, you'll likely need [supplemental heat](#when-you-need-supplemental-heat) below the balance point, but the heat pump handles the vast majority of heating hours — typically 75–90% even in Zone 6.
+
+### What is the balance point of a heat pump?
+
+The balance point is the outdoor temperature where a heat pump's capacity exactly matches the building's heating load. Above it, the heat pump covers 100% of heating demand. Below it, supplemental heat is needed. For standard heat pumps, the balance point typically falls between **30–45°F**. For properly sized cold climate units, it can drop below **0°F**. Use the [balance point formula](#heat-pump-balance-point-calculator) above to calculate yours, or see the [Efficiency Vermont Balance Point Tool](https://www.efficiencyvermont.com/trade-partners/heat-pump-balance-point-tool).
+
+### Is a 3-ton heat pump enough for 2,000 sq ft?
+
+In **warm climates (Zones 1–3), yes** — a 3-ton heat pump delivers 36,000 BTU of cooling, which covers the typical 35,000–45,000 BTU cooling load of a 2,000 sq ft home. In **cold climates (Zones 5+), probably not** as the sole heating source — the heating load reaches 60,000–70,000 BTU at design conditions, and a 3-ton unit can only deliver 22,000–27,000 BTU at 17°F. You'd either need a larger unit (4–5 ton) or a [dual fuel system](/gas-vs-electric-heating) pairing the 3-ton heat pump with a gas furnace.
+
+---
+
+## DOE Heat Pump Efficiency Standards (2023)
+
+For reference, here are the current federal minimum efficiency requirements as of January 1, 2023:
+
+| Equipment Type | SEER2 Minimum | HSPF2 Minimum | Equivalent Old Rating | Source |
+|---|---|---|---|---|
+| Split-system heat pump (all regions) | 14.3 | 7.5 | 15.0 SEER / 8.8 HSPF | [DOE / AHRI](https://www.ahrinet.org/2023-energy-efficiency-standards) |
+| Single-packaged heat pump | 13.4 | 6.7 | 14.0 SEER / 8.0 HSPF | [DOE / AHRI](https://www.ahrinet.org/2023-energy-efficiency-standards) |
+| ENERGY STAR split heat pump | 15.2 | 8.1 | ~16.0 SEER / ~9.5 HSPF | [ENERGY STAR](https://www.energystar.gov) |
+| ENERGY STAR mini split | — | 8.5 | ~10.0 HSPF | [ENERGY STAR](https://www.energystar.gov) |
+
+When comparing units, [HSPF2 measures heating efficiency](/hspf-rating) and [SEER2 measures cooling efficiency](/seer-rating). In cold climates, prioritize HSPF2. In hot climates, prioritize SEER2. A rough conversion: **HSPF2 ≈ HSPF × 0.89** (the new test method uses higher static pressure, producing lower numbers for the same equipment).
+
+---
+
+## Sources and References
+
+1. ACCA — Manual J Residential Load Calculation (8th Edition): [acca.org](https://www.acca.org/standards/technical-manuals/manual-j)
+2. ACCA — Correctly Sizing Variable-Capacity Heat Pump Equipment (Manual S 2023): [hvac-blog.acca.org](https://hvac-blog.acca.org/correctly-sizing-variable-capacity-heat-pump-equipment/)
+3. AHRI — Standard 210/240 (Residential Heat Pump Rating): [ahrinet.org](https://www.ahrinet.org/search-standards/ahri-210240-i-p-performance-rating-unitary-air-conditioning-and-air-source-heat-pump-equipment)
+4. AHRI — 2023 Energy Efficiency Standards: [ahrinet.org](https://www.ahrinet.org/2023-energy-efficiency-standards)
+5. NEEP — Cold Climate Air Source Heat Pump Specification v4.0: [neep.org](https://neep.org/heating-electrification/ccashp-specification-product-list)
+6. NEEP — ccASHP Product List & Sizing Tool: [ashp.neep.org](https://ashp.neep.org)
+7. DOE Building America — Cold Climate Heat Pump Sizing and Selection: [basc.pnnl.gov](https://basc.pnnl.gov/resource-guides/cold-climate-heat-pump-sizing-and-selection)
+8. ASHRAE — Climatic Design Conditions: [ashrae-meteo.info](https://ashrae-meteo.info/v3.0/)
+9. ASHRAE — Design Temperatures for Major US Cities: [fgiaonline.org](https://fgiaonline.org/wp-content/uploads/2025/02/ASHRAE-Temperatures-for-Major-US-Cities.pdf)
+10. Energy Vanguard — Heat Pump Balance Point Calculation: [energyvanguard.com](https://www.energyvanguard.com/blog/simple-way-calculate-heat-pump-balance-point/)
+11. Efficiency Vermont — Heat Pump Balance Point Tool: [efficiencyvermont.com](https://www.efficiencyvermont.com/trade-partners/heat-pump-balance-point-tool)
+12. CEE — Controls for Heat Pump with Secondary Heating: [cee1.org](https://cee1.org)
+13. Mitsubishi Electric — Heat Pump Product Specifications: [mitsubishicomfort.com](https://www.mitsubishicomfort.com/products/heat-pumps)
+14. EnergySage — Heat Pump Sizing Guide: [energysage.com](https://www.energysage.com/heat-pumps/heat-pump-size-guide/)
+15. Rewiring America — Heat Pump Sizing (MassCEC Manual J Study): [homes.rewiringamerica.org](https://homes.rewiringamerica.org/articles/heating-and-cooling/heat-pump-sizing-guide)
+16. NRCan — Air Source Heat Pump Sizing and Selection Guide: [natural-resources.canada.ca](https://natural-resources.canada.ca)
+17. ACCA — Outdoor Design Conditions Guide: [acca.org](https://higherlogicdownload.s3.amazonaws.com/ACCA/c6b38bda-2e04-4f93-bd51-7a80525ad936/UploadedImages/Outdoor-Design-Conditions-1.pdf)
+18. Contracting Business — Manual J & S Compliance for HVAC Contractors: [contractingbusiness.com](https://www.contractingbusiness.com/residential-hvac/article/55089577/what-hvac-contractors-need-to-know-to-perform-acca-approved-manuals-j-and-s-correctly)
+
+---
+
+If you have a specific sizing scenario we haven't covered, drop your square footage, climate zone, and insulation details in the comments below and we'll run the numbers for you.
