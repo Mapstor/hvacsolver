@@ -65,6 +65,7 @@ export default function RootLayout({
             gtag('config', 'G-TTGMYH1CQ6');
           `}
         </Script>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3093026304369835" crossOrigin="anonymous" />
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased bg-slate-50 text-slate-700`}
