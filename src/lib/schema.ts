@@ -1,16 +1,16 @@
 import { ArticleFrontmatter, PILLAR_INFO } from './articles';
 
-const SITE_URL = 'https://hvacsolver.com';
+const SITE_URL = 'https://www.hvacsolver.com';
 const SITE_NAME = 'HVACSolver';
 
 /**
  * Generate TechArticle schema (more specific than Article for technical content)
- * Includes dateModified and speakable for AI visibility
+ * Reads datePublished and dateModified from frontmatter (required) — no
+ * synthetic fallbacks. Includes speakable for AI/voice assistant visibility.
  */
 export function generateTechArticleSchema(
   frontmatter: ArticleFrontmatter,
-  slug: string,
-  dateModified?: string
+  slug: string
 ) {
   const pillarInfo = PILLAR_INFO[frontmatter.pillar];
 
@@ -20,8 +20,8 @@ export function generateTechArticleSchema(
     headline: frontmatter.title,
     description: frontmatter.description,
     url: `${SITE_URL}/${slug}`,
-    dateModified: dateModified || new Date().toISOString().split('T')[0],
-    datePublished: '2024-01-01', // Default publish date
+    datePublished: frontmatter.datePublished,
+    dateModified: frontmatter.dateModified,
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,
@@ -31,13 +31,10 @@ export function generateTechArticleSchema(
       '@type': 'WebPage',
       '@id': `${SITE_URL}/${slug}`,
     },
-    // Technical article specific fields
-    proficiencyLevel: 'Beginner',
-    dependencies: 'None - free online tool',
     // Speakable: marks content suitable for voice assistants
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '.article-content p:first-of-type', '.calculator-result'],
+      cssSelector: ['h1', '.article-content p:first-of-type'],
     },
     // Article categorization
     articleSection: pillarInfo?.name || 'HVAC',
@@ -110,14 +107,6 @@ export function generateCalculatorSchema(
       '@type': 'Organization',
       name: SITE_NAME,
       url: SITE_URL,
-    },
-    // Aggregate rating placeholder - can be populated if reviews are added
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '150',
-      bestRating: '5',
-      worstRating: '1',
     },
   };
 }
@@ -223,18 +212,10 @@ export function generateWebSiteSchema() {
     url: SITE_URL,
     description:
       'HVAC problems solved with engineering data, not opinions. Free calculators, diagnostic guides, and reference charts backed by ASHRAE standards.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
     // Speakable specification for voice assistants
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '.hero-description'],
+      cssSelector: ['h1', 'h2'],
     },
   };
 }
@@ -302,7 +283,7 @@ export function generateCollectionPageSchema(
     // Speakable for voice assistants
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', '.pillar-description'],
+      cssSelector: ['header h1', 'header p'],
     },
   };
 }

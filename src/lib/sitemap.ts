@@ -1,6 +1,22 @@
 import { getAllArticles, PILLAR_INFO } from './articles';
 
-const SITE_URL = 'https://hvacsolver.com';
+const SITE_URL = 'https://www.hvacsolver.com';
+
+// Hardcoded last-update dates for static legal pages.
+// Update these when the corresponding page content meaningfully changes.
+const STATIC_PAGE_DATES: Record<string, string> = {
+  '/about': '2026-03-01',
+  '/contact': '2026-03-01',
+  '/privacy-policy': '2026-02-01', // page body: "Last updated: February 2026"
+  '/terms-of-use': '2026-02-01',   // page body: "Last updated: February 2026"
+};
+
+const STATIC_PAGE_PRIORITY: Record<string, number> = {
+  '/about': 0.6,
+  '/contact': 0.5,
+  '/privacy-policy': 0.3,
+  '/terms-of-use': 0.3,
+};
 
 export interface SitemapEntry {
   url: string;
@@ -10,60 +26,66 @@ export interface SitemapEntry {
 }
 
 /**
- * Generate all sitemap entries for the site
+ * Generate all sitemap entries for the site.
+ *
+ * lastModified is sourced from each article's frontmatter dateModified.
+ * Pillar hubs use the most recent dateModified of articles in that pillar.
+ * Homepage uses the most recent dateModified across the whole corpus.
+ * Static legal pages use the hardcoded dates above.
  */
 export function generateSitemapEntries(): SitemapEntry[] {
   const entries: SitemapEntry[] = [];
-  const now = new Date();
+  const articles = getAllArticles();
 
-  // Homepage - highest priority
+  // Compute aggregate dates from article corpus
+  const allDates = articles.map((a) => a.dateModified).sort();
+  const siteMaxModified = allDates[allDates.length - 1] || '2026-03-01';
+
+  const pillarMaxModified: Record<string, string> = {};
+  for (const a of articles) {
+    const p = a.pillar;
+    if (!pillarMaxModified[p] || a.dateModified > pillarMaxModified[p]) {
+      pillarMaxModified[p] = a.dateModified;
+    }
+  }
+
+  // Homepage
   entries.push({
     url: SITE_URL,
-    lastModified: now,
+    lastModified: new Date(siteMaxModified),
     changeFrequency: 'weekly',
     priority: 1.0,
   });
 
-  // Pillar hub pages - high priority
-  Object.values(PILLAR_INFO).forEach((pillar) => {
+  // Pillar hub pages
+  Object.entries(PILLAR_INFO).forEach(([key, pillar]) => {
     if (pillar.hub !== '/') {
       entries.push({
         url: `${SITE_URL}${pillar.hub}`,
-        lastModified: now,
+        lastModified: new Date(pillarMaxModified[key] || siteMaxModified),
         changeFrequency: 'weekly',
         priority: 0.9,
       });
     }
   });
 
-  // Static pages
-  const staticPages = [
-    { path: '/about', priority: 0.6 },
-    { path: '/contact', priority: 0.5 },
-    { path: '/privacy-policy', priority: 0.3 },
-    { path: '/terms-of-use', priority: 0.3 },
-  ];
-
-  staticPages.forEach(({ path, priority }) => {
+  // Static legal pages
+  Object.entries(STATIC_PAGE_DATES).forEach(([path, dateStr]) => {
     entries.push({
       url: `${SITE_URL}${path}`,
-      lastModified: now,
+      lastModified: new Date(dateStr),
       changeFrequency: 'monthly',
-      priority,
+      priority: STATIC_PAGE_PRIORITY[path] ?? 0.5,
     });
   });
 
-  // All articles
-  const articles = getAllArticles();
+  // Articles
   articles.forEach((article) => {
-    // Calculator articles get higher priority
-    const priority = article.hasCalculator ? 0.8 : 0.7;
-
     entries.push({
       url: `${SITE_URL}/${article.slug}`,
-      lastModified: now,
+      lastModified: new Date(article.dateModified),
       changeFrequency: 'monthly',
-      priority,
+      priority: article.hasCalculator ? 0.8 : 0.7,
     });
   });
 
@@ -71,7 +93,8 @@ export function generateSitemapEntries(): SitemapEntry[] {
 }
 
 /**
- * Generate sitemap XML string
+ * Generate sitemap XML string (used only by audit/standalone tooling;
+ * production sitemap is emitted by app/sitemap.ts via Next's metadata route).
  */
 export function generateSitemapXML(): string {
   const entries = generateSitemapEntries();

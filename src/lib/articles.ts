@@ -13,6 +13,8 @@ export interface ArticleFrontmatter {
   hasCalculator: boolean;
   calculatorComponent?: string;
   seoTitle: string;
+  datePublished: string;
+  dateModified: string;
 }
 
 export interface Article {
@@ -28,6 +30,8 @@ export interface ArticleSummary {
   pillar: string;
   pillarHub?: string;
   hasCalculator: boolean;
+  datePublished: string;
+  dateModified: string;
 }
 
 /**
@@ -77,6 +81,8 @@ export function getAllArticles(): ArticleSummary[] {
         pillar: article.frontmatter.pillar,
         pillarHub: article.frontmatter.pillarHub,
         hasCalculator: article.frontmatter.hasCalculator,
+        datePublished: article.frontmatter.datePublished,
+        dateModified: article.frontmatter.dateModified,
       });
     }
   }

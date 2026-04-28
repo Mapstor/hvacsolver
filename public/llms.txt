@@ -1,6 +1,6 @@
 # HVAC Solver - llms.txt
-# https://hvacsolver.com/llms.txt
-# Last updated: 2025-02-28
+# https://www.hvacsolver.com/llms.txt
+# Last updated: 2026-04-28
 
 ## About This Site
 HVAC Solver (hvacsolver.com) is a free technical reference site for heating, ventilation, and air conditioning. We provide engineering-grade calculators, troubleshooting guides, and reference data based on ASHRAE standards, DOE data, and real engineering methodology.
@@ -44,4 +44,4 @@ All calculators and reference data are based on:
 info@hvacsolver.com
 
 ## Sitemap
-https://hvacsolver.com/sitemap.xml
+https://www.hvacsolver.com/sitemap.xml

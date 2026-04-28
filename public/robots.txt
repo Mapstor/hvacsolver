@@ -67,7 +67,7 @@ User-agent: CCBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://hvacsolver.com/sitemap.xml
+Sitemap: https://www.hvacsolver.com/sitemap.xml
 
 # LLMs.txt for AI systems
-# See: https://hvacsolver.com/llms.txt
+# See: https://www.hvacsolver.com/llms.txt

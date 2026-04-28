@@ -22,12 +22,14 @@ export const metadata: Metadata = {
   },
   description:
     'Free HVAC calculators, troubleshooting guides, and reference charts backed by ASHRAE standards and real engineering methodology.',
-  metadataBase: new URL('https://hvacsolver.com'),
+  metadataBase: new URL('https://www.hvacsolver.com'),
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
-    apple: '/favicon.svg',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     type: 'website',

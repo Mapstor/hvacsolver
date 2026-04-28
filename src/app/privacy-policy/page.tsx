@@ -85,8 +85,8 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="text-xl font-bold text-slate-950 mt-8 mb-4">Advertising</h2>
               <p>
-                We display ads through Raptive (formerly AdThrive), a digital advertising company.
-                Raptive and its partners may use cookies and similar technologies to:
+                We display ads through Google AdSense. Google and its advertising
+                partners may use cookies and similar technologies to:
               </p>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Serve ads based on your interests</li>
@@ -94,18 +94,36 @@ export default function PrivacyPolicyPage() {
                 <li>Limit how often you see an ad</li>
               </ul>
               <p>
-                You can learn more about Raptive&apos;s privacy practices at{' '}
+                You can learn more about how Google uses information from sites that
+                use its services at{' '}
                 <a
-                  href="https://raptive.com/privacy-policy/"
+                  href="https://policies.google.com/technologies/partner-sites"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#1e3a5f] underline hover:text-[#c2410c]"
                 >
-                  raptive.com/privacy-policy
+                  policies.google.com/technologies/partner-sites
+                </a>, and about Google&apos;s advertising policies at{' '}
+                <a
+                  href="https://policies.google.com/technologies/ads"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1e3a5f] underline hover:text-[#c2410c]"
+                >
+                  policies.google.com/technologies/ads
                 </a>.
               </p>
               <p>
-                To opt out of personalized advertising, you can visit{' '}
+                You can manage your Google personalized advertising preferences at{' '}
+                <a
+                  href="https://adssettings.google.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1e3a5f] underline hover:text-[#c2410c]"
+                >
+                  adssettings.google.com
+                </a>. To opt out of additional personalized advertising across the
+                broader ad ecosystem, you can also visit{' '}
                 <a
                   href="https://optout.aboutads.info/"
                   target="_blank"
