@@ -3,7 +3,14 @@ import { notFound } from 'next/navigation';
 import ReactMarkdown, { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAllArticleSlugs, getArticleBySlug, PILLAR_INFO } from '@/lib/articles';
-import { generateTechArticleSchema, generateCalculatorSchema, generateBreadcrumbSchema, schemaToJsonLd } from '@/lib/schema';
+import { generateTechArticleSchema, generateCalculatorSchema, generateBreadcrumbSchema, generateDatasetSchema, schemaToJsonLd } from '@/lib/schema';
+
+const DATASET_SLUGS: Record<string, string[]> = {
+  'refrigerant-pt-charts': ['R-410A', 'R-22', 'R-32', 'R-454B', 'R-134a', 'pressure-temperature', 'saturation pressure', 'NIST REFPROP', 'refrigerant'],
+  'insulation-r-value-chart': ['R-value', 'thermal resistance', 'insulation', 'fiberglass', 'spray foam', 'cellulose', 'climate zone'],
+  'merv-rating-chart': ['MERV', 'air filter', 'particle size', 'HEPA', 'filtration efficiency', 'ASHRAE 52.2'],
+  'sones-to-decibels': ['sones', 'decibels', 'dBA', 'noise level', 'fan sound', 'bathroom fan'],
+};
 import Breadcrumbs from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculators/CalculatorRenderer';
 import IllustrationRenderer from '@/components/illustrations/IllustrationRenderer';
@@ -134,6 +141,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: 'HVACSolver',
       locale: 'en_US',
       section: pillarInfo?.name || 'HVAC',
+      publishedTime: frontmatter.datePublished,
+      modifiedTime: frontmatter.dateModified,
+      authors: ['https://www.hvacsolver.com/about'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -167,6 +177,16 @@ export default async function ArticlePage({ params }: PageProps) {
   // Add SoftwareApplication schema for calculator pages
   const calculatorSchema = frontmatter.hasCalculator
     ? generateCalculatorSchema(frontmatter, slug)
+    : null;
+  // Add Dataset schema for reference-data pages (PT charts, R-value tables, etc.)
+  const datasetKeywords = DATASET_SLUGS[slug];
+  const datasetSchema = datasetKeywords
+    ? generateDatasetSchema(
+        frontmatter.title.split(' — ')[0].trim(),
+        frontmatter.description,
+        slug,
+        datasetKeywords
+      )
     : null;
 
   // Extract sources section first
@@ -215,6 +235,13 @@ export default async function ArticlePage({ params }: PageProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: schemaToJsonLd(calculatorSchema) }}
+        />
+      )}
+      {/* Dataset schema for reference-data pages */}
+      {datasetSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schemaToJsonLd(datasetSchema) }}
         />
       )}
 

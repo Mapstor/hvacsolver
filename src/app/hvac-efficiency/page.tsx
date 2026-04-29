@@ -7,7 +7,7 @@ const pillarKey = 'efficiency';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'HVAC Efficiency Ratings — SEER, AFUE, HSPF Explained | HVACSolver',
+  title: 'HVAC Efficiency Ratings — SEER, AFUE, HSPF Explained',
   description: 'Understand HVAC efficiency ratings including SEER, AFUE, HSPF, EER, and COP. Learn what the numbers mean and how to compare systems.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function HVACEfficiencyPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

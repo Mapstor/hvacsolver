@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { generateWebPageSchema, schemaToJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | HVACSolver',
+  title: 'Privacy Policy',
   description: 'Privacy policy for HVACSolver.com explaining how we collect, use, and protect your information.',
   alternates: {
     canonical: '/privacy-policy',

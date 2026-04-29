@@ -7,7 +7,7 @@ const pillarKey = 'installation';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'HVAC Installation Guides — DIY Setup & Wiring | HVACSolver',
+  title: 'HVAC Installation Guides — DIY Setup & Wiring',
   description: 'HVAC installation guides for thermostats, window AC units, bathroom fans, and more. Includes wiring diagrams and step-by-step instructions.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function HVACInstallationPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

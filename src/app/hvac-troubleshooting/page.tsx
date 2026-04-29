@@ -7,7 +7,7 @@ const pillarKey = 'troubleshooting';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'HVAC Troubleshooting Guides — Diagnose Common Problems | HVACSolver',
+  title: 'HVAC Troubleshooting Guides — Diagnose Common Problems',
   description: 'Step-by-step HVAC troubleshooting guides for AC not cooling, furnace issues, thermostat problems, and more. Diagnose before you call a technician.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function HVACTroubleshootingPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

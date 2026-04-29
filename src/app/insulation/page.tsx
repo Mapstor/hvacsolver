@@ -7,7 +7,7 @@ const pillarKey = 'insulation';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'Insulation Guides — R-Value Charts & Requirements | HVACSolver',
+  title: 'Insulation Guides — R-Value Charts & Requirements',
   description: 'Insulation R-value charts, requirements by climate zone, and guides for understanding thermal resistance in walls, attics, and floors.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function InsulationPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

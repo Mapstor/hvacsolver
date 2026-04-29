@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { generateWebPageSchema, schemaToJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | HVACSolver',
+  title: 'Terms of Use',
   description: 'Terms of use for HVACSolver.com. Please read these terms before using our calculators and guides.',
   alternates: {
     canonical: '/terms-of-use',

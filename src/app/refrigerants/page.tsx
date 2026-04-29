@@ -7,7 +7,7 @@ const pillarKey = 'refrigerants';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'Refrigerants — PT Charts, Types & Technical Data | HVACSolver',
+  title: 'Refrigerants — PT Charts, Types & Technical Data',
   description: 'Refrigerant pressure-temperature charts, superheat/subcooling guides, and technical data for R-410A, R-22, R-32, and other common refrigerants.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function RefrigerantsPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { generateWebPageSchema, schemaToJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | HVACSolver',
+  title: 'Contact Us',
   description: 'Have a question, found an error, or want to suggest an improvement? Contact the HVACSolver team.',
   alternates: {
     canonical: '/contact',

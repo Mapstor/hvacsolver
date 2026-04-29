@@ -7,7 +7,7 @@ const pillarKey = 'calculators';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'HVAC Calculators — Free Sizing & Cost Tools | HVACSolver',
+  title: 'HVAC Calculators — Free Sizing & Cost Tools',
   description: 'Free HVAC calculators for AC tonnage, furnace sizing, duct CFM, heating costs, and more. Based on ASHRAE standards and Manual J methodology.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function HVACCalculatorsPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

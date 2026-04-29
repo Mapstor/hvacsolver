@@ -1,48 +1,54 @@
-import { ArticleFrontmatter, PILLAR_INFO } from './articles';
+import { ArticleFrontmatter, ArticleSummary, PILLAR_INFO } from './articles';
 
 const SITE_URL = 'https://www.hvacsolver.com';
 const SITE_NAME = 'HVACSolver';
+const ORG_ID = `${SITE_URL}#organization`;
+const WEBSITE_ID = `${SITE_URL}#website`;
+
+const articleId = (slug: string) => `${SITE_URL}/${slug}#article`;
+const webpageId = (slug: string) => `${SITE_URL}/${slug}#webpage`;
+const calculatorId = (slug: string) => `${SITE_URL}/${slug}#calculator`;
+const datasetId = (slug: string) => `${SITE_URL}/${slug}#dataset`;
 
 /**
  * Generate TechArticle schema (more specific than Article for technical content)
  * Reads datePublished and dateModified from frontmatter (required) — no
- * synthetic fallbacks. Includes speakable for AI/voice assistant visibility.
+ * synthetic fallbacks. Includes image (required by Google Article rich
+ * results), author/publisher referencing the Organization, and speakable.
  */
 export function generateTechArticleSchema(
   frontmatter: ArticleFrontmatter,
   slug: string
 ) {
   const pillarInfo = PILLAR_INFO[frontmatter.pillar];
+  const articleUrl = `${SITE_URL}/${slug}`;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
+    '@id': articleId(slug),
     headline: frontmatter.title,
     description: frontmatter.description,
-    url: `${SITE_URL}/${slug}`,
+    url: articleUrl,
     datePublished: frontmatter.datePublished,
     dateModified: frontmatter.dateModified,
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
+    image: {
+      '@type': 'ImageObject',
+      url: `${articleUrl}/opengraph-image`,
+      width: 1200,
+      height: 630,
     },
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}/${slug}`,
+      '@id': webpageId(slug),
     },
-    // Speakable: marks content suitable for voice assistants
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', '.article-content p:first-of-type'],
     },
-    // Article categorization
     articleSection: pillarInfo?.name || 'HVAC',
-    about: {
-      '@type': 'Thing',
-      name: 'HVAC Systems',
-      description: 'Heating, ventilation, and air conditioning systems',
-    },
   };
 }
 
@@ -85,6 +91,7 @@ export function generateCalculatorSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
+    '@id': calculatorId(slug),
     name: calcName,
     description: frontmatter.description,
     url: `${SITE_URL}/${slug}`,
@@ -103,11 +110,8 @@ export function generateCalculatorSchema(
       'Instant results',
       'Mobile-friendly',
     ],
-    creator: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    creator: { '@id': ORG_ID },
+    isPartOf: { '@id': articleId(slug) },
   };
 }
 
@@ -201,18 +205,18 @@ export function generateBreadcrumbSchema(
 }
 
 /**
- * Generate WebSite schema for homepage
- * Includes speakable for AI/voice assistant visibility
+ * Generate WebSite schema for homepage. Linked to Organization via publisher @id.
  */
 export function generateWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': WEBSITE_ID,
     name: SITE_NAME,
     url: SITE_URL,
     description:
       'HVAC problems solved with engineering data, not opinions. Free calculators, diagnostic guides, and reference charts backed by ASHRAE standards.',
-    // Speakable specification for voice assistants
+    publisher: { '@id': ORG_ID },
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2'],
@@ -221,14 +225,22 @@ export function generateWebSiteSchema() {
 }
 
 /**
- * Generate Organization schema with enhanced details
+ * Generate Organization schema with logo (required for Google publisher rich
+ * results), contact info, knowledge areas, and identity for cross-references.
  */
 export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': ORG_ID,
     name: SITE_NAME,
     url: SITE_URL,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/logo.png`,
+      width: 512,
+      height: 512,
+    },
     description:
       'Free HVAC calculators and guides backed by ASHRAE standards, DOE data, and real engineering methodology.',
     contactPoint: {
@@ -236,7 +248,7 @@ export function generateOrganizationSchema() {
       email: 'info@hvacsolver.com',
       contactType: 'customer service',
     },
-    // Knowledge areas (helps AI understand expertise)
+    sameAs: [],
     knowsAbout: [
       'HVAC systems',
       'Air conditioning',
@@ -251,11 +263,12 @@ export function generateOrganizationSchema() {
 }
 
 /**
- * Generate CollectionPage schema for pillar hub pages
+ * Generate CollectionPage schema for pillar hub pages.
+ * Accepts article summaries so each ListItem carries name + url.
  */
 export function generateCollectionPageSchema(
   pillarKey: string,
-  articleSlugs: string[]
+  articles: Pick<ArticleSummary, 'slug' | 'title'>[]
 ) {
   const pillarInfo = PILLAR_INFO[pillarKey];
   const hubUrl = pillarInfo?.hub || `/${pillarKey}`;
@@ -266,21 +279,18 @@ export function generateCollectionPageSchema(
     name: pillarInfo?.name || pillarKey,
     description: pillarInfo?.description || '',
     url: `${SITE_URL}${hubUrl}`,
-    isPartOf: {
-      '@type': 'WebSite',
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    isPartOf: { '@id': WEBSITE_ID },
+    publisher: { '@id': ORG_ID },
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: articleSlugs.length,
-      itemListElement: articleSlugs.slice(0, 10).map((slug, index) => ({
+      numberOfItems: articles.length,
+      itemListElement: articles.slice(0, 10).map((article, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        url: `${SITE_URL}/${slug}`,
+        name: article.title.split(' — ')[0].split(' | ')[0].trim(),
+        url: `${SITE_URL}/${article.slug}`,
       })),
     },
-    // Speakable for voice assistants
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['header h1', 'header p'],
@@ -359,17 +369,15 @@ export function generateDatasetSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
-    name: name,
-    description: description,
+    '@id': datasetId(slug),
+    name,
+    description,
     url: `${SITE_URL}/${slug}`,
-    keywords: keywords,
-    creator: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    keywords,
+    creator: { '@id': ORG_ID },
     license: 'https://creativecommons.org/licenses/by/4.0/',
     isAccessibleForFree: true,
+    isPartOf: { '@id': articleId(slug) },
     distribution: {
       '@type': 'DataDownload',
       encodingFormat: 'text/html',

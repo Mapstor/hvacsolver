@@ -7,7 +7,7 @@ const pillarKey = 'indoor-climate';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'Indoor Climate — Humidity, Air Quality & Comfort | HVACSolver',
+  title: 'Indoor Climate — Humidity, Air Quality & Comfort',
   description: 'Guides for indoor humidity control, air purifiers, dehumidifiers, and maintaining optimal indoor air quality and comfort levels.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function IndoorClimatePage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

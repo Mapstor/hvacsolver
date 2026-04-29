@@ -7,7 +7,7 @@ const pillarKey = 'water-heaters';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'Water Heaters — Sizing, Types & Efficiency | HVACSolver',
+  title: 'Water Heaters — Sizing, Types & Efficiency',
   description: 'Water heater sizing calculators, tankless vs tank comparisons, and guides for choosing the right water heater for your home.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function WaterHeatersPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

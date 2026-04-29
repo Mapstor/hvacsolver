@@ -7,7 +7,7 @@ const pillarKey = 'energy-costs';
 const pillarInfo = PILLAR_INFO[pillarKey];
 
 export const metadata: Metadata = {
-  title: 'HVAC Energy Costs — Running Cost Calculators | HVACSolver',
+  title: 'HVAC Energy Costs — Running Cost Calculators',
   description: 'Calculate the cost to run air conditioners, heaters, dehumidifiers, and other HVAC equipment. Compare energy costs across different systems.',
   alternates: {
     canonical: pillarInfo?.hub,
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
 
 export default function EnergyCostsPage() {
   const articles = getArticlesByPillar(pillarKey);
-  const articleSlugs = articles.map(a => a.slug);
-
-  const collectionSchema = generateCollectionPageSchema(pillarKey, articleSlugs);
+  const collectionSchema = generateCollectionPageSchema(pillarKey, articles);
   const breadcrumbSchema = generatePillarBreadcrumbSchema(pillarKey);
 
   return (

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
@@ -15,6 +15,12 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
 });
 
+export const viewport: Viewport = {
+  themeColor: '#1e3a5f',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: 'HVACSolver — HVAC Calculators & Troubleshooting Guides',
@@ -23,6 +29,8 @@ export const metadata: Metadata = {
   description:
     'Free HVAC calculators, troubleshooting guides, and reference charts backed by ASHRAE standards and real engineering methodology.',
   metadataBase: new URL('https://www.hvacsolver.com'),
+  authors: [{ name: 'HVACSolver Editorial', url: 'https://www.hvacsolver.com/about' }],
+  publisher: 'HVACSolver',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
