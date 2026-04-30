@@ -241,7 +241,6 @@ export function generateOrganizationSchema() {
       email: 'info@hvacsolver.com',
       contactType: 'customer service',
     },
-    sameAs: [],
     knowsAbout: [
       'HVAC systems',
       'Air conditioning',
