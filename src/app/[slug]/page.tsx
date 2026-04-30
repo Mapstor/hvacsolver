@@ -261,6 +261,19 @@ export default async function ArticlePage({ params }: PageProps) {
         <div className="lg:flex lg:gap-8">
           {/* Article content - min 700px on desktop */}
           <div className="lg:flex-1 lg:min-w-0" style={{ maxWidth: '780px' }}>
+            {/* Hero featured image — gives every article a crawlable above-the-fold
+                image (addresses zero <img> on body content); reuses the OG card. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/${slug}/opengraph-image`}
+              alt={frontmatter.title}
+              width={1200}
+              height={630}
+              className="w-full h-auto rounded-lg border border-slate-200 mb-6"
+              loading="eager"
+              decoding="async"
+            />
+
             {/* Informational Article Layout (with illustration) */}
             {isInformationalArticle ? (
               <>

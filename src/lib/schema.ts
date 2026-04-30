@@ -103,13 +103,6 @@ export function generateCalculatorSchema(
       price: '0',
       priceCurrency: 'USD',
     },
-    featureList: [
-      'Free to use',
-      'No registration required',
-      'Based on ASHRAE engineering standards',
-      'Instant results',
-      'Mobile-friendly',
-    ],
     creator: { '@id': ORG_ID },
     isPartOf: { '@id': articleId(slug) },
   };
